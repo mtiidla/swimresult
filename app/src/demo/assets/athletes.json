@@ -1,0 +1,794 @@
+[
+  {
+    "gender": "2",
+    "lastname": "Aavik",
+    "fullname": "Carmen Marie Aavik",
+    "id": "10786",
+    "swrid": "5072119",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Alimov",
+    "fullname": "Ilja Alimov",
+    "id": "10807",
+    "swrid": "5120798",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Astrelin",
+    "fullname": "Dmitri Astrelin",
+    "id": "10741",
+    "swrid": "4996416",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Badzjuh",
+    "fullname": "Nikita Badzjuh",
+    "id": "10783",
+    "swrid": "5113721",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Beloborodova",
+    "fullname": "Ksenia Beloborodova",
+    "id": "10780",
+    "swrid": "5138037",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Belov",
+    "fullname": "Aleksandr Belov",
+    "id": "10777",
+    "swrid": "5138064",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Berg",
+    "fullname": "Ron Berg",
+    "id": "10795",
+    "swrid": "4901139",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Bolshakov",
+    "fullname": "Nikita Bolshakov",
+    "id": "10801",
+    "swrid": "5138089",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Drozdov",
+    "fullname": "Daniil Drozdov",
+    "id": "10738",
+    "swrid": "4996411",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Gritsok",
+    "fullname": "Alan Gritsok",
+    "id": "10735",
+    "swrid": "4996404",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Gritsok",
+    "fullname": "Aleks Gritsok",
+    "id": "10774",
+    "swrid": "5120567",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Haaviste",
+    "fullname": "Maribel Haaviste",
+    "id": "10886",
+    "swrid": "5056952",
+    "clubid": "10330"
+  },
+  {
+    "gender": "1",
+    "lastname": "Halimendikov",
+    "fullname": "Ivan Halimendikov",
+    "id": "10717",
+    "swrid": "5138072",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Haljaste",
+    "fullname": "Heleriin Haljaste",
+    "id": "10928",
+    "swrid": "5120599",
+    "clubid": "10606"
+  },
+  {
+    "gender": "1",
+    "lastname": "Ikim",
+    "fullname": "Alex Ikim",
+    "id": "10666",
+    "swrid": "5063129",
+    "clubid": "10349"
+  },
+  {
+    "gender": "2",
+    "lastname": "Israel",
+    "fullname": "Romi Israel",
+    "id": "10957",
+    "swrid": "5120556",
+    "clubid": "10655"
+  },
+  {
+    "gender": "1",
+    "lastname": "Ivanov",
+    "fullname": "Nikita Ivanov",
+    "id": "10672",
+    "swrid": "5120805",
+    "clubid": "10349"
+  },
+  {
+    "gender": "1",
+    "lastname": "Jarjomenko",
+    "fullname": "Aleksander Jarjomenko",
+    "id": "10771",
+    "swrid": "5177723",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Kadak",
+    "fullname": "Karoliina Kadak",
+    "id": "10846",
+    "swrid": "5014077",
+    "clubid": "10330"
+  },
+  {
+    "gender": "2",
+    "lastname": "Kaevats",
+    "fullname": "Teele Kaevats",
+    "id": "10875",
+    "swrid": "5173487",
+    "clubid": "10330"
+  },
+  {
+    "gender": "1",
+    "lastname": "Kazarevski",
+    "fullname": "Nikita Kazarevski",
+    "id": "10946",
+    "swrid": "5120595",
+    "clubid": "10606"
+  },
+  {
+    "gender": "2",
+    "lastname": "Kikas",
+    "fullname": "Luisa Miia Kikas",
+    "id": "10878",
+    "swrid": "5120582",
+    "clubid": "10330"
+  },
+  {
+    "gender": "1",
+    "lastname": "Kleinson",
+    "fullname": "Georg Kleinson",
+    "id": "10690",
+    "swrid": "5035406",
+    "clubid": "10376"
+  },
+  {
+    "gender": "1",
+    "lastname": "Konev",
+    "fullname": "Arsenii Konev",
+    "id": "10831",
+    "swrid": "5071868",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Kont",
+    "fullname": "Sander Kont",
+    "id": "10869",
+    "swrid": "5120586",
+    "clubid": "10330"
+  },
+  {
+    "gender": "2",
+    "lastname": "Kookmaa",
+    "fullname": "Reelika Kookmaa",
+    "id": "10822",
+    "swrid": "5014052",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Kotsetkov-Pitjem",
+    "fullname": "Matvei Kotsetkov-Pitjem",
+    "id": "10714",
+    "swrid": "5138068",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Krivenko",
+    "fullname": "Nikita Krivenko",
+    "id": "10768",
+    "swrid": "5120825",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Kuebar",
+    "fullname": "Johanna Kuebar",
+    "id": "10863",
+    "swrid": "5014088",
+    "clubid": "10330"
+  },
+  {
+    "gender": "2",
+    "lastname": "Kuebar",
+    "fullname": "Kirke Kuebar",
+    "id": "10860",
+    "swrid": "4996437",
+    "clubid": "10330"
+  },
+  {
+    "gender": "2",
+    "lastname": "Kuzmina",
+    "fullname": "Alina Kuzmina",
+    "id": "10660",
+    "swrid": "5071831",
+    "clubid": "10349"
+  },
+  {
+    "gender": "1",
+    "lastname": "Kuznetsov",
+    "fullname": "Maksim Kuznetsov",
+    "id": "10828",
+    "swrid": "5149607",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Lasko",
+    "fullname": "Aleksander Lasko",
+    "id": "10922",
+    "swrid": "5014106",
+    "clubid": "10606"
+  },
+  {
+    "gender": "2",
+    "lastname": "Leede",
+    "fullname": "Eliise Adeele Leede",
+    "id": "10816",
+    "swrid": "5120575",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Lihhats",
+    "fullname": "Erik Lihhats",
+    "id": "10840",
+    "swrid": "5014026",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Litonin",
+    "fullname": "Maksim Litonin",
+    "id": "10792",
+    "swrid": "5258428",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Luts",
+    "fullname": "Sigrid Luts",
+    "id": "10892",
+    "swrid": "5120799",
+    "clubid": "10330"
+  },
+  {
+    "gender": "2",
+    "lastname": "Maling",
+    "fullname": "Helena Maling",
+    "id": "10955",
+    "swrid": "5114990",
+    "clubid": "10655"
+  },
+  {
+    "gender": "2",
+    "lastname": "Matskevits",
+    "fullname": "Sofia Matskevits",
+    "id": "10711",
+    "swrid": "5258437",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Metsa",
+    "fullname": "Aap Valter Metsa",
+    "id": "10916",
+    "swrid": "5111770",
+    "clubid": "10606"
+  },
+  {
+    "gender": "2",
+    "lastname": "Mikker",
+    "fullname": "Juuli-Marie Mikker",
+    "id": "10880",
+    "swrid": "5120684",
+    "clubid": "10330"
+  },
+  {
+    "gender": "2",
+    "lastname": "Milsina",
+    "fullname": "Arina Milsina",
+    "id": "10765",
+    "swrid": "5120579",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Minajev",
+    "fullname": "Maksim Minajev",
+    "id": "10732",
+    "swrid": "4996408",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Nebogova",
+    "fullname": "Safina Nebogova",
+    "id": "10762",
+    "swrid": "4790259",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Neier",
+    "fullname": "Gregor Neier",
+    "id": "10943",
+    "swrid": "5137409",
+    "clubid": "10606"
+  },
+  {
+    "gender": "2",
+    "lastname": "Olesk",
+    "fullname": "Kaisa Olesk",
+    "id": "10889",
+    "swrid": "5014090",
+    "clubid": "10330"
+  },
+  {
+    "gender": "2",
+    "lastname": "Palagina",
+    "fullname": "Alina Palagina",
+    "id": "10669",
+    "swrid": "5063115",
+    "clubid": "10349"
+  },
+  {
+    "gender": "2",
+    "lastname": "Pall",
+    "fullname": "Triinu Pall",
+    "id": "10854",
+    "swrid": "5120688",
+    "clubid": "10330"
+  },
+  {
+    "gender": "1",
+    "lastname": "Part",
+    "fullname": "Mark Part",
+    "id": "10729",
+    "swrid": "5120569",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Pashenkov",
+    "fullname": "Anton Pashenkov",
+    "id": "10898",
+    "swrid": "5120702",
+    "clubid": "10330"
+  },
+  {
+    "gender": "1",
+    "lastname": "Pent",
+    "fullname": "Mihkel Pent",
+    "id": "10919",
+    "swrid": "5056972",
+    "clubid": "10606"
+  },
+  {
+    "gender": "1",
+    "lastname": "Petrov",
+    "fullname": "Ilja Petrov",
+    "id": "10726",
+    "swrid": "4996401",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Pogodina",
+    "fullname": "Jekaterina Pogodina",
+    "id": "10677",
+    "swrid": "5014021",
+    "clubid": "10349"
+  },
+  {
+    "gender": "1",
+    "lastname": "Prans",
+    "fullname": "Sten-Artti Prans",
+    "id": "10872",
+    "swrid": "5063167",
+    "clubid": "10330"
+  },
+  {
+    "gender": "1",
+    "lastname": "Priboslavski",
+    "fullname": "Jegor Priboslavski",
+    "id": "10699",
+    "swrid": "4777363",
+    "clubid": "10393"
+  },
+  {
+    "gender": "1",
+    "lastname": "Prits",
+    "fullname": "Ralf Erik Prits",
+    "id": "10693",
+    "swrid": "5056796",
+    "clubid": "10386"
+  },
+  {
+    "gender": "1",
+    "lastname": "Raasman",
+    "fullname": "Johan Rene Raasman",
+    "id": "10687",
+    "swrid": "5035427",
+    "clubid": "10376"
+  },
+  {
+    "gender": "2",
+    "lastname": "Raidmaee",
+    "fullname": "Margaret Raidmaee",
+    "id": "10895",
+    "swrid": "5120590",
+    "clubid": "10330"
+  },
+  {
+    "gender": "1",
+    "lastname": "Rannik",
+    "fullname": "Kristo Rannik",
+    "id": "10940",
+    "swrid": "5120713",
+    "clubid": "10606"
+  },
+  {
+    "gender": "1",
+    "lastname": "Rannik",
+    "fullname": "Ranel Rannik",
+    "id": "10682",
+    "swrid": "4996426",
+    "clubid": "10373"
+  },
+  {
+    "gender": "1",
+    "lastname": "Reimand",
+    "fullname": "Hannes Villem Reimand",
+    "id": "10913",
+    "swrid": "5113723",
+    "clubid": "10606"
+  },
+  {
+    "gender": "1",
+    "lastname": "Reivart",
+    "fullname": "Kristjan Reivart",
+    "id": "10849",
+    "swrid": "5120800",
+    "clubid": "10330"
+  },
+  {
+    "gender": "1",
+    "lastname": "Rootsma",
+    "fullname": "Ats Rootsma",
+    "id": "10925",
+    "swrid": "5096543",
+    "clubid": "10606"
+  },
+  {
+    "gender": "1",
+    "lastname": "Sahhov",
+    "fullname": "Vladislav Sahhov",
+    "id": "10798",
+    "swrid": "5088356",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Sander",
+    "fullname": "Robert Sander",
+    "id": "10907",
+    "swrid": "5014086",
+    "clubid": "10606"
+  },
+  {
+    "gender": "1",
+    "lastname": "Shuvalov",
+    "fullname": "Daniil Shuvalov",
+    "id": "10702",
+    "swrid": "5138084",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Shuvalov",
+    "fullname": "Igor Shuvalov",
+    "id": "10834",
+    "swrid": "5120513",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Sidorenko",
+    "fullname": "Darja Sidorenko",
+    "id": "10825",
+    "swrid": "5014053",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Siimar",
+    "fullname": "Mirtel-Madlen Siimar",
+    "id": "10904",
+    "swrid": "5072133",
+    "clubid": "10601"
+  },
+  {
+    "gender": "1",
+    "lastname": "Silber",
+    "fullname": "Aleksei Silber",
+    "id": "10804",
+    "swrid": "5120571",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Simakov",
+    "fullname": "Aleksander Simakov",
+    "id": "10759",
+    "swrid": "5138083",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Sinkarjov",
+    "fullname": "Nikita Sinkarjov",
+    "id": "10684",
+    "swrid": "5035380",
+    "clubid": "10376"
+  },
+  {
+    "gender": "1",
+    "lastname": "Sisov",
+    "fullname": "Danila Sisov",
+    "id": "10756",
+    "swrid": "5138093",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Smirnov",
+    "fullname": "Denis Smirnov",
+    "id": "10837",
+    "swrid": "5014024",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Smok",
+    "fullname": "Alan Smok",
+    "id": "10819",
+    "swrid": "5063150",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Smok",
+    "fullname": "Edvin Smok",
+    "id": "10789",
+    "swrid": "5063151",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Sokk",
+    "fullname": "Laura Sokk",
+    "id": "10843",
+    "swrid": "5115011",
+    "clubid": "10330"
+  },
+  {
+    "gender": "1",
+    "lastname": "Soomre",
+    "fullname": "Sten Erik Soomre",
+    "id": "10696",
+    "swrid": "5033779",
+    "clubid": "10386"
+  },
+  {
+    "gender": "1",
+    "lastname": "Soosaar",
+    "fullname": "Andreas Soosaar",
+    "id": "10949",
+    "swrid": "5120598",
+    "clubid": "10606"
+  },
+  {
+    "gender": "1",
+    "lastname": "Strassov",
+    "fullname": "Alan Strassov",
+    "id": "10723",
+    "swrid": "4996409",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Sulla",
+    "fullname": "Aleksandr Sulla",
+    "id": "10810",
+    "swrid": "5120578",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Tammer",
+    "fullname": "Toomas Tanel Tammer",
+    "id": "10851",
+    "swrid": "4996435",
+    "clubid": "10330"
+  },
+  {
+    "gender": "2",
+    "lastname": "Tammiste",
+    "fullname": "Greete Tammiste",
+    "id": "10883",
+    "swrid": "5115010",
+    "clubid": "10330"
+  },
+  {
+    "gender": "2",
+    "lastname": "Teder",
+    "fullname": "Anette Teder",
+    "id": "10901",
+    "swrid": "5056948",
+    "clubid": "10330"
+  },
+  {
+    "gender": "2",
+    "lastname": "Tsaero",
+    "fullname": "Grete Tsaero",
+    "id": "10937",
+    "swrid": "5014089",
+    "clubid": "10606"
+  },
+  {
+    "gender": "1",
+    "lastname": "Tsarin",
+    "fullname": "Artur Tsarin",
+    "id": "10753",
+    "swrid": "5120827",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Tsizik",
+    "fullname": "Miroslav Tsizik",
+    "id": "10750",
+    "swrid": "5073088",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Vaerk",
+    "fullname": "Freia Vaerk",
+    "id": "10934",
+    "swrid": "4904736",
+    "clubid": "10606"
+  },
+  {
+    "gender": "2",
+    "lastname": "Valdmaa",
+    "fullname": "Laura-Liis Valdmaa",
+    "id": "10857",
+    "swrid": "5014098",
+    "clubid": "10330"
+  },
+  {
+    "gender": "1",
+    "lastname": "Valkrusman",
+    "fullname": "Andreas Valkrusman",
+    "id": "10674",
+    "swrid": "5073078",
+    "clubid": "10349"
+  },
+  {
+    "gender": "2",
+    "lastname": "Veede",
+    "fullname": "Helen Veede",
+    "id": "10931",
+    "swrid": "5258420",
+    "clubid": "10606"
+  },
+  {
+    "gender": "1",
+    "lastname": "Vinokurov",
+    "fullname": "Denis Vinokurov",
+    "id": "10813",
+    "swrid": "5014027",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Vool",
+    "fullname": "Mattias Vool",
+    "id": "10866",
+    "swrid": "5056966",
+    "clubid": "10330"
+  },
+  {
+    "gender": "2",
+    "lastname": "Vorontsova",
+    "fullname": "Jekaterina Vorontsova",
+    "id": "10720",
+    "swrid": "5107430",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Vorontsova",
+    "fullname": "Maria Vorontsova",
+    "id": "10747",
+    "swrid": "5160789",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Zabotin",
+    "fullname": "Allan Zabotin",
+    "id": "10708",
+    "swrid": "5124460",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Zahharova",
+    "fullname": "Aleksandra Zahharova",
+    "id": "10705",
+    "swrid": "5138070",
+    "clubid": "10397"
+  },
+  {
+    "gender": "1",
+    "lastname": "Zaitsev",
+    "fullname": "Sebastian Zaitsev",
+    "id": "10744",
+    "swrid": "5138079",
+    "clubid": "10397"
+  },
+  {
+    "gender": "2",
+    "lastname": "Zirk",
+    "fullname": "Heleri Zirk",
+    "id": "10680",
+    "swrid": "4987541",
+    "clubid": "10370"
+  }
+]

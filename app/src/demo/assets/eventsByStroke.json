@@ -1,0 +1,45 @@
+{
+  "lastupdate": "2018-11-18T11:24:49",
+  "eventgroups": [
+    {
+      "gender": "1",
+      "stroke": "1",
+      "events": [
+        {
+          "status": 3,
+          "id": "10310"
+        }
+      ]
+    },
+    {
+      "gender": "1",
+      "stroke": "5",
+      "events": [
+        {
+          "status": 3,
+          "id": "10306"
+        }
+      ]
+    },
+    {
+      "gender": "2",
+      "stroke": "1",
+      "events": [
+        {
+          "status": 3,
+          "id": "10308"
+        }
+      ]
+    },
+    {
+      "gender": "2",
+      "stroke": "5",
+      "events": [
+        {
+          "status": 3,
+          "id": "10304"
+        }
+      ]
+    }
+  ]
+}
