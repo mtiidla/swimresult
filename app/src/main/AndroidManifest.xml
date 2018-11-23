@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ee.mtiidla.swimresult">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".SwimApplication"
         android:allowBackup="true"
