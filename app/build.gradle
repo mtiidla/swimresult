@@ -77,6 +77,8 @@ dependencies {
     implementation 'com.google.dagger:dagger:2.16'
     kapt 'com.google.dagger:dagger-compiler:2.16'
 
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.1.1'
+
     // test dependencies
     testImplementation 'junit:junit:4.12'
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {

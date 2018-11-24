@@ -11,8 +11,8 @@ import ee.mtiidla.swimresult.data.network.model.Event
 import ee.mtiidla.swimresult.data.network.model.EventsBySession
 import ee.mtiidla.swimresult.data.network.model.EventsByStroke
 import ee.mtiidla.swimresult.data.network.model.Heats
-import ee.mtiidla.swimresult.data.network.model.MeetDetail
-import ee.mtiidla.swimresult.data.network.model.Meets
+import ee.mtiidla.swimresult.data.network.model.MeetNetworkModel
+import ee.mtiidla.swimresult.data.network.model.MeetsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.Results
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
@@ -27,9 +27,9 @@ class DemoRestApi @Inject constructor(
 ) :
     RestApi {
 
-    override fun getMeets(): Deferred<Meets> = getData("meets.json")
+    override fun getMeets(): Deferred<MeetsNetworkModel> = getData("meets.json")
 
-    override fun getMeet(meetId: Long): Deferred<MeetDetail> = getData("meet.json")
+    override fun getMeet(meetId: Long): Deferred<MeetNetworkModel> = getData("meet.json")
 
     override fun getClubs(meetId: Long): Deferred<List<Club>> = getData("clubs.json")
 

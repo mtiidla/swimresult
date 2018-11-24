@@ -4,6 +4,5 @@ import android.view.ViewGroup
 
 interface Screen {
 
-    fun getRootView() : ViewGroup
-
+    fun getRootView(): ViewGroup
 }

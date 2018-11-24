@@ -10,6 +10,5 @@ import ee.mtiidla.swimresult.data.network.service.MeetService
 abstract class DataModule {
 
     @Binds
-    abstract fun bindMeetService(meetService: MeetNetworkService) : MeetService
-
+    abstract fun bindMeetService(meetService: MeetNetworkService): MeetService
 }

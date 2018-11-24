@@ -10,8 +10,8 @@ import ee.mtiidla.swimresult.data.network.model.Event
 import ee.mtiidla.swimresult.data.network.model.EventsBySession
 import ee.mtiidla.swimresult.data.network.model.EventsByStroke
 import ee.mtiidla.swimresult.data.network.model.Heats
-import ee.mtiidla.swimresult.data.network.model.MeetDetail
-import ee.mtiidla.swimresult.data.network.model.Meets
+import ee.mtiidla.swimresult.data.network.model.MeetNetworkModel
+import ee.mtiidla.swimresult.data.network.model.MeetsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.Results
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
@@ -20,10 +20,10 @@ import retrofit2.http.Path
 interface RestApi {
 
     @GET("index.php?Cmd=Meets")
-    fun getMeets(): Deferred<Meets>
+    fun getMeets(): Deferred<MeetsNetworkModel>
 
     @GET("meets/{meetId}/main.dat")
-    fun getMeet(@Path("meetId") meetId: Long): Deferred<MeetDetail>
+    fun getMeet(@Path("meetId") meetId: Long): Deferred<MeetNetworkModel>
 
     @GET("meets/{meetId}/clubs.dat")
     fun getClubs(meetId: Long): Deferred<List<Club>>
