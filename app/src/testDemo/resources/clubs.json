@@ -1,0 +1,101 @@
+[
+  {
+    "nation": "EST",
+    "shortname": "ARGO Ujumisklubi",
+    "region": "",
+    "longcode": "",
+    "id": "10349",
+    "name": "ARGO Ujumisklubi",
+    "code": "ARGO"
+  },
+  {
+    "nation": "EST",
+    "shortname": "Audentese SK",
+    "region": "",
+    "longcode": "",
+    "id": "10370",
+    "name": "Audentese Spordiklubi",
+    "code": "AUD"
+  },
+  {
+    "nation": "EST",
+    "shortname": "Kalevi Ujumiskool",
+    "region": "",
+    "longcode": "",
+    "id": "10373",
+    "name": "Kalevi Ujumiskool",
+    "code": "KUK"
+  },
+  {
+    "nation": "EST",
+    "shortname": "Keila Swimclub",
+    "region": "",
+    "longcode": "",
+    "id": "10376",
+    "name": "Keila Swimclub",
+    "code": "KEILA"
+  },
+  {
+    "nation": "EST",
+    "shortname": "MyFitness",
+    "region": "",
+    "longcode": "",
+    "id": "10386",
+    "name": "MyFitness",
+    "code": "MYFIT"
+  },
+  {
+    "nation": "EST",
+    "shortname": "SK Energia",
+    "region": "",
+    "longcode": "",
+    "id": "10393",
+    "name": "Spordiklubi Energia",
+    "code": "SKENER"
+  },
+  {
+    "nation": "EST",
+    "shortname": "SK Garant",
+    "region": "",
+    "longcode": "",
+    "id": "10397",
+    "name": "Spordiklubi Garant",
+    "code": "GARANT"
+  },
+  {
+    "nation": "EST",
+    "shortname": "Tartu UK",
+    "region": "",
+    "longcode": "",
+    "id": "10330",
+    "name": "Tartu Ujumisklubi",
+    "code": "TUK"
+  },
+  {
+    "nation": "EST",
+    "shortname": "Top Uk",
+    "region": "",
+    "longcode": "",
+    "id": "10601",
+    "name": "TOPi Ujumisklubi",
+    "code": "TOP"
+  },
+  {
+    "nation": "EST",
+    "shortname": "Ujumise SK",
+    "region": "",
+    "longcode": "",
+    "id": "10606",
+    "name": "Ujumise Spordiklubi",
+    "code": "USK"
+  },
+  {
+    "nation": "EST",
+    "shortname": "Ujumisklubi Karksi Sport",
+    "region": "",
+    "longcode": "",
+    "id": "10655",
+    "name": "Ujumisklubi Karksi Sport",
+    "code": "UKKS"
+  }
+]

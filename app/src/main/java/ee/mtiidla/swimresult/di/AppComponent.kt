@@ -5,7 +5,7 @@ import dagger.BindsInstance
 import dagger.Component
 import ee.mtiidla.swimresult.NavigationActivity
 import ee.mtiidla.swimresult.SwimApplication
-import ee.mtiidla.swimresult.ui.meet.MeetFragment
+import ee.mtiidla.swimresult.ui.meet.MeetComponent
 import ee.mtiidla.swimresult.ui.meetlist.MeetListFragment
 
 @ApplicationScope
@@ -18,7 +18,7 @@ interface AppComponent {
 
     fun inject(meetListFragment: MeetListFragment)
 
-    fun inject(meetFragment: MeetFragment)
+    fun meet() : MeetComponent.Builder
 
     @Component.Builder
     interface Builder {

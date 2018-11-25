@@ -1,0 +1,18 @@
+{
+  "startdate": "2018-11-18",
+  "nation": "EST",
+  "statistic": {
+    "relays": 0,
+    "entries": 191,
+    "athletes": 99
+  },
+  "userinfo": "SPLASH Meet Manager 11, 11.57072 - registered to Tartu Ujumisklubi",
+  "lastupdate": "2018-11-18T12:08:14",
+  "version": "1.0",
+  "id": "22532",
+  "course": "2",
+  "enddate": "2018-11-18",
+  "name": "Arena Baltics Talents",
+  "days": 1,
+  "city": "Tartu"
+}

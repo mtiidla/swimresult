@@ -38,7 +38,7 @@ class MeetListFragment : ScreenFragment<MeetListScreen>() {
         screen.listener = object : Listener {
             override fun onMeetClicked(meet: Meet) {
                 (activity as NavigationActivity).replaceFragment(
-                    MeetFragment.newInstance(MeetScreenArgs(meet.id)), true
+                    newInstance(MeetFragment::class, MeetScreenArgs(meet.id)), true
                 )
             }
         }

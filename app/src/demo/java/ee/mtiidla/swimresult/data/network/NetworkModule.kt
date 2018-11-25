@@ -5,6 +5,7 @@ import android.content.res.AssetManager
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
+import ee.mtiidla.swimresult.data.network.adapter.EventsJsonMapAdapter
 import ee.mtiidla.swimresult.di.ApplicationScope
 
 @Module
@@ -13,7 +14,9 @@ class NetworkModule {
     @Provides
     @ApplicationScope
     fun provideMoshi(): Moshi {
-        return Moshi.Builder().build()
+        return Moshi.Builder()
+            .add(EventsJsonMapAdapter())
+            .build()
     }
 
     @Provides

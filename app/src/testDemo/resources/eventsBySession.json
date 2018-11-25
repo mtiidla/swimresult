@@ -1,0 +1,31 @@
+{
+  "lastupdate": "2018-11-18T12:08:11",
+  "sessions": [
+    {
+      "day": 1,
+      "events": [
+        {
+          "status": 5,
+          "id": "10304"
+        },
+        {
+          "status": 5,
+          "id": "10306"
+        },
+        {
+          "status": 5,
+          "id": "10308"
+        },
+        {
+          "status": 5,
+          "id": "10310"
+        }
+      ],
+      "course": "2",
+      "number": 1,
+      "time": "11:00",
+      "name": "I osa",
+      "date": "2018-11-18"
+    }
+  ]
+}

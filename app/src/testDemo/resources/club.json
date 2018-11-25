@@ -1,0 +1,137 @@
+{
+  "results": [],
+  "lastupdate": "2018-11-14T07:53:25",
+  "id": "10330",
+  "entries": [],
+  "athletes": [
+    {
+      "gender": "1",
+      "fullname": "Sander Kont",
+      "id": "10869",
+      "swrid": "5120586"
+    },
+    {
+      "gender": "1",
+      "fullname": "Anton Pashenkov",
+      "id": "10898",
+      "swrid": "5120702"
+    },
+    {
+      "gender": "1",
+      "fullname": "Sten-Artti Prans",
+      "id": "10872",
+      "swrid": "5063167"
+    },
+    {
+      "gender": "1",
+      "fullname": "Kristjan Reivart",
+      "id": "10849",
+      "swrid": "5120800"
+    },
+    {
+      "gender": "1",
+      "fullname": "Toomas Tanel Tammer",
+      "id": "10851",
+      "swrid": "4996435"
+    },
+    {
+      "gender": "1",
+      "fullname": "Mattias Vool",
+      "id": "10866",
+      "swrid": "5056966"
+    },
+    {
+      "gender": "2",
+      "fullname": "Maribel Haaviste",
+      "id": "10886",
+      "swrid": "5056952"
+    },
+    {
+      "gender": "2",
+      "fullname": "Karoliina Kadak",
+      "id": "10846",
+      "swrid": "5014077"
+    },
+    {
+      "gender": "2",
+      "fullname": "Teele Kaevats",
+      "id": "10875",
+      "swrid": "5173487"
+    },
+    {
+      "gender": "2",
+      "fullname": "Luisa Miia Kikas",
+      "id": "10878",
+      "swrid": "5120582"
+    },
+    {
+      "gender": "2",
+      "fullname": "Johanna Kuebar",
+      "id": "10863",
+      "swrid": "5014088"
+    },
+    {
+      "gender": "2",
+      "fullname": "Kirke Kuebar",
+      "id": "10860",
+      "swrid": "4996437"
+    },
+    {
+      "gender": "2",
+      "fullname": "Sigrid Luts",
+      "id": "10892",
+      "swrid": "5120799"
+    },
+    {
+      "gender": "2",
+      "fullname": "Juuli-Marie Mikker",
+      "id": "10880",
+      "swrid": "5120684"
+    },
+    {
+      "gender": "2",
+      "fullname": "Kaisa Olesk",
+      "id": "10889",
+      "swrid": "5014090"
+    },
+    {
+      "gender": "2",
+      "fullname": "Triinu Pall",
+      "id": "10854",
+      "swrid": "5120688"
+    },
+    {
+      "gender": "2",
+      "fullname": "Margaret Raidmaee",
+      "id": "10895",
+      "swrid": "5120590"
+    },
+    {
+      "gender": "2",
+      "fullname": "Laura Sokk",
+      "id": "10843",
+      "swrid": "5115011"
+    },
+    {
+      "gender": "2",
+      "fullname": "Greete Tammiste",
+      "id": "10883",
+      "swrid": "5115010"
+    },
+    {
+      "gender": "2",
+      "fullname": "Anette Teder",
+      "id": "10901",
+      "swrid": "5056948"
+    },
+    {
+      "gender": "2",
+      "fullname": "Laura-Liis Valdmaa",
+      "id": "10857",
+      "swrid": "5014098"
+    }
+  ],
+  "swrid": "68117",
+  "name": "Tartu Ujumisklubi",
+  "code": "TUK"
+}

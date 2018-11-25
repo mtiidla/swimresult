@@ -3,7 +3,7 @@ package ee.mtiidla.swimresult.ui.meetlist
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ee.mtiidla.swimresult.data.repo.MeetRepository
+import ee.mtiidla.swimresult.domain.repo.MeetRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

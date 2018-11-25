@@ -12,6 +12,7 @@ class DefaultViewModelFactory<VM : ViewModel> @Inject constructor(
     override fun <T : ViewModel?> create(viewModelClass: Class<T>): T {
         val viewModel = viewModelProvider.get()
         if (viewModel.javaClass.isAssignableFrom(viewModelClass)) {
+            @Suppress("UNCHECKED_CAST") // only called when can be assigned
             return viewModel as T
         } else {
             throw IllegalArgumentException(

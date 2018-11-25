@@ -1,22 +1,20 @@
 package ee.mtiidla.swimresult.ui.meetlist
 
-import androidx.recyclerview.widget.DiffUtil
 import com.hannesdorfmann.adapterdelegates4.AsyncListDifferDelegationAdapter
 import ee.mtiidla.swimresult.domain.model.Meet
+import ee.mtiidla.swimresult.util.IdEqualsDiffCallback
 
 class MeetListAdapter(listener: (Meet) -> Unit) :
-    AsyncListDifferDelegationAdapter<MeetListData>(object :
-        DiffUtil.ItemCallback<MeetListData>() {
-
-        override fun areItemsTheSame(oldItem: MeetListData, newItem: MeetListData): Boolean =
-            newItem::class == oldItem::class
-
-        override fun areContentsTheSame(oldItem: MeetListData, newItem: MeetListData): Boolean =
-            oldItem == newItem
-    }) {
+    AsyncListDifferDelegationAdapter<MeetListData>(
+        IdEqualsDiffCallback<MeetListData>(MeetListData::id)
+    ) {
 
     init {
         delegatesManager.addDelegate(MeetGroupAdapterDelegate())
         delegatesManager.addDelegate(MeetAdapterDelegate(listener))
+    }
+
+    override fun getItemId(position: Int): Long {
+        return items[position].id
     }
 }

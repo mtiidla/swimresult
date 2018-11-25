@@ -26,6 +26,7 @@ class MeetListScreen(context: Context) : Screen, LayoutContainer {
     var listener: Listener? = null
 
     init {
+        adapter.setHasStableIds(true)
         meetListView.layoutManager = LinearLayoutManager(context)
         meetListView.adapter = adapter
     }

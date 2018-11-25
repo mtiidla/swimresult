@@ -1,0 +1,99 @@
+{
+  "10329": {
+    "gender": "11",
+    "eid": "10329",
+    "stroke": "1",
+    "isrelay": false,
+    "distance": "400m",
+    "id": "10329",
+    "number": 4,
+    "time": "13:18",
+    "date": "2018-11-18",
+    "round": "10"
+  },
+  "10328": {
+    "gender": "12",
+    "eid": "10328",
+    "stroke": "1",
+    "isrelay": false,
+    "distance": "400m",
+    "id": "10328",
+    "number": 3,
+    "time": "13:17",
+    "date": "2018-11-18",
+    "round": "10"
+  },
+  "10327": {
+    "gender": "11",
+    "eid": "10327",
+    "stroke": "5",
+    "isrelay": false,
+    "distance": "200m",
+    "id": "10327",
+    "number": 2,
+    "time": "13:16",
+    "date": "2018-11-18",
+    "round": "10"
+  },
+  "10326": {
+    "gender": "12",
+    "eid": "10326",
+    "stroke": "5",
+    "isrelay": false,
+    "distance": "200m",
+    "id": "10326",
+    "number": 1,
+    "time": "13:15",
+    "date": "2018-11-18",
+    "round": "10"
+  },
+  "10310": {
+    "gender": "11",
+    "eid": "10310",
+    "stroke": "1",
+    "isrelay": false,
+    "distance": "400m",
+    "id": "10310",
+    "number": 4,
+    "time": "12:27",
+    "date": "2018-11-18",
+    "round": "1"
+  },
+  "10308": {
+    "gender": "12",
+    "eid": "10308",
+    "stroke": "1",
+    "isrelay": false,
+    "distance": "400m",
+    "id": "10308",
+    "number": 3,
+    "time": "11:48",
+    "date": "2018-11-18",
+    "round": "1"
+  },
+  "10306": {
+    "gender": "11",
+    "eid": "10306",
+    "stroke": "5",
+    "isrelay": false,
+    "distance": "200m",
+    "id": "10306",
+    "number": 2,
+    "time": "11:19",
+    "date": "2018-11-18",
+    "round": "1"
+  },
+  "10304": {
+    "gender": "12",
+    "eid": "10304",
+    "stroke": "5",
+    "isrelay": false,
+    "distance": "200m",
+    "id": "10304",
+    "number": 1,
+    "time": "11:00",
+    "date": "2018-11-18",
+    "round": "1"
+  },
+  "lastupdate": "2018-11-16T19:37:12"
+}

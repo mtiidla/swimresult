@@ -4,6 +4,7 @@ import ee.mtiidla.swimresult.data.network.RestApi
 import ee.mtiidla.swimresult.data.network.mapper.MeetGroupNetworkMapper
 import ee.mtiidla.swimresult.data.network.mapper.MeetNetworkMapper
 import ee.mtiidla.swimresult.domain.model.MeetGroup
+import ee.mtiidla.swimresult.domain.network.service.MeetService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
