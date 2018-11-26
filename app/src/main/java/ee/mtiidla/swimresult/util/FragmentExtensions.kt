@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 
 fun Fragment.requireArgs() = this.arguments!!
 
+// TODO: Marko 25.11.2018 verify that when proguarded, the reified is used correctly
 inline fun <reified T : Parcelable> Fragment.requireScreenArg(): T {
     return requireArgs().getParcelable(T::class.java.canonicalName)!!
 }

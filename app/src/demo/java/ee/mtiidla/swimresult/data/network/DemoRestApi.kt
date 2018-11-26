@@ -7,13 +7,13 @@ import ee.mtiidla.swimresult.data.network.model.AthleteDetails
 import ee.mtiidla.swimresult.data.network.model.Club
 import ee.mtiidla.swimresult.data.network.model.ClubResults
 import ee.mtiidla.swimresult.data.network.model.Entries
-import ee.mtiidla.swimresult.data.network.model.EventsBySession
 import ee.mtiidla.swimresult.data.network.model.EventsByStroke
 import ee.mtiidla.swimresult.data.network.model.EventsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.Heats
 import ee.mtiidla.swimresult.data.network.model.MeetNetworkModel
 import ee.mtiidla.swimresult.data.network.model.MeetsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.Results
+import ee.mtiidla.swimresult.data.network.model.SessionsNetworkModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
@@ -35,9 +35,9 @@ class DemoRestApi @Inject constructor(
 
     override fun getAthletes(meetId: Long): Deferred<List<Athlete>> = getData("athletes.json")
 
-    override fun getEvents(meetId: Long): Deferred<EventsNetworkModel> = getData("events2.json")
+    override fun getEvents(meetId: Long): Deferred<EventsNetworkModel> = getData("events.json")
 
-    override fun getEventsBySession(meetId: Long): Deferred<EventsBySession> =
+    override fun getEventsBySession(meetId: Long): Deferred<SessionsNetworkModel> =
         getData("eventsBySession.json")
 
     override fun getEventsByStroke(meetId: Long): Deferred<EventsByStroke> =

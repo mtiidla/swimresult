@@ -36,7 +36,14 @@ class EventListScreen(context: Context) : Screen, LayoutContainer {
             is EventListState.Data -> {
                 progressBar.gone()
                 eventListView.visible()
-                adapter.items = state.events.map { EventListData.EventItem(it) }
+
+                val adapterData = mutableListOf<EventListData>()
+                state.eventsBySession.forEach {
+                    adapterData += EventListData.SessionItem(it.key)
+                    adapterData += it.value.map { event -> EventListData.EventItem(event) }
+                }
+
+                adapter.items = adapterData
             }
             is EventListState.Error -> TODO()
         }

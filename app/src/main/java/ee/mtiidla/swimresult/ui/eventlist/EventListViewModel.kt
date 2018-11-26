@@ -31,8 +31,16 @@ class EventListViewModel @Inject constructor(
 
             viewState.value = EventListState.Loading
             val events = eventRepository.events(screenArgs.meetId).await()
-            viewState.value = EventListState.Data(events)
+            val sessions = eventRepository.sessions(screenArgs.meetId).await()
 
+            val eventBySession = sessions.associateWith { it.events }.mapValues { entry ->
+                entry.value.map { sessionEvent ->
+                    events.firstOrNull { sessionEvent.id == it.id }?.copy(status = sessionEvent.status)
+                        ?: throw NullPointerException("Session event $sessionEvent not present in events: $events ")
+                }
+            }
+
+            viewState.value = EventListState.Data(eventBySession)
         }
     }
 

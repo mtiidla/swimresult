@@ -11,6 +11,7 @@ class EventListAdapter(listener: (Event) -> Unit) :
 
     init {
         delegatesManager.addDelegate(EventAdapterDelegate(listener))
+        delegatesManager.addDelegate(SessionAdapterDelegate())
     }
 
     override fun getItemId(position: Int): Long {

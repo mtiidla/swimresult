@@ -19,7 +19,7 @@ class EventView : ConstraintLayout {
 
     fun bindEvent(event: Event) {
         eventNameView.text = "${event.number}. ${event.gender}, ${event.distance}, ${event.stroke}"
-        eventSubtitleView.text = "${event.round} ${event.date} ${event.time}, is relay: ${event.relay}"
+        eventSubtitleView.text = "status: ${event.status} round: ${event.round} ${event.date} ${event.time}, is relay: ${event.relay}"
     }
 
 }

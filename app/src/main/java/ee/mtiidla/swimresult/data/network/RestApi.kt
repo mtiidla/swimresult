@@ -6,13 +6,13 @@ import ee.mtiidla.swimresult.data.network.model.AthleteDetails
 import ee.mtiidla.swimresult.data.network.model.Club
 import ee.mtiidla.swimresult.data.network.model.ClubResults
 import ee.mtiidla.swimresult.data.network.model.Entries
-import ee.mtiidla.swimresult.data.network.model.EventsBySession
 import ee.mtiidla.swimresult.data.network.model.EventsByStroke
 import ee.mtiidla.swimresult.data.network.model.EventsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.Heats
 import ee.mtiidla.swimresult.data.network.model.MeetNetworkModel
 import ee.mtiidla.swimresult.data.network.model.MeetsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.Results
+import ee.mtiidla.swimresult.data.network.model.SessionsNetworkModel
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -35,7 +35,7 @@ interface RestApi {
     fun getEvents(@Path("meetId") meetId: Long): Deferred<EventsNetworkModel>
 
     @GET("meets/{meetId}/eventsBySession.dat")
-    fun getEventsBySession(@Path("meetId") meetId: Long): Deferred<EventsBySession>
+    fun getEventsBySession(@Path("meetId") meetId: Long): Deferred<SessionsNetworkModel>
 
     @GET("meets/{meetId}/eventsByStroke.dat")
     fun getEventsByStroke(@Path("meetId") meetId: Long): Deferred<EventsByStroke>
