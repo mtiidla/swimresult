@@ -1,8 +1,8 @@
 package ee.mtiidla.swimresult.data.network
 
 import ee.mtiidla.swimresult.data.network.model.AgeGroup
-import ee.mtiidla.swimresult.data.network.model.Athlete
 import ee.mtiidla.swimresult.data.network.model.AthleteDetails
+import ee.mtiidla.swimresult.data.network.model.AthleteNetworkModel
 import ee.mtiidla.swimresult.data.network.model.Club
 import ee.mtiidla.swimresult.data.network.model.ClubResults
 import ee.mtiidla.swimresult.data.network.model.Entries
@@ -29,7 +29,7 @@ interface RestApi {
     fun getClubs(@Path("meetId") meetId: Long): Deferred<List<Club>>
 
     @GET("meets/{meetId}/athletes.dat")
-    fun getAthletes(@Path("meetId") meetId: Long): Deferred<List<Athlete>>
+    fun getAthletes(@Path("meetId") meetId: Long): Deferred<List<AthleteNetworkModel>>
 
     @GET("meets/{meetId}/events.dat")
     fun getEvents(@Path("meetId") meetId: Long): Deferred<EventsNetworkModel>

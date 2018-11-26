@@ -1,3 +1,6 @@
 <resources>
     <string name="swim_app_name">SwimResults</string>
+    <string name="meet_navigation_events">Events</string>
+    <string name="meet_navigation_athletes">Athletes</string>
+    <string name="meet_navigation_clubs">Clubs</string>
 </resources>

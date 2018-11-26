@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_events"
+        android:icon="@drawable/ic_events"
+        android:title="@string/meet_navigation_events" />
+    <item
+        android:id="@+id/menu_athletes"
+        android:icon="@drawable/ic_athletes"
+        android:title="@string/meet_navigation_athletes" />
+    <item
+        android:id="@+id/menu_clubs"
+        android:icon="@drawable/ic_clubs"
+        android:title="@string/meet_navigation_clubs" />
+</menu>

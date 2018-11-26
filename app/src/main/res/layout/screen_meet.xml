@@ -45,6 +45,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/meetNavigationView"
         app:layout_constraintTop_toBottomOf="@+id/meetHeaderView" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/meetNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/meet_navigation_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

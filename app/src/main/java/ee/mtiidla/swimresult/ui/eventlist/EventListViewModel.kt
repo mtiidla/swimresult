@@ -30,6 +30,7 @@ class EventListViewModel @Inject constructor(
         job = launch {
 
             viewState.value = EventListState.Loading
+            // TODO: Marko 26.11.2018 check if they run in parallel
             val events = eventRepository.events(screenArgs.meetId).await()
             val sessions = eventRepository.sessions(screenArgs.meetId).await()
 
