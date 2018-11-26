@@ -1,4 +1,4 @@
-package ee.mtiidla.swimresult.domain.network.service
+package ee.mtiidla.swimresult.domain.service
 
 import ee.mtiidla.swimresult.domain.model.Event
 import ee.mtiidla.swimresult.domain.model.Session

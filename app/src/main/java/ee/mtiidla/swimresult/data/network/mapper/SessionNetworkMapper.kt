@@ -3,8 +3,6 @@ package ee.mtiidla.swimresult.data.network.mapper
 import ee.mtiidla.swimresult.data.network.model.SessionNetworkModel
 import ee.mtiidla.swimresult.domain.model.Course
 import ee.mtiidla.swimresult.domain.model.Session
-import org.threeten.bp.LocalDate
-import org.threeten.bp.LocalTime
 import javax.inject.Inject
 
 class SessionNetworkMapper @Inject constructor(
@@ -15,8 +13,8 @@ class SessionNetworkMapper @Inject constructor(
         Session(
             name = name,
             day = day,
-            time = LocalTime.parse(time),
-            date = LocalDate.parse(date),
+            time = mapTime(time),
+            date = mapDate(date),
             number = number,
             course = mapCourse(course),
             events = eventMapper.map(events)

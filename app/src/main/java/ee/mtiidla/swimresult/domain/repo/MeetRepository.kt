@@ -1,6 +1,6 @@
 package ee.mtiidla.swimresult.domain.repo
 
-import ee.mtiidla.swimresult.domain.network.service.MeetService
+import ee.mtiidla.swimresult.domain.service.MeetService
 import javax.inject.Inject
 
 class MeetRepository @Inject constructor(private val service: MeetService) {

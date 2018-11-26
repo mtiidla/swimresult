@@ -4,5 +4,5 @@ interface NetworkMapper<T, R> {
 
     fun map(item: T): R
 
-    fun map(item: List<T>): List<R> = item.map { map(it) }
+    fun map(itemList: List<T>): List<R> = itemList.map { map(it) }
 }

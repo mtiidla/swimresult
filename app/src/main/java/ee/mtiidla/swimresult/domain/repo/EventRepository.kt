@@ -1,6 +1,6 @@
 package ee.mtiidla.swimresult.domain.repo
 
-import ee.mtiidla.swimresult.domain.network.service.EventService
+import ee.mtiidla.swimresult.domain.service.EventService
 import javax.inject.Inject
 
 class EventRepository @Inject constructor(private val service: EventService) {

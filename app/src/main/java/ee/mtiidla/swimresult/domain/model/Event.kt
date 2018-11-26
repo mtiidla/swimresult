@@ -8,7 +8,7 @@ data class Event(
     val number: Int,
     val stroke: Stroke,
     val distance: String?,
-    val gender: String,
+    val gender: Gender,
     val relay: Boolean,
     val time: LocalTime,
     val date: LocalDate,

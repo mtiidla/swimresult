@@ -4,7 +4,7 @@ import com.squareup.moshi.Moshi
 import ee.mtiidla.swimresult.data.network.model.AgeGroup
 import ee.mtiidla.swimresult.data.network.model.AthleteNetworkModel
 import ee.mtiidla.swimresult.data.network.model.AthleteDetails
-import ee.mtiidla.swimresult.data.network.model.Club
+import ee.mtiidla.swimresult.data.network.model.ClubNetworkModel
 import ee.mtiidla.swimresult.data.network.model.ClubResults
 import ee.mtiidla.swimresult.data.network.model.Entries
 import ee.mtiidla.swimresult.data.network.model.EventsByStroke
@@ -31,7 +31,7 @@ class DemoRestApi @Inject constructor(
 
     override fun getMeet(meetId: Long): Deferred<MeetNetworkModel> = getData("meet.json")
 
-    override fun getClubs(meetId: Long): Deferred<List<Club>> = getData("clubs.json")
+    override fun getClubs(meetId: Long): Deferred<List<ClubNetworkModel>> = getData("clubs.json")
 
     override fun getAthletes(meetId: Long): Deferred<List<AthleteNetworkModel>> = getData("athletes.json")
 

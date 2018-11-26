@@ -6,9 +6,9 @@ import ee.mtiidla.swimresult.data.network.NetworkModule
 import ee.mtiidla.swimresult.data.network.service.AthleteNetworkService
 import ee.mtiidla.swimresult.data.network.service.EventNetworkService
 import ee.mtiidla.swimresult.data.network.service.MeetNetworkService
-import ee.mtiidla.swimresult.domain.network.service.AthleteService
-import ee.mtiidla.swimresult.domain.network.service.EventService
-import ee.mtiidla.swimresult.domain.network.service.MeetService
+import ee.mtiidla.swimresult.domain.service.AthleteService
+import ee.mtiidla.swimresult.domain.service.EventService
+import ee.mtiidla.swimresult.domain.service.MeetService
 
 @Module(includes = [NetworkModule::class])
 abstract class DataModule {

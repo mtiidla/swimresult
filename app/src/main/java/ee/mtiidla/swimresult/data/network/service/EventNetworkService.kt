@@ -5,7 +5,7 @@ import ee.mtiidla.swimresult.data.network.mapper.EventNetworkMapper
 import ee.mtiidla.swimresult.data.network.mapper.SessionNetworkMapper
 import ee.mtiidla.swimresult.domain.model.Event
 import ee.mtiidla.swimresult.domain.model.Session
-import ee.mtiidla.swimresult.domain.network.service.EventService
+import ee.mtiidla.swimresult.domain.service.EventService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers

@@ -11,6 +11,7 @@ import ee.mtiidla.swimresult.di.Dependencies
 import ee.mtiidla.swimresult.ui.DefaultViewModelFactory
 import ee.mtiidla.swimresult.ui.ScreenFragment
 import ee.mtiidla.swimresult.ui.athletelist.AthleteListFragment
+import ee.mtiidla.swimresult.ui.clublist.ClubListFragment
 import ee.mtiidla.swimresult.ui.eventlist.EventListFragment
 import ee.mtiidla.swimresult.util.requireScreenArg
 import kotlinx.android.synthetic.main.screen_meet.*
@@ -56,7 +57,8 @@ class MeetFragment : ScreenFragment<MeetScreen>() {
                     true
                 }
                 R.id.menu_clubs -> {
-                    TODO()
+                    replaceChildFragment(ClubListFragment())
+                    true
                 }
                 else -> throw IllegalArgumentException("Unknown menu item $it")
             }

@@ -4,8 +4,6 @@ import ee.mtiidla.swimresult.data.network.model.EventNetworkModel
 import ee.mtiidla.swimresult.domain.model.Event
 import ee.mtiidla.swimresult.domain.model.Stroke
 import ee.mtiidla.swimresult.util.whenNotNull
-import org.threeten.bp.LocalDate
-import org.threeten.bp.LocalTime
 import javax.inject.Inject
 
 class EventNetworkMapper @Inject constructor() : NetworkMapper<EventNetworkModel, Event> {
@@ -16,10 +14,10 @@ class EventNetworkMapper @Inject constructor() : NetworkMapper<EventNetworkModel
             number = number,
             stroke = whenNotNull(stroke) { mapStroke(it.toInt()) } ?: Stroke.OTHER,
             distance = distance,
-            gender = gender,
+            gender = mapGender(gender),
             relay = isrelay,
-            time = LocalTime.parse(time), // TODO: Marko 25.11.2018 use date and time mappers
-            date = LocalDate.parse(date), // TODO: Marko 25.11.2018 not always available
+            time = mapTime(time),
+            date = mapDate(date), // TODO: Marko 25.11.2018 not always available
             round = round
         )
     }

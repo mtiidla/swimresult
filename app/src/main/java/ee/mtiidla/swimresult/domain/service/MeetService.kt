@@ -1,4 +1,4 @@
-package ee.mtiidla.swimresult.domain.network.service
+package ee.mtiidla.swimresult.domain.service
 
 import ee.mtiidla.swimresult.domain.model.Meet
 import ee.mtiidla.swimresult.domain.model.MeetGroup

@@ -2,9 +2,6 @@ package ee.mtiidla.swimresult.data.network.mapper
 
 import ee.mtiidla.swimresult.data.network.model.MeetNetworkModel
 import ee.mtiidla.swimresult.domain.model.Meet
-import org.threeten.bp.LocalDate
-import org.threeten.bp.LocalDateTime
-import org.threeten.bp.ZoneOffset
 import javax.inject.Inject
 
 class MeetNetworkMapper @Inject constructor() : NetworkMapper<MeetNetworkModel, Meet> {
@@ -15,11 +12,11 @@ class MeetNetworkMapper @Inject constructor() : NetworkMapper<MeetNetworkModel, 
             name = name,
             nation = nation,
             number = number,
-            startDate = LocalDate.parse(startdate),
-            endDate = LocalDate.parse(enddate),
+            startDate = mapDate(startdate),
+            endDate = mapDate(enddate),
             course = course,
             status = status,
-            lastUpdate = LocalDateTime.parse(lastupdate).atZone(ZoneOffset.UTC),
+            lastUpdate = mapUtcDateTime(lastupdate),
             statistic = null
         )
     }
