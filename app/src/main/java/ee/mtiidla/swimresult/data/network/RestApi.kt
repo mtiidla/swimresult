@@ -5,10 +5,10 @@ import ee.mtiidla.swimresult.data.network.model.AthleteDetails
 import ee.mtiidla.swimresult.data.network.model.AthleteNetworkModel
 import ee.mtiidla.swimresult.data.network.model.ClubNetworkModel
 import ee.mtiidla.swimresult.data.network.model.ClubResults
-import ee.mtiidla.swimresult.data.network.model.Entries
+import ee.mtiidla.swimresult.data.network.model.EntriesNetworkModel
 import ee.mtiidla.swimresult.data.network.model.EventsByStroke
 import ee.mtiidla.swimresult.data.network.model.EventsNetworkModel
-import ee.mtiidla.swimresult.data.network.model.Heats
+import ee.mtiidla.swimresult.data.network.model.HeatsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.MeetNetworkModel
 import ee.mtiidla.swimresult.data.network.model.MeetsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.Results
@@ -53,13 +53,13 @@ interface RestApi {
     fun getHeats(
         @Path("meetId") meetId: Long,
         @Path("eventId") eventId: Long
-    ): Deferred<Heats>
+    ): Deferred<HeatsNetworkModel>
 
     @GET("meets/{meetId}/entries/{eventId}.dat")
     fun getEntries(
         @Path("meetId") meetId: Long,
         @Path("eventId") eventId: Long
-    ): Deferred<Entries>
+    ): Deferred<EntriesNetworkModel>
 
     @GET("meets/{meetId}/athletes/{athleteId}.dat")
     fun getAthlete(

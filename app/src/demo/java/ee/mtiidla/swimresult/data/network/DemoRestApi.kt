@@ -2,14 +2,14 @@ package ee.mtiidla.swimresult.data.network
 
 import com.squareup.moshi.Moshi
 import ee.mtiidla.swimresult.data.network.model.AgeGroup
-import ee.mtiidla.swimresult.data.network.model.AthleteNetworkModel
 import ee.mtiidla.swimresult.data.network.model.AthleteDetails
+import ee.mtiidla.swimresult.data.network.model.AthleteNetworkModel
 import ee.mtiidla.swimresult.data.network.model.ClubNetworkModel
 import ee.mtiidla.swimresult.data.network.model.ClubResults
-import ee.mtiidla.swimresult.data.network.model.Entries
+import ee.mtiidla.swimresult.data.network.model.EntriesNetworkModel
 import ee.mtiidla.swimresult.data.network.model.EventsByStroke
 import ee.mtiidla.swimresult.data.network.model.EventsNetworkModel
-import ee.mtiidla.swimresult.data.network.model.Heats
+import ee.mtiidla.swimresult.data.network.model.HeatsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.MeetNetworkModel
 import ee.mtiidla.swimresult.data.network.model.MeetsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.Results
@@ -49,9 +49,9 @@ class DemoRestApi @Inject constructor(
     override fun getResults(meetId: Long, eventId: Long): Deferred<Results> =
         getData("results.json")
 
-    override fun getHeats(meetId: Long, eventId: Long): Deferred<Heats> = getData("heats.json")
+    override fun getHeats(meetId: Long, eventId: Long): Deferred<HeatsNetworkModel> = getData("heats.json")
 
-    override fun getEntries(meetId: Long, eventId: Long): Deferred<Entries> =
+    override fun getEntries(meetId: Long, eventId: Long): Deferred<EntriesNetworkModel> =
         getData("entries.json")
 
     override fun getAthlete(meetId: Long, athleteId: Long): Deferred<AthleteDetails> =

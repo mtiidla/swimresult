@@ -8,7 +8,7 @@ import ee.mtiidla.swimresult.domain.model.Meet
 import ee.mtiidla.swimresult.ui.Screen
 import ee.mtiidla.swimresult.util.gone
 import ee.mtiidla.swimresult.util.inflateLayout
-import ee.mtiidla.swimresult.util.notNull
+import ee.mtiidla.swimresult.util.setStableIds
 import ee.mtiidla.swimresult.util.visible
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.screen_meet_list.*
@@ -19,14 +19,12 @@ class MeetListScreen(context: Context) : Screen, LayoutContainer {
 
     override fun getRootView(): ViewGroup = containerView
 
-    private val adapter: MeetListAdapter = MeetListAdapter { meet ->
-        listener.notNull { it.onMeetClicked(meet) }
-    }
+    lateinit var listener: Listener
 
-    var listener: Listener? = null
+    private val adapter: MeetListAdapter = MeetListAdapter { listener.onMeetClicked(it) }
 
     init {
-        adapter.setHasStableIds(true)
+        adapter.setStableIds()
         meetListView.layoutManager = LinearLayoutManager(context)
         meetListView.adapter = adapter
     }

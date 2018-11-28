@@ -37,8 +37,34 @@ class DemoRestApiTest {
 
             val events = restApi.getEvents(0).await()
 
-            assertEquals(110, events.events.size)
+            assertEquals(8, events.events.size)
 
         }
+    }
+
+    @Test
+    fun testHeats() {
+        
+        runBlocking { 
+            
+            val heats = restApi.getHeats(0, 0).await()
+            
+            assertEquals(8, heats.heats.size)
+            
+        }
+        
+    }
+
+    @Test
+    fun testEntries() {
+
+        runBlocking {
+
+            val entries = restApi.getEntries(0, 0).await()
+
+            assertEquals(61, entries.entries.size)
+
+        }
+
     }
 }

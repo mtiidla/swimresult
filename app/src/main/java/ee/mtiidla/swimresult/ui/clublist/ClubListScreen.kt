@@ -7,6 +7,7 @@ import ee.mtiidla.swimresult.R
 import ee.mtiidla.swimresult.ui.Screen
 import ee.mtiidla.swimresult.util.gone
 import ee.mtiidla.swimresult.util.inflateLayout
+import ee.mtiidla.swimresult.util.setStableIds
 import ee.mtiidla.swimresult.util.visible
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.screen_club_list.*
@@ -21,7 +22,7 @@ class ClubListScreen(context: Context) : Screen, LayoutContainer {
     private val adapter : ClubListAdapter = ClubListAdapter { Timber.d(it.toString())}
 
     init {
-        adapter.setHasStableIds(true)
+        adapter.setStableIds()
         clubListView.adapter = adapter
         clubListView.layoutManager = LinearLayoutManager(context)
     }

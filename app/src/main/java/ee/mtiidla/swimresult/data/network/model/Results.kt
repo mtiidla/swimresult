@@ -19,7 +19,7 @@ data class Results(
             val gender: String,
             val nation: String,
             val medal: Int,
-            val heatinfo: Heatinfo,
+            val heatinfo: HeatInfoNetworkModel,
             val clubtext: String,
             val clubcode: String,
             val athleteid: String,

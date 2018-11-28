@@ -7,7 +7,7 @@ data class AthleteResult(
     val eventid: String,
     val agegroupid: String,
     val medal: Int,
-    val heatinfo: Heatinfo,
+    val heatinfo: HeatInfoNetworkModel,
     val splits: Map<String, String>,
     val entrytime: String,
     val heatid: String,

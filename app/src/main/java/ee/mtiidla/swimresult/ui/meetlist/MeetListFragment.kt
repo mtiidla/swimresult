@@ -37,13 +37,17 @@ class MeetListFragment : ScreenFragment<MeetListScreen>() {
 
         screen.listener = object : Listener {
             override fun onMeetClicked(meet: Meet) {
-                (activity as NavigationActivity).replaceFragment(
-                    newInstance(MeetFragment::class, MeetScreenArgs(meet.id)), true
-                )
+                openMeetScreen(meet)
             }
         }
 
         viewModel.screenState.observe(viewLifecycleOwner, Observer<MeetListState>(screen::render))
+    }
+
+    private fun openMeetScreen(meet: Meet) {
+        (activity as NavigationActivity).replaceFragment(
+            newInstance(MeetFragment::class, MeetScreenArgs(meet.id)), true
+        )
     }
 }
 
