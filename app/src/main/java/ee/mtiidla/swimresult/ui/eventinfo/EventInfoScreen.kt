@@ -1,4 +1,4 @@
-package ee.mtiidla.swimresult.ui.heatlist
+package ee.mtiidla.swimresult.ui.eventinfo
 
 import android.content.Context
 import android.view.ViewGroup
@@ -14,40 +14,40 @@ import ee.mtiidla.swimresult.util.notNull
 import ee.mtiidla.swimresult.util.setStableIds
 import ee.mtiidla.swimresult.util.visible
 import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.screen_heat_list.*
+import kotlinx.android.synthetic.main.screen_event_info.*
 
-class HeatListScreen(context: Context) : Screen,LayoutContainer {
+class EventInfoScreen(context: Context) : Screen,LayoutContainer {
 
-    override val containerView: ViewGroup = inflateLayout(context, R.layout.screen_heat_list)
+    override val containerView: ViewGroup = inflateLayout(context, R.layout.screen_event_info)
 
     override fun getRootView(): ViewGroup = containerView
 
-    private val adapter = HeatListAdapter()
+    private val adapter = EventInfoAdapter()
 
     init {
         adapter.setStableIds()
-        heatListView.adapter = adapter
-        heatListView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        PagerSnapHelper().attachToRecyclerView(heatListView)
+        eventInfoListView.adapter = adapter
+        eventInfoListView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        PagerSnapHelper().attachToRecyclerView(eventInfoListView)
     }
 
-    fun render(state: HeatListState) {
+    fun render(state: EventInfoState) {
 
         when (state) {
-            is HeatListState.Loading -> {
-                heatListView.gone()
+            is EventInfoState.Loading -> {
+                eventInfoListView.gone()
                 progressBar.visible()
             }
-            is HeatListState.Data -> {
-                heatListView.visible()
+            is EventInfoState.Data -> {
+                eventInfoListView.visible()
                 progressBar.gone()
 
-                val adapterData = mutableListOf<HeatListData>()
+                val adapterData = mutableListOf<EventInfoData>()
                 state.eventInfo.entries.notNull {
-                    adapterData += HeatListData.EntryListItem(EntryListState.Data(it))
+                    adapterData += EventInfoData.EntryListItem(EntryListState.Data(it))
                 }
                 state.eventInfo.heats.notNull {
-                    adapterData += it.map { heat -> HeatListData.HeatItem(HeatState.Data(heat)) }
+                    adapterData += it.map { heat -> EventInfoData.HeatItem(HeatState.Data(heat)) }
                 }
                 adapter.items = adapterData
             }

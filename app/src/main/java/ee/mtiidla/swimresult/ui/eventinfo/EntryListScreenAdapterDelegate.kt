@@ -1,17 +1,17 @@
-package ee.mtiidla.swimresult.ui.heatlist
+package ee.mtiidla.swimresult.ui.eventinfo
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ee.mtiidla.swimresult.ui.entrylist.EntryListScreen
 import ee.mtiidla.swimresult.util.ViewHolderAdapterDelegate
 
-class EntryListAdapterDelegate :
-    ViewHolderAdapterDelegate<HeatListData.EntryListItem, HeatListData, EntryListAdapterDelegate.EntryListViewHolder>() {
+class EntryListScreenAdapterDelegate :
+    ViewHolderAdapterDelegate<EventInfoData.EntryListItem, EventInfoData, EntryListScreenAdapterDelegate.EntryListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup) = EntryListViewHolder(EntryListScreen(parent.context))
 
     override fun onBindViewHolder(
-        item: HeatListData.EntryListItem,
+        item: EventInfoData.EntryListItem,
         holder: EntryListViewHolder,
         payloads: MutableList<Any>
     ) {
@@ -19,10 +19,10 @@ class EntryListAdapterDelegate :
     }
 
     override fun isForViewType(
-        item: HeatListData,
-        items: MutableList<HeatListData>,
+        item: EventInfoData,
+        items: MutableList<EventInfoData>,
         position: Int
-    ): Boolean = item is HeatListData.EntryListItem
+    ): Boolean = item is EventInfoData.EntryListItem
 
     class EntryListViewHolder(internal val screen: EntryListScreen) :
         RecyclerView.ViewHolder(screen.getRootView()) {
