@@ -1,7 +1,7 @@
 package ee.mtiidla.swimresult.data.network
 
 import com.squareup.moshi.Moshi
-import ee.mtiidla.swimresult.data.network.model.AgeGroup
+import ee.mtiidla.swimresult.data.network.model.AgeGroupsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.AthleteDetails
 import ee.mtiidla.swimresult.data.network.model.AthleteNetworkModel
 import ee.mtiidla.swimresult.data.network.model.ClubNetworkModel
@@ -12,7 +12,7 @@ import ee.mtiidla.swimresult.data.network.model.EventsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.HeatsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.MeetNetworkModel
 import ee.mtiidla.swimresult.data.network.model.MeetsNetworkModel
-import ee.mtiidla.swimresult.data.network.model.Results
+import ee.mtiidla.swimresult.data.network.model.ResultsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.SessionsNetworkModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
@@ -43,10 +43,10 @@ class DemoRestApi @Inject constructor(
     override fun getEventsByStroke(meetId: Long): Deferred<EventsByStroke> =
         getData("eventsByStroke.json")
 
-    override fun getAgegroups(meetId: Long): Deferred<Map<String, AgeGroup>> =
+    override fun getAgegroups(meetId: Long): Deferred<AgeGroupsNetworkModel> =
         getData("agegroups.json")
 
-    override fun getResults(meetId: Long, eventId: Long): Deferred<Results> =
+    override fun getResults(meetId: Long, eventId: Long): Deferred<ResultsNetworkModel> =
         getData("results.json")
 
     override fun getHeats(meetId: Long, eventId: Long): Deferred<HeatsNetworkModel> = getData("heats.json")

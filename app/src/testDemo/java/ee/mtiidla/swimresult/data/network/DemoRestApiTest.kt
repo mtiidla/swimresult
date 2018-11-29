@@ -2,6 +2,7 @@ package ee.mtiidla.swimresult.data.network
 
 import com.squareup.moshi.Moshi
 import ee.mtiidla.swimresult.TestFileDataSource
+import ee.mtiidla.swimresult.data.network.adapter.AgeGroupsJsonMapAdapter
 import ee.mtiidla.swimresult.data.network.adapter.EventsJsonMapAdapter
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
@@ -17,6 +18,7 @@ class DemoRestApiTest {
         restApi = DemoRestApi(
             Moshi.Builder()
                 .add(EventsJsonMapAdapter())
+                .add(AgeGroupsJsonMapAdapter())
                 .build(), TestFileDataSource()
         )
     }
