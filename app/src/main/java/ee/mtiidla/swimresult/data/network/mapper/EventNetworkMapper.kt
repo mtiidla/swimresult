@@ -17,7 +17,7 @@ class EventNetworkMapper @Inject constructor() : NetworkMapper<EventNetworkModel
             gender = mapGender(gender),
             relay = isrelay,
             time = mapTime(time),
-            date = mapDate(date), // TODO: Marko 25.11.2018 not always available
+            date = mapDateSafe(date),
             round = round
         )
     }

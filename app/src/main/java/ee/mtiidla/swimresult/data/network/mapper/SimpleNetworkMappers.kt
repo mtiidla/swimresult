@@ -24,5 +24,7 @@ internal fun mapTime(time: String): LocalTime? = if (time.isBlank()) null else L
 
 internal fun mapDate(date: String): LocalDate = LocalDate.parse(date)
 
+internal fun mapDateSafe(date: String): LocalDate? = if (date.isBlank()) null else LocalDate.parse(date)
+
 internal fun mapUtcDateTime(datetime: String): ZonedDateTime =
     LocalDateTime.parse(datetime).atZone(ZoneOffset.UTC)

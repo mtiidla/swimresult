@@ -8,6 +8,7 @@ import ee.mtiidla.swimresult.R
 import ee.mtiidla.swimresult.ui.Screen
 import ee.mtiidla.swimresult.ui.entrylist.EntryListState
 import ee.mtiidla.swimresult.ui.heat.HeatState
+import ee.mtiidla.swimresult.ui.resultlist.ResultListState
 import ee.mtiidla.swimresult.util.gone
 import ee.mtiidla.swimresult.util.inflateLayout
 import ee.mtiidla.swimresult.util.notNull
@@ -16,7 +17,7 @@ import ee.mtiidla.swimresult.util.visible
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.screen_event_info.*
 
-class EventInfoScreen(context: Context) : Screen,LayoutContainer {
+class EventInfoScreen(context: Context) : Screen, LayoutContainer {
 
     override val containerView: ViewGroup = inflateLayout(context, R.layout.screen_event_info)
 
@@ -27,7 +28,8 @@ class EventInfoScreen(context: Context) : Screen,LayoutContainer {
     init {
         adapter.setStableIds()
         eventInfoListView.adapter = adapter
-        eventInfoListView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        eventInfoListView.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         PagerSnapHelper().attachToRecyclerView(eventInfoListView)
     }
 
@@ -46,13 +48,14 @@ class EventInfoScreen(context: Context) : Screen,LayoutContainer {
                 state.eventInfo.entries.notNull {
                     adapterData += EventInfoData.EntryListItem(EntryListState.Data(it))
                 }
+                state.eventInfo.results.notNull {
+                    adapterData += EventInfoData.ResultListItem(ResultListState.Data(it))
+                }
                 state.eventInfo.heats.notNull {
                     adapterData += it.map { heat -> EventInfoData.HeatItem(HeatState.Data(heat)) }
                 }
                 adapter.items = adapterData
             }
         }
-
     }
-
 }

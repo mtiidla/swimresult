@@ -11,7 +11,7 @@ data class Event(
     val gender: Gender,
     val relay: Boolean,
     val time: LocalTime?,
-    val date: LocalDate,
+    val date: LocalDate?,
     val round: String,
     val status: Int? = null
 )

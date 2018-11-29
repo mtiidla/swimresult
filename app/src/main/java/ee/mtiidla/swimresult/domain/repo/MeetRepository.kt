@@ -8,4 +8,6 @@ class MeetRepository @Inject constructor(private val service: MeetService) {
     fun meetGroups() = service.meets()
 
     fun meet(meetId: Long) = service.meet(meetId)
+
+    fun ageGroups(meetId: Long) = service.ageGroups(meetId)
 }

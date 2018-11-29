@@ -1,6 +1,6 @@
 package ee.mtiidla.swimresult.data.network
 
-import ee.mtiidla.swimresult.data.network.model.AgeGroup
+import ee.mtiidla.swimresult.data.network.model.AgeGroupsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.AthleteDetails
 import ee.mtiidla.swimresult.data.network.model.AthleteNetworkModel
 import ee.mtiidla.swimresult.data.network.model.ClubNetworkModel
@@ -11,7 +11,7 @@ import ee.mtiidla.swimresult.data.network.model.EventsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.HeatsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.MeetNetworkModel
 import ee.mtiidla.swimresult.data.network.model.MeetsNetworkModel
-import ee.mtiidla.swimresult.data.network.model.Results
+import ee.mtiidla.swimresult.data.network.model.ResultsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.SessionsNetworkModel
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
@@ -41,13 +41,13 @@ interface RestApi {
     fun getEventsByStroke(@Path("meetId") meetId: Long): Deferred<EventsByStroke>
 
     @GET("meets/{meetId}/agegroups.dat")
-    fun getAgegroups(@Path("meetId") meetId: Long): Deferred<Map<String, AgeGroup>>
+    fun getAgegroups(@Path("meetId") meetId: Long): Deferred<AgeGroupsNetworkModel>
 
     @GET("meets/{meetId}/results/{eventId}.dat")
     fun getResults(
         @Path("meetId") meetId: Long,
         @Path("eventId") eventId: Long
-    ): Deferred<Results>
+    ): Deferred<ResultsNetworkModel>
 
     @GET("meets/{meetId}/heats/{eventId}.dat")
     fun getHeats(

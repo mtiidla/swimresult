@@ -16,7 +16,7 @@ class EntryListScreen(context: Context) : Screen, LayoutContainer {
 
     override fun getRootView(): ViewGroup = containerView
 
-    private val adapter = EntryAdapter()
+    private val adapter = EntryListAdapter()
 
     init {
         adapter.setStableIds()

@@ -12,4 +12,6 @@ class EventRepository @Inject constructor(private val service: EventService) {
     fun entries(meetId: Long, eventId: Long) = service.entries(meetId, eventId)
 
     fun heats(meetId: Long, eventId: Long) = service.heats(meetId, eventId)
+
+    fun results(meetId: Long, eventId: Long) = service.results(meetId, eventId)
 }

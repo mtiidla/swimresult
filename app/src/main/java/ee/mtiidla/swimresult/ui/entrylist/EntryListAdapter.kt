@@ -3,7 +3,7 @@ package ee.mtiidla.swimresult.ui.entrylist
 import com.hannesdorfmann.adapterdelegates4.AsyncListDifferDelegationAdapter
 import ee.mtiidla.swimresult.util.IdEqualsDiffCallback
 
-class EntryAdapter :
+class EntryListAdapter :
     AsyncListDifferDelegationAdapter<EntryListData>(
         IdEqualsDiffCallback<EntryListData>(
             EntryListData::id

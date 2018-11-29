@@ -9,6 +9,7 @@ class EventInfoAdapter :
     init {
         delegatesManager.addDelegate(HeatScreenAdapterDelegate())
         delegatesManager.addDelegate(EntryListScreenAdapterDelegate())
+        delegatesManager.addDelegate(ResultListScreenAdapterDelegate())
     }
 
     override fun getItemId(position: Int): Long {

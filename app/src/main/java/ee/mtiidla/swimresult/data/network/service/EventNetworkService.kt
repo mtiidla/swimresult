@@ -1,10 +1,12 @@
 package ee.mtiidla.swimresult.data.network.service
 
 import ee.mtiidla.swimresult.data.network.RestApi
+import ee.mtiidla.swimresult.data.network.mapper.AgeGroupResultNetworkMapper
 import ee.mtiidla.swimresult.data.network.mapper.EntryNetworkMapper
 import ee.mtiidla.swimresult.data.network.mapper.EventNetworkMapper
 import ee.mtiidla.swimresult.data.network.mapper.HeatNetworkMapper
 import ee.mtiidla.swimresult.data.network.mapper.SessionNetworkMapper
+import ee.mtiidla.swimresult.domain.model.AgeGroupResults
 import ee.mtiidla.swimresult.domain.model.Entry
 import ee.mtiidla.swimresult.domain.model.Event
 import ee.mtiidla.swimresult.domain.model.Heat
@@ -21,7 +23,8 @@ class EventNetworkService @Inject constructor(
     private val eventMapper: EventNetworkMapper,
     private val sessionMapper: SessionNetworkMapper,
     private val entryMapper: EntryNetworkMapper,
-    private val heatMapper: HeatNetworkMapper
+    private val heatMapper: HeatNetworkMapper,
+    private val resultMapper: AgeGroupResultNetworkMapper
 ) : EventService {
 
     override fun events(meetId: Long): Deferred<List<Event>> =
@@ -54,5 +57,13 @@ class EventNetworkService @Inject constructor(
             val heats = restApi.getHeats(meetId, eventId).await()
 
             return@async heatMapper.map(heats.heats)
+        }
+
+    override fun results(meetId: Long, eventId: Long): Deferred<List<AgeGroupResults>> =
+        CoroutineScope(Dispatchers.IO).async {
+
+            val results = restApi.getResults(meetId, eventId).await()
+
+            return@async resultMapper.map(results.agegroups)
         }
 }
