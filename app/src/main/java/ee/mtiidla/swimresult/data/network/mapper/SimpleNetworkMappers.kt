@@ -20,7 +20,7 @@ internal fun mapHeatInfo(heatInfo: HeatInfoNetworkModel) = with(heatInfo) {
     HeatInfo(key, code)
 }
 
-internal fun mapTime(time: String): LocalTime = LocalTime.parse(time)
+internal fun mapTime(time: String): LocalTime? = if (time.isBlank()) null else LocalTime.parse(time)
 
 internal fun mapDate(date: String): LocalDate = LocalDate.parse(date)
 

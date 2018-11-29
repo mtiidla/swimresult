@@ -6,8 +6,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import ee.mtiidla.swimresult.R
 import ee.mtiidla.swimresult.ui.Screen
+import ee.mtiidla.swimresult.ui.entrylist.EntryListState
+import ee.mtiidla.swimresult.ui.heat.HeatState
 import ee.mtiidla.swimresult.util.gone
 import ee.mtiidla.swimresult.util.inflateLayout
+import ee.mtiidla.swimresult.util.notNull
 import ee.mtiidla.swimresult.util.setStableIds
 import ee.mtiidla.swimresult.util.visible
 import kotlinx.android.extensions.LayoutContainer
@@ -39,7 +42,14 @@ class HeatListScreen(context: Context) : Screen,LayoutContainer {
                 heatListView.visible()
                 progressBar.gone()
 
-                adapter.items = state.heats.map { HeatListData.HeatItem(it) }
+                val adapterData = mutableListOf<HeatListData>()
+                state.eventInfo.entries.notNull {
+                    adapterData += HeatListData.EntryListItem(EntryListState.Data(it))
+                }
+                state.eventInfo.heats.notNull {
+                    adapterData += it.map { heat -> HeatListData.HeatItem(HeatState.Data(heat)) }
+                }
+                adapter.items = adapterData
             }
         }
 

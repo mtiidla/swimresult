@@ -10,7 +10,7 @@ data class Event(
     val distance: String?,
     val gender: Gender,
     val relay: Boolean,
-    val time: LocalTime,
+    val time: LocalTime?,
     val date: LocalDate,
     val round: String,
     val status: Int? = null

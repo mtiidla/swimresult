@@ -6,7 +6,7 @@ import org.threeten.bp.LocalTime
 data class Session(
     val name: String,
     val day: Int,
-    val time: LocalTime,
+    val time: LocalTime?,
     val date: LocalDate,
     val number: Int,
     val course: Course,

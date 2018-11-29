@@ -7,6 +7,6 @@ data class Heat(
     val heatInfo: HeatInfo,
     val status: Int,
     val entries: List<Entry>,
-    val time: LocalTime,
+    val time: LocalTime?,
     val code: String
 )

@@ -3,6 +3,7 @@ package ee.mtiidla.swimresult.ui.event
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import ee.mtiidla.swimresult.domain.model.EventInfo
 import ee.mtiidla.swimresult.domain.repo.EventRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -38,11 +39,7 @@ class EventViewModel @Inject constructor(
             val entries = eventRepository.entries(meetId, eventId).await()
             val heats = eventRepository.heats(meetId, eventId).await()
 
-            if (heats.isEmpty()) {
-                viewState.value = EventState.Data.Empty(event)
-            } else {
-                viewState.value = EventState.Data.Heats(event, heats)
-            }
+            viewState.value = EventState.Data(EventInfo(event, entries, heats))
 
         }
     }

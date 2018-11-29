@@ -8,6 +8,7 @@ class HeatListAdapter :
 
     init {
         delegatesManager.addDelegate(HeatAdapterDelegate())
+        delegatesManager.addDelegate(EntryListAdapterDelegate())
     }
 
     override fun getItemId(position: Int): Long {
