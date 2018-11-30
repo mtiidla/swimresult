@@ -8,7 +8,7 @@ data class ClubResults(
     val lastupdate: String,
     val id: String,
     val entries: List<Any>,
-    val athletes: List<ClubAthlete>,
+    val athletes: List<ClubAthleteNetworkModel>,
     val swrid: String,
     val name: String,
     val code: String
