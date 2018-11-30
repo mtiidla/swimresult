@@ -1,6 +1,7 @@
 package ee.mtiidla.swimresult.data.network.mapper
 
 import ee.mtiidla.swimresult.data.network.model.EntryNetworkModel
+import ee.mtiidla.swimresult.domain.model.Competitor
 import ee.mtiidla.swimresult.domain.model.Entry
 import javax.inject.Inject
 
@@ -17,7 +18,7 @@ class EntryNetworkMapper @Inject constructor(private val clubAthleteMapper: Club
                         place = place,
                         status = status,
                         entryStatus = entrystatus,
-                        entrant = Entry.Entrant.AthleteEntry(
+                        competitor = Competitor.Athlete(
                             athleteId = athleteid.toLong(),
                             athleteName = nametext,
                             gender = mapGender(gender),
@@ -25,7 +26,7 @@ class EntryNetworkMapper @Inject constructor(private val clubAthleteMapper: Club
                             clubId = clubid.toLong(),
                             clubName = clubtext,
                             clubCode = clubcode,
-                            ageText = agetext,
+                            ageGroup = agetext,
                             swrid = swrid
                         )
                     )
@@ -39,7 +40,7 @@ class EntryNetworkMapper @Inject constructor(private val clubAthleteMapper: Club
                         place = place,
                         status = status,
                         entryStatus = entrystatus,
-                        entrant = Entry.Entrant.ClubEntry(
+                        competitor = Competitor.Club(
                             nation = nation,
                             clubId = clubid.toLong(),
                             clubName = nametext,

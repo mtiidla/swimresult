@@ -13,7 +13,8 @@ class ClubAthleteNetworkMapper @Inject constructor() :
             id = id.toLong(),
             swrid = swrid,
             fullName = fullname,
-            gender = whenNotNull(gender) { mapGender(it) }
+            gender = whenNotNull(gender) { mapGender(it) },
+            swimTime = swimtime
         )
     }
 }

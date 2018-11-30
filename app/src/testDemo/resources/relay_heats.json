@@ -1,0 +1,250 @@
+{
+  "status": 5,
+  "lastupdate": "2018-11-26T10:06:04",
+  "heats": [
+    {
+      "heatinfo": {
+        "key": "H",
+        "code": "1"
+      },
+      "status": 4,
+      "id": "15825",
+      "entries": [
+        {
+          "nation": "EST",
+          "clubtext": "",
+          "clubcode": "MYFIT",
+          "entrytime": "NT",
+          "teamnumber": "2",
+          "agetext": "",
+          "athletes": [
+            {
+              "fullname": "Markus Arm",
+              "id": "12492",
+              "swrid": "4996380"
+            },
+            {
+              "fullname": "Sandra Tammiste",
+              "id": "12499",
+              "swrid": "4987565"
+            },
+            {
+              "fullname": "Rain Rasmus Lookene",
+              "id": "12520",
+              "swrid": "5160794"
+            },
+            {
+              "fullname": "Meril Arndt",
+              "id": "12458",
+              "swrid": "4948872"
+            }
+          ],
+          "lane": 1,
+          "clubid": "12444",
+          "nametext": "MyFitness 2"
+        },
+        {
+          "nation": "EST",
+          "clubtext": "",
+          "clubcode": "JAERSK",
+          "entrytime": "2:01.00",
+          "teamnumber": "2",
+          "agetext": "",
+          "athletes": [
+            {
+              "fullname": "Alina Tuntsik",
+              "id": "12082",
+              "swrid": "4996419"
+            },
+            {
+              "fullname": "Janely Havi",
+              "id": "12072",
+              "swrid": "5024684"
+            },
+            {
+              "fullname": "Aleksandr Amosenkov",
+              "id": "12040",
+              "swrid": "4948880"
+            },
+            {
+              "fullname": "Mark Tretjakov",
+              "id": "12048",
+              "swrid": "5025046"
+            }
+          ],
+          "lane": 2,
+          "clubid": "12032",
+          "nametext": "J\u00e4rveotsa SK 2"
+        },
+        {
+          "nation": "EST",
+          "clubtext": "",
+          "clubcode": "BRIIS",
+          "entrytime": "1:57.50",
+          "teamnumber": "2",
+          "agetext": "",
+          "athletes": [
+            {
+              "fullname": "Teodor Juko Hiiemaa",
+              "id": "13821",
+              "swrid": "4948932"
+            },
+            {
+              "fullname": "Melissa Priidel",
+              "id": "13757",
+              "swrid": "4855248"
+            },
+            {
+              "fullname": "Uku Paerismaa",
+              "id": "13705",
+              "swrid": "4948933"
+            },
+            {
+              "fullname": "Tiina-Britt Kaljuvald",
+              "id": "13794",
+              "swrid": "5024657"
+            }
+          ],
+          "lane": 3,
+          "clubid": "13704",
+          "nametext": "Ujumisklubi Briis 2"
+        },
+        {
+          "nation": "EST",
+          "clubtext": "",
+          "clubcode": "USK",
+          "entrytime": "1:54.54",
+          "teamnumber": "2",
+          "agetext": "",
+          "athletes": [
+            {
+              "fullname": "Alex Ahtiainen",
+              "id": "13502",
+              "swrid": "4948921"
+            },
+            {
+              "fullname": "Ida Tuule Jogi",
+              "id": "13495",
+              "swrid": "4996444"
+            },
+            {
+              "fullname": "Karl-Johannes Visnapuu",
+              "id": "13467",
+              "swrid": "4996438"
+            },
+            {
+              "fullname": "Getriin Marii Lessing",
+              "id": "13435",
+              "swrid": "4924505"
+            }
+          ],
+          "lane": 4,
+          "clubid": "13401",
+          "nametext": "Ujumise Spordiklubi 2"
+        },
+        {
+          "nation": "EST",
+          "clubtext": "",
+          "clubcode": "AKTIIV",
+          "entrytime": "1:57.00",
+          "teamnumber": "2",
+          "agetext": "",
+          "athletes": [
+            {
+              "fullname": "Emilia Trotsenko",
+              "id": "13689",
+              "swrid": "5025656"
+            },
+            {
+              "fullname": "Ilja Rozenkov",
+              "id": "13644",
+              "swrid": "5025653"
+            },
+            {
+              "fullname": "Konstantin Varkki",
+              "id": "13635",
+              "swrid": "5025658"
+            },
+            {
+              "fullname": "Sofja Krivorukova",
+              "id": "13674",
+              "swrid": "4948928"
+            }
+          ],
+          "lane": 5,
+          "clubid": "13629",
+          "nametext": "Ujumisklubi Aktiiv 2"
+        },
+        {
+          "nation": "EST",
+          "clubtext": "",
+          "clubcode": "AUD",
+          "entrytime": "1:59.00",
+          "teamnumber": "2",
+          "agetext": "",
+          "athletes": [
+            {
+              "fullname": "Aleksander Roosimaa",
+              "id": "11906",
+              "swrid": "4948876"
+            },
+            {
+              "fullname": "Gregory Kask",
+              "id": "11844",
+              "swrid": "4987527"
+            },
+            {
+              "fullname": "Diana Kornet",
+              "id": "11936",
+              "swrid": "5024744"
+            },
+            {
+              "fullname": "Laurika Lint",
+              "id": "11839",
+              "swrid": "4912388"
+            }
+          ],
+          "lane": 6,
+          "clubid": "11828",
+          "nametext": "Audentese Spordiklubi 2"
+        },
+        {
+          "nation": "EST",
+          "clubtext": "",
+          "clubcode": "TOP",
+          "entrytime": "4:14.00",
+          "teamnumber": "2",
+          "agetext": "",
+          "athletes": [
+            {
+              "fullname": "Hanna Grete Vutt",
+              "id": "13324",
+              "swrid": "4987586"
+            },
+            {
+              "fullname": "Mark Sovtsa",
+              "id": "13176",
+              "swrid": "4942411"
+            },
+            {
+              "fullname": "Kaspar Helde",
+              "id": "13188",
+              "swrid": "4995719"
+            },
+            {
+              "fullname": "Elisabet Maetlik",
+              "id": "13291",
+              "swrid": "5024748"
+            }
+          ],
+          "lane": 7,
+          "clubid": "13175",
+          "nametext": "TOPi Ujumisklubi 2"
+        }
+      ],
+      "time": "19:25",
+      "code": "1"
+    }
+  ],
+  "id": "1437"
+}

@@ -5,7 +5,7 @@ import ee.mtiidla.swimresult.domain.model.Result
 
 sealed class ResultListData(val id: Long) {
 
-    data class ResultItem(val result : Result) : ResultListData(result.athleteId)
+    data class ResultItem(val result : Result) : ResultListData(result.competitor.id)
 
     data class AgeGroupItem(val ageGroup: AgeGroup) : ResultListData(ageGroup.hashCode().toLong())
 

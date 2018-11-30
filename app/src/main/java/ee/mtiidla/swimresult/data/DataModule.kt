@@ -6,8 +6,9 @@ import dagger.Module
 import dagger.Provides
 import ee.mtiidla.swimresult.data.network.NetworkModule
 import ee.mtiidla.swimresult.data.network.adapter.AgeGroupsJsonMapAdapter
-import ee.mtiidla.swimresult.data.network.adapter.EventsJsonMapAdapter
 import ee.mtiidla.swimresult.data.network.adapter.EntryJsonParentAdapter
+import ee.mtiidla.swimresult.data.network.adapter.EventsJsonMapAdapter
+import ee.mtiidla.swimresult.data.network.adapter.ResultJsonParentAdapter
 import ee.mtiidla.swimresult.data.network.service.AthleteNetworkService
 import ee.mtiidla.swimresult.data.network.service.EventNetworkService
 import ee.mtiidla.swimresult.data.network.service.MeetNetworkService
@@ -39,6 +40,7 @@ abstract class DataModule {
                 .add(EventsJsonMapAdapter())
                 .add(AgeGroupsJsonMapAdapter())
                 .add(EntryJsonParentAdapter())
+                .add(ResultJsonParentAdapter())
                 .build()
         }
     }

@@ -4,5 +4,6 @@ data class ClubAthlete(
     val swrid: String?,
     val id: Long,
     val fullName: String,
-    val gender: Gender?
+    val gender: Gender?,
+    val swimTime: String?
 )

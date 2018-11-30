@@ -7,5 +7,6 @@ data class ClubAthleteNetworkModel(
     val id: String,
     val gender: String?,
     val fullname: String,
-    val swrid: String?
+    val swrid: String?,
+    val swimtime: String?
 )
