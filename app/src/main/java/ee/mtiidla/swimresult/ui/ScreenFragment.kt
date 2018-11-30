@@ -14,6 +14,8 @@ abstract class ScreenFragment<T : Screen> : Fragment() {
 
     lateinit var screen: T
 
+    abstract fun createScreen(context: Context): T
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,10 +25,9 @@ abstract class ScreenFragment<T : Screen> : Fragment() {
         return screen.getRootView()
     }
 
-    abstract fun createScreen(context: Context): T
-
     companion object {
 
+        // TODO: Marko 30.11.2018 enforce match of screen and screenargs via generic type?
         inline fun <F : Fragment, reified T : Parcelable> newInstance(
             fragmentClass: KClass<F>,
             screenArg: T

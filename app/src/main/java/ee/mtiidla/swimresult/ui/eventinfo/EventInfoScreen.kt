@@ -13,6 +13,7 @@ import ee.mtiidla.swimresult.util.gone
 import ee.mtiidla.swimresult.util.inflateLayout
 import ee.mtiidla.swimresult.util.notNull
 import ee.mtiidla.swimresult.util.setStableIds
+import ee.mtiidla.swimresult.util.setupWithRecyclerView
 import ee.mtiidla.swimresult.util.visible
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.screen_event_info.*
@@ -28,9 +29,12 @@ class EventInfoScreen(context: Context) : Screen, LayoutContainer {
     init {
         adapter.setStableIds()
         eventInfoListView.adapter = adapter
-        eventInfoListView.layoutManager =
+        val linearLayoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        eventInfoListView.layoutManager =
+            linearLayoutManager
         PagerSnapHelper().attachToRecyclerView(eventInfoListView)
+        eventInfoTabView.setupWithRecyclerView(eventInfoListView)
     }
 
     fun render(state: EventInfoState) {
@@ -44,18 +48,35 @@ class EventInfoScreen(context: Context) : Screen, LayoutContainer {
                 eventInfoListView.visible()
                 progressBar.gone()
 
+                val tabs = mutableListOf<String>()
                 val adapterData = mutableListOf<EventInfoData>()
                 state.eventInfo.entries.notNull {
+                    tabs += "Entries"
                     adapterData += EventInfoData.EntryListItem(EntryListState.Data(it))
                 }
                 state.eventInfo.results.notNull {
+                    tabs += "Results"
                     adapterData += EventInfoData.ResultListItem(ResultListState.Data(it))
                 }
                 state.eventInfo.heats.notNull {
-                    adapterData += it.map { heat -> EventInfoData.HeatItem(HeatState.Data(heat)) }
+                    it.forEach { heat ->
+                        tabs += "Heat ${heat.code}"
+                        adapterData += EventInfoData.HeatItem(HeatState.Data(heat))
+                    }
                 }
                 adapter.items = adapterData
+                renderTabs(tabs)
             }
+        }
+    }
+
+    private fun renderTabs(tabs: List<String>) {
+
+        eventInfoTabView.removeAllTabs()
+        tabs.forEach {
+            val tab = eventInfoTabView.newTab()
+            tab.text = it
+            eventInfoTabView.addTab(tab)
         }
     }
 }

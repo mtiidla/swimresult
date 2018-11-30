@@ -9,8 +9,14 @@ import ee.mtiidla.swimresult.util.ViewHolderAdapterDelegate
 class ResultListScreenAdapterDelegate :
     ViewHolderAdapterDelegate<ResultListItem, EventInfoData, ResultListScreenAdapterDelegate.ResultListViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup) =
-        ResultListViewHolder(ResultListScreen(parent.context))
+    override fun onCreateViewHolder(parent: ViewGroup): ResultListViewHolder {
+        val screen = ResultListScreen(parent.context)
+        screen.getRootView().layoutParams = RecyclerView.LayoutParams(
+            RecyclerView.LayoutParams.MATCH_PARENT,
+            RecyclerView.LayoutParams.MATCH_PARENT
+        )
+        return ResultListViewHolder(screen)
+    }
 
     override fun onBindViewHolder(
         item: ResultListItem,
@@ -27,11 +33,5 @@ class ResultListScreenAdapterDelegate :
     ): Boolean = item is ResultListItem
 
     class ResultListViewHolder(internal val screen: ResultListScreen) :
-        RecyclerView.ViewHolder(screen.getRootView()) {
-        init {
-            val windowWidth = 1080 // TODO: Marko 27.11.2018 real window width
-            itemView.layoutParams =
-                RecyclerView.LayoutParams(windowWidth, RecyclerView.LayoutParams.MATCH_PARENT)
-        }
-    }
+        RecyclerView.ViewHolder(screen.getRootView())
 }

@@ -8,7 +8,14 @@ import ee.mtiidla.swimresult.util.ViewHolderAdapterDelegate
 class EntryListScreenAdapterDelegate :
     ViewHolderAdapterDelegate<EventInfoData.EntryListItem, EventInfoData, EntryListScreenAdapterDelegate.EntryListViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup) = EntryListViewHolder(EntryListScreen(parent.context))
+    override fun onCreateViewHolder(parent: ViewGroup): EntryListViewHolder {
+        val screen = EntryListScreen(parent.context)
+        screen.getRootView().layoutParams = RecyclerView.LayoutParams(
+            RecyclerView.LayoutParams.MATCH_PARENT,
+            RecyclerView.LayoutParams.MATCH_PARENT
+        )
+        return EntryListViewHolder(screen)
+    }
 
     override fun onBindViewHolder(
         item: EventInfoData.EntryListItem,
@@ -25,10 +32,5 @@ class EntryListScreenAdapterDelegate :
     ): Boolean = item is EventInfoData.EntryListItem
 
     class EntryListViewHolder(internal val screen: EntryListScreen) :
-        RecyclerView.ViewHolder(screen.getRootView()) {
-        init {
-            val windowWidth = 1080 // TODO: Marko 27.11.2018 real window width
-            itemView.layoutParams = RecyclerView.LayoutParams(windowWidth, RecyclerView.LayoutParams.MATCH_PARENT)
-        }
-    }
+        RecyclerView.ViewHolder(screen.getRootView())
 }
