@@ -63,7 +63,11 @@ class MeetFragment : ScreenFragment<MeetScreen>() {
                 else -> throw IllegalArgumentException("Unknown menu item $it")
             }
         }
-        meetNavigationView.selectedItemId = R.id.menu_events
+        if (childFragmentManager.findFragmentById(R.id.meetScreenContainer) == null) {
+            meetNavigationView.selectedItemId = R.id.menu_events
+        }
+        // disable selecting same navigation item again, only after the initial item is selected
+        meetNavigationView.setOnNavigationItemReselectedListener { }
     }
 
     private fun replaceChildFragment(fragment: Fragment) {
