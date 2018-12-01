@@ -34,19 +34,18 @@ class EventViewModel @Inject constructor(
             val eventId = screenArgs.eventId
 
             viewState.value = EventState.Loading
-            val event =
-                eventRepository.events(meetId).await().firstOrNull { it.id == eventId }
-                    ?: throw NullPointerException("Event not found $eventId")
 
-            val ageGroups = meetRepository.ageGroups(meetId).await()
+            val event = eventRepository.events(meetId)
+            val ageGroups = meetRepository.ageGroups(meetId)
+            val entries = eventRepository.entries(meetId, eventId)
+            val heats = eventRepository.heats(meetId, eventId)
+            val results = eventRepository.results(meetId, eventId)
 
-            val entries = eventRepository.entries(meetId, eventId).await()
-            val heats = eventRepository.heats(meetId, eventId).await()
-            val results = eventRepository.results(meetId, eventId).await()
             val ageGroupResults =
-                results.map { it.copy(ageGroup = ageGroups.firstOrNull { ageGroup -> it.id == ageGroup.id }) }
+                results.await().map { it.copy(ageGroup = ageGroups.await().firstOrNull { ageGroup -> it.id == ageGroup.id }) }
 
-            viewState.value = EventState.Data(EventInfo(event, entries, heats, ageGroupResults))
+            viewState.value = EventState.Data(EventInfo(event.await().firstOrNull { it.id == eventId }
+                ?: throw NullPointerException("Event not found $eventId"), entries.await(), heats.await(), ageGroupResults))
 
         }
     }

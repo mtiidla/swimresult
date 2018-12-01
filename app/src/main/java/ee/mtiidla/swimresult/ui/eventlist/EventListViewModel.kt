@@ -31,12 +31,12 @@ class EventListViewModel @Inject constructor(
 
             viewState.value = EventListState.Loading
             // TODO: Marko 26.11.2018 check if they run in parallel
-            val events = eventRepository.events(screenArgs.meetId).await()
-            val sessions = eventRepository.sessions(screenArgs.meetId).await()
+            val events = eventRepository.events(screenArgs.meetId)
+            val sessions = eventRepository.sessions(screenArgs.meetId)
 
-            val eventBySession = sessions.associateWith { it.events }.mapValues { entry ->
+            val eventBySession = sessions.await().associateWith { it.events }.mapValues { entry ->
                 entry.value.map { sessionEvent ->
-                    events.firstOrNull { sessionEvent.id == it.id }?.copy(status = sessionEvent.status)
+                    events.await().firstOrNull { sessionEvent.id == it.id }?.copy(status = sessionEvent.status)
                         ?: throw NullPointerException("Session event $sessionEvent not present in events: $events ")
                 }
             }
