@@ -1,8 +1,5 @@
 package ee.mtiidla.swimresult.domain.model
 
-import com.squareup.moshi.JsonClass
-
-@JsonClass(generateAdapter = true)
 data class EntrySummary(
     val eventId: Long,
     val heatId: Long,

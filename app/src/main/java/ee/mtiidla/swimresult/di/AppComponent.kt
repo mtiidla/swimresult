@@ -5,6 +5,7 @@ import dagger.BindsInstance
 import dagger.Component
 import ee.mtiidla.swimresult.NavigationActivity
 import ee.mtiidla.swimresult.SwimApplication
+import ee.mtiidla.swimresult.ui.athlete.AthleteComponent
 import ee.mtiidla.swimresult.ui.event.EventComponent
 import ee.mtiidla.swimresult.ui.meet.MeetComponent
 import ee.mtiidla.swimresult.ui.meetlist.MeetListFragment
@@ -22,6 +23,8 @@ interface AppComponent {
     fun meet() : MeetComponent.Builder
 
     fun event() : EventComponent.Builder
+
+    fun athlete() : AthleteComponent.Builder
 
     @Component.Builder
     interface Builder {

@@ -16,7 +16,7 @@ abstract class ScreenFragment<T : Screen> : Fragment() {
 
     abstract fun createScreen(context: Context): T
 
-    override fun onCreateView(
+    final override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?

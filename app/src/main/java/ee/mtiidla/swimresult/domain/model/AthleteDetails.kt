@@ -4,7 +4,7 @@ import org.threeten.bp.LocalDate
 
 data class AthleteDetails (
     val id: Long,
-    val swrid: String,
+    val swrid: String?,
     val fullName: String,
     val gender: Gender,
     val nation: String,

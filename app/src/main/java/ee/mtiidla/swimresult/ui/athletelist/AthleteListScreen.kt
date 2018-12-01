@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import ee.mtiidla.swimresult.R
+import ee.mtiidla.swimresult.domain.model.Athlete
 import ee.mtiidla.swimresult.ui.Screen
 import ee.mtiidla.swimresult.util.gone
 import ee.mtiidla.swimresult.util.inflateLayout
@@ -11,7 +12,6 @@ import ee.mtiidla.swimresult.util.setStableIds
 import ee.mtiidla.swimresult.util.visible
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.screen_athlete_list.*
-import timber.log.Timber
 
 class AthleteListScreen(context: Context) : Screen, LayoutContainer {
 
@@ -19,7 +19,9 @@ class AthleteListScreen(context: Context) : Screen, LayoutContainer {
 
     override fun getRootView(): ViewGroup = containerView
 
-    private val adapter : AthleteListAdapter = AthleteListAdapter { Timber.d(it.toString())}
+    private val adapter : AthleteListAdapter = AthleteListAdapter { listener.onAthleteClicked(it) }
+
+    lateinit var listener: Listener
 
     init {
         adapter.setStableIds()
@@ -41,5 +43,10 @@ class AthleteListScreen(context: Context) : Screen, LayoutContainer {
             }
             is AthleteListState.Error -> TODO("Implement")
         }
+    }
+
+    interface Listener {
+
+        fun onAthleteClicked(athlete: Athlete)
     }
 }

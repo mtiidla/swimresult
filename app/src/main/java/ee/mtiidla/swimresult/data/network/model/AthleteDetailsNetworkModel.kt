@@ -5,7 +5,7 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class AthleteDetailsNetworkModel(
     val id: String,
-    val swrid: String,
+    val swrid: String?,
     val fullname: String,
     val gender: String,
     val nation: String,

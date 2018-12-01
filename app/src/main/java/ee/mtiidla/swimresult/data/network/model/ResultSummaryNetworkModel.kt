@@ -6,7 +6,7 @@ import com.squareup.moshi.JsonClass
 data class ResultSummaryNetworkModel(
     val eventid: String,
     val agegroupid: String,
-    val medal: Int,
+    val medal: Int?,
     val heatinfo: HeatInfoNetworkModel,
     val splits: Map<String, String>?,
     val entrytime: String,

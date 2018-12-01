@@ -1,6 +1,6 @@
 package ee.mtiidla.swimresult.domain.model
 
-class ResultSummary (
+data class ResultSummary (
     val eventId: Long,
     val ageGroupId: Long,
     val medal: Int?,
