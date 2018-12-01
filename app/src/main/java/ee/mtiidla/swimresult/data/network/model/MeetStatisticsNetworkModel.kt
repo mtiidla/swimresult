@@ -3,8 +3,8 @@ package ee.mtiidla.swimresult.data.network.model
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class MeetStatistics(
-    val relays: Int,
+data class MeetStatisticsNetworkModel(
+    val athletes: Int,
     val entries: Int,
-    val athletes: Int
+    val relays: Int
 )

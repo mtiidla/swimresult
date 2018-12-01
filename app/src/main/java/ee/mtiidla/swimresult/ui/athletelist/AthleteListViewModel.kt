@@ -3,7 +3,7 @@ package ee.mtiidla.swimresult.ui.athletelist
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ee.mtiidla.swimresult.domain.repo.AthleteRepository
+import ee.mtiidla.swimresult.domain.repo.CompetitorRepository
 import ee.mtiidla.swimresult.ui.meet.MeetScreenArgs
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -13,7 +13,7 @@ import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
 class AthleteListViewModel @Inject constructor(
-    private val athleteRepository: AthleteRepository,
+    private val competitorRepository: CompetitorRepository,
     screenArgs: MeetScreenArgs
 ) : ViewModel(), CoroutineScope {
 
@@ -30,7 +30,7 @@ class AthleteListViewModel @Inject constructor(
         job = launch {
 
             viewState.value = AthleteListState.Loading
-            val athletes = athleteRepository.athletes(screenArgs.meetId).await()
+            val athletes = competitorRepository.athletes(screenArgs.meetId).await()
             viewState.value = AthleteListState.Data(athletes.sortedBy { it.fullname })
 
         }

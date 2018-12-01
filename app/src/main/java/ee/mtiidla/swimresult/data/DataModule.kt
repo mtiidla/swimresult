@@ -9,11 +9,11 @@ import ee.mtiidla.swimresult.data.network.adapter.AgeGroupsJsonMapAdapter
 import ee.mtiidla.swimresult.data.network.adapter.EntryJsonParentAdapter
 import ee.mtiidla.swimresult.data.network.adapter.EventsJsonMapAdapter
 import ee.mtiidla.swimresult.data.network.adapter.ResultJsonParentAdapter
-import ee.mtiidla.swimresult.data.network.service.AthleteNetworkService
+import ee.mtiidla.swimresult.data.network.service.CompetitorNetworkService
 import ee.mtiidla.swimresult.data.network.service.EventNetworkService
 import ee.mtiidla.swimresult.data.network.service.MeetNetworkService
 import ee.mtiidla.swimresult.di.ApplicationScope
-import ee.mtiidla.swimresult.domain.service.AthleteService
+import ee.mtiidla.swimresult.domain.service.CompetitorService
 import ee.mtiidla.swimresult.domain.service.EventService
 import ee.mtiidla.swimresult.domain.service.MeetService
 
@@ -27,7 +27,7 @@ abstract class DataModule {
     abstract fun bindEventService(EventService: EventNetworkService): EventService
 
     @Binds
-    abstract fun bindAthleteService(AthleteService: AthleteNetworkService): AthleteService
+    abstract fun bindAthleteService(competitorService: CompetitorNetworkService): CompetitorService
 
     @Module
     companion object {

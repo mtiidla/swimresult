@@ -1,61 +1,136 @@
 {
-  "gender": "2",
-  "nation": "EST",
-  "age": 15,
-  "birthdate": "2004-06-18",
+  "gender": "1",
+  "nation": "CAN",
+  "age": 12,
+  "birthdate": "2006-07-31",
   "results": [
     {
-      "eventid": "10308",
-      "agegroupid": "10325",
-      "medal": 1,
+      "eventid": "16300",
+      "agegroupid": "16301",
       "heatinfo": {
         "key": "H",
-        "code": "1"
+        "code": "3"
       },
       "splits": {
-        "400": "4:30.65  (34.03)",
-        "350": "3:56.62  (34.42)",
-        "300": "3:22.20  (35.18)",
-        "250": "2:47.02  (34.55)",
-        "200": "2:12.47  (34.65)",
-        "150": "1:37.82  (34.44)",
-        "100": "1:03.38  (33.91)",
-        "50": "29.47  (29.47)"
+        "200": "2:45.62  (40.25)",
+        "150": "2:05.37  (43.81)",
+        "100": "1:21.56  (42.30)",
+        "50": "39.26  (39.26)"
       },
-      "entrytime": "4:30.82",
-      "heatid": "10998",
-      "lane": 4,
-      "swimtime": "4:30.65",
+      "entrytime": "2:48.32",
+      "heatid": "23395",
+      "lane": 6,
+      "swimtime": "2:45.62",
       "info": "",
-      "place": 1
+      "diff": "+8.24",
+      "place": 4
     },
     {
-      "eventid": "10304",
-      "agegroupid": "10313",
-      "medal": 1,
+      "eventid": "16304",
+      "agegroupid": "16305",
+      "heatinfo": {
+        "key": "H",
+        "code": "3"
+      },
+      "splits": {
+        "200": "3:24.90  (52.78)",
+        "150": "2:32.12  (52.30)",
+        "100": "1:39.82  (52.49)",
+        "50": "47.33  (47.33)"
+      },
+      "entrytime": "3:32.31",
+      "heatid": "24285",
+      "lane": 2,
+      "swimtime": "3:24.90",
+      "info": "",
+      "diff": "+33.32",
+      "place": 7
+    },
+    {
+      "eventid": "16296",
+      "agegroupid": "16297",
       "heatinfo": {
         "key": "H",
         "code": "1"
       },
       "splits": {
-        "200": "2:24.26  (34.99)",
-        "150": "1:49.27  (42.40)",
-        "100": "1:06.87  (36.63)",
-        "50": "30.24  (30.24)"
+        "100": "1:22.79  (44.32)",
+        "50": "38.47  (38.47)"
       },
-      "entrytime": "2:24.16",
-      "heatid": "10985",
-      "lane": 4,
-      "swimtime": "2:24.26",
+      "entrytime": "1:40.46",
+      "heatid": "23386",
+      "lane": 5,
+      "swimtime": "1:22.79",
       "info": "",
-      "place": 1
+      "diff": "+10.14",
+      "place": 9
     }
   ],
-  "lastupdate": "2018-11-18T10:52:08",
-  "clubname": "Tartu Ujumisklubi",
-  "fullname": "Laura-Liis Valdmaa",
-  "id": "10857",
-  "entries": [],
-  "swrid": "5014098",
-  "clubid": "10330"
+  "lastupdate": "2018-11-30T22:42:51",
+  "clubname": "COBRA Swim Club",
+  "fullname": "Aaron Abanilla",
+  "id": "17097",
+  "entries": [
+    {
+      "eventid": "1805",
+      "heatinfo": {
+        "key": "H",
+        "code": "5"
+      },
+      "entrytime": "32.51",
+      "heatid": "23479",
+      "lane": 5
+    },
+    {
+      "eventid": "2325",
+      "heatinfo": {
+        "key": "H",
+        "code": "6"
+      },
+      "entrytime": "1:09.55",
+      "heatid": "23515",
+      "lane": 7
+    },
+    {
+      "eventid": "1770",
+      "heatinfo": {
+        "key": "H",
+        "code": "5"
+      },
+      "entrytime": "2:41.64",
+      "heatid": "23459",
+      "lane": 2
+    },
+    {
+      "eventid": "1795",
+      "heatinfo": {
+        "key": "H",
+        "code": "6"
+      },
+      "entrytime": "1:16.33",
+      "heatid": "23472",
+      "lane": 3
+    },
+    {
+      "eventid": "2305",
+      "heatinfo": {
+        "key": "H",
+        "code": "5"
+      },
+      "entrytime": "1:39.50",
+      "heatid": "23502",
+      "lane": 6
+    },
+    {
+      "eventid": "2285",
+      "heatinfo": {
+        "key": "H",
+        "code": "5"
+      },
+      "entrytime": "3:00.55",
+      "heatid": "23491",
+      "lane": 3
+    }
+  ],
+  "clubid": "17096"
 }

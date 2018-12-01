@@ -11,7 +11,7 @@ data class MeetDetailNetworkModel(
     val course: String,
     val startdate: String,
     val enddate: String,
-    val statistic: MeetStatistics,
+    val statistic: MeetStatisticsNetworkModel,
     val days: Int,
     val userinfo: String,
     val lastupdate: String,

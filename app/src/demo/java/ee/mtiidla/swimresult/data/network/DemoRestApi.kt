@@ -2,10 +2,10 @@ package ee.mtiidla.swimresult.data.network
 
 import com.squareup.moshi.Moshi
 import ee.mtiidla.swimresult.data.network.model.AgeGroupsNetworkModel
-import ee.mtiidla.swimresult.data.network.model.AthleteDetails
+import ee.mtiidla.swimresult.data.network.model.AthleteDetailsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.AthleteNetworkModel
 import ee.mtiidla.swimresult.data.network.model.ClubNetworkModel
-import ee.mtiidla.swimresult.data.network.model.ClubResults
+import ee.mtiidla.swimresult.data.network.model.ClubDetailsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.EntriesNetworkModel
 import ee.mtiidla.swimresult.data.network.model.EventsByStroke
 import ee.mtiidla.swimresult.data.network.model.EventsNetworkModel
@@ -54,10 +54,10 @@ class DemoRestApi @Inject constructor(
     override fun getEntries(meetId: Long, eventId: Long): Deferred<EntriesNetworkModel> =
         getData("entries.json")
 
-    override fun getAthlete(meetId: Long, athleteId: Long): Deferred<AthleteDetails> =
+    override fun getAthlete(meetId: Long, athleteId: Long): Deferred<AthleteDetailsNetworkModel> =
         getData("athlete.json")
 
-    override fun getClub(meetId: Long, clubId: Long): Deferred<ClubResults> = getData("club.json")
+    override fun getClub(meetId: Long, clubId: Long): Deferred<ClubDetailsNetworkModel> = getData("club.json")
 
     private inline fun <reified T> getData(fileName: String): Deferred<T> {
         return CoroutineScope(Dispatchers.IO).async {

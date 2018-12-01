@@ -1,6 +1,5 @@
 package ee.mtiidla.swimresult.domain.model
 
-import ee.mtiidla.swimresult.data.network.model.MeetStatistics
 import org.threeten.bp.LocalDate
 import org.threeten.bp.ZonedDateTime
 
@@ -15,5 +14,11 @@ data class Meet(
     val endDate: LocalDate,
     val status: Int?,
     val lastUpdate: ZonedDateTime,
-    val statistic: MeetStatistics?
-)
+    val statistic: Statistics?
+) {
+    data class Statistics(
+        val athletes: Int,
+        val entries: Int,
+        val relays: Int
+    )
+}

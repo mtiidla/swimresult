@@ -14,5 +14,5 @@ data class MeetNetworkModel(
     val enddate: String,
     val status: Int?,
     val lastupdate: String,
-    val statistic: MeetStatistics?
+    val statistic: MeetStatisticsNetworkModel?
 )

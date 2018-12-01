@@ -3,16 +3,12 @@ package ee.mtiidla.swimresult.data.network.model
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class AthleteResult(
+data class EntrySummaryNetworkModel(
     val eventid: String,
-    val agegroupid: String,
-    val medal: Int,
-    val heatinfo: HeatInfoNetworkModel,
-    val splits: Map<String, String>,
-    val entrytime: String,
     val heatid: String,
+    val heatinfo: HeatInfoNetworkModel,
+    val entrytime: String,
     val lane: Int,
-    val swimtime: String,
-    val info: String,
-    val place: Int
+    val teamnumber: String?,
+    val athletes: List<ClubAthleteNetworkModel>?
 )

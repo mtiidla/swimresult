@@ -3,7 +3,6 @@ package ee.mtiidla.swimresult.data.network.mapper
 import ee.mtiidla.swimresult.data.network.model.ResultNetworkModel
 import ee.mtiidla.swimresult.domain.model.Competitor
 import ee.mtiidla.swimresult.domain.model.Result
-import ee.mtiidla.swimresult.domain.model.Split
 import ee.mtiidla.swimresult.util.whenNotNull
 import javax.inject.Inject
 
@@ -65,7 +64,4 @@ class ResultNetworkMapper @Inject constructor(private val clubAthleteMapper: Clu
         }
     }
 
-    private fun mapSplits(splits: Map<String, String>?): List<Split>? {
-        return splits?.map { (distance, time) -> Split(distance, time) }
-    }
 }

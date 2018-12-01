@@ -1,10 +1,10 @@
 package ee.mtiidla.swimresult.data.network
 
 import ee.mtiidla.swimresult.data.network.model.AgeGroupsNetworkModel
-import ee.mtiidla.swimresult.data.network.model.AthleteDetails
+import ee.mtiidla.swimresult.data.network.model.AthleteDetailsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.AthleteNetworkModel
 import ee.mtiidla.swimresult.data.network.model.ClubNetworkModel
-import ee.mtiidla.swimresult.data.network.model.ClubResults
+import ee.mtiidla.swimresult.data.network.model.ClubDetailsNetworkModel
 import ee.mtiidla.swimresult.data.network.model.EntriesNetworkModel
 import ee.mtiidla.swimresult.data.network.model.EventsByStroke
 import ee.mtiidla.swimresult.data.network.model.EventsNetworkModel
@@ -65,11 +65,11 @@ interface RestApi {
     fun getAthlete(
         @Path("meetId") meetId: Long,
         @Path("athleteId") athleteId: Long
-    ): Deferred<AthleteDetails>
+    ): Deferred<AthleteDetailsNetworkModel>
 
     @GET("meets/{meetId}/clubs/{clubId}.dat")
     fun getClub(
         @Path("meetId") meetId: Long,
         @Path("clubId") clubId: Long
-    ): Deferred<ClubResults>
+    ): Deferred<ClubDetailsNetworkModel>
 }

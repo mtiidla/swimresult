@@ -1,7 +1,9 @@
 package ee.mtiidla.swimresult.data.network.mapper
 
 import ee.mtiidla.swimresult.data.network.model.MeetNetworkModel
+import ee.mtiidla.swimresult.data.network.model.MeetStatisticsNetworkModel
 import ee.mtiidla.swimresult.domain.model.Meet
+import ee.mtiidla.swimresult.util.whenNotNull
 import javax.inject.Inject
 
 class MeetNetworkMapper @Inject constructor() : NetworkMapper<MeetNetworkModel, Meet> {
@@ -17,7 +19,16 @@ class MeetNetworkMapper @Inject constructor() : NetworkMapper<MeetNetworkModel, 
             course = course,
             status = status,
             lastUpdate = mapUtcDateTime(lastupdate),
-            statistic = null
+            statistic = whenNotNull(statistic) { mapStatistics(it) }
         )
     }
+
+    private fun mapStatistics(item: MeetStatisticsNetworkModel): Meet.Statistics =
+        with(item) {
+            Meet.Statistics(
+                athletes = athletes,
+                entries = entries,
+                relays = relays
+            )
+        }
 }

@@ -3,6 +3,7 @@ package ee.mtiidla.swimresult.data.network.mapper
 import ee.mtiidla.swimresult.data.network.model.HeatInfoNetworkModel
 import ee.mtiidla.swimresult.domain.model.Gender
 import ee.mtiidla.swimresult.domain.model.HeatInfo
+import ee.mtiidla.swimresult.domain.model.Split
 import org.threeten.bp.LocalDate
 import org.threeten.bp.LocalDateTime
 import org.threeten.bp.LocalTime
@@ -18,6 +19,10 @@ internal fun mapGender(gender: String): Gender = when (gender) {
 
 internal fun mapHeatInfo(heatInfo: HeatInfoNetworkModel) = with(heatInfo) {
     HeatInfo(key, code)
+}
+
+internal fun mapSplits(splits: Map<String, String>?): List<Split>? {
+    return splits?.map { (distance, time) -> Split(distance, time) }
 }
 
 internal fun mapTime(time: String): LocalTime? = if (time.isBlank()) null else LocalTime.parse(time)
