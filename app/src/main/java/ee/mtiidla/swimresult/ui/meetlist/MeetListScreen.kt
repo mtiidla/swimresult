@@ -42,7 +42,7 @@ class MeetListScreen(context: Context) : Screen, LayoutContainer {
 
                 val adapterData = mutableListOf<MeetListData>()
                 state.meetGroups.forEach {
-                    adapterData += MeetListData.MeetGroupItem("${it.country.code} - ${it.country.name}")
+                    adapterData += MeetListData.MeetGroupItem(it)
                     adapterData += it.meets.map { meet -> MeetListData.MeetItem(meet) }
                 }
 

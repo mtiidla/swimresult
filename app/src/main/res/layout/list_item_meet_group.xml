@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="@dimen/spacing_16"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="@dimen/spacing_16">
+
+    <ImageView
+        android:id="@+id/meetGroupFlagView"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical" />
 
     <TextView
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
         android:id="@+id/meetGroupTitleView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
 </FrameLayout>
