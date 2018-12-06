@@ -1,17 +1,24 @@
 package ee.mtiidla.swimresult.util
 
 import android.content.Context
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.annotation.LayoutRes
 
 fun View.visible() {
-    visibility = View.VISIBLE
+    if (visibility != View.VISIBLE) {
+        visibility = View.VISIBLE
+    }
 }
 
 fun View.gone() {
-    visibility = View.GONE
+    if (visibility != View.GONE) {
+        visibility = View.GONE
+    }
 }
 
 fun inflateLayout(context: Context, @LayoutRes layoutRes: Int): ViewGroup {
@@ -25,4 +32,18 @@ fun inflateLayout(context: Context, @LayoutRes layoutRes: Int): ViewGroup {
 @Suppress("UNCHECKED_CAST")
 fun <V : View> inflateView(parent: ViewGroup, @LayoutRes layoutRes: Int): V {
     return LayoutInflater.from(parent.context).inflate(layoutRes, parent, false) as V
+}
+
+fun EditText.onTextChanged(f: (String) -> Unit) {
+    addTextChangedListener(object : TextWatcher {
+        override fun afterTextChanged(s: Editable?) {
+        }
+
+        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+        }
+
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            f.invoke(s.toString())
+        }
+    })
 }

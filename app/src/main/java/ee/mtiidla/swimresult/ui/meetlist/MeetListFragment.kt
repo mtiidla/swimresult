@@ -36,6 +36,11 @@ class MeetListFragment : ScreenFragment<MeetListScreen>() {
         super.onViewCreated(view, savedInstanceState)
 
         screen.listener = object : Listener {
+
+            override fun onMeetSearch(query: String) {
+                viewModel.onMeetSearch(query)
+            }
+
             override fun onMeetClicked(meet: Meet) {
                 openMeetScreen(meet)
             }
