@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/spacing_16">
+    android:paddingLeft="@dimen/spacing_16"
+    android:paddingTop="@dimen/spacing_24"
+    android:paddingRight="@dimen/spacing_16"
+    android:paddingBottom="@dimen/spacing_8">
 
     <ImageView
         android:id="@+id/meetGroupFlagView"
@@ -14,7 +18,8 @@
         android:id="@+id/meetGroupTitleView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="48dp"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+        android:layout_marginLeft="42dp"
+        android:textAppearance="@style/TextAppearance.S20"
+        tools:text="Estonia" />
 
 </FrameLayout>
