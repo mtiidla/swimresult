@@ -9,10 +9,10 @@ data class Meet(
     val name: String,
     val nation: String,
     val number: String?,
-    val course: Int,
+    val course: Course,
     val startDate: LocalDate,
     val endDate: LocalDate,
-    val status: Int?,
+    val status: Status?,
     val lastUpdate: ZonedDateTime,
     val statistic: Statistics?
 ) {
@@ -21,4 +21,8 @@ data class Meet(
         val entries: Int,
         val relays: Int
     )
+
+    enum class Status {
+        FINISHED, INVITATION, SEEDED, ONGOING, UNKNOWN
+    }
 }

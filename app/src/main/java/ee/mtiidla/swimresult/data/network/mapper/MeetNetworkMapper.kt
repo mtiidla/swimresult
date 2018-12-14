@@ -16,8 +16,8 @@ class MeetNetworkMapper @Inject constructor() : NetworkMapper<MeetNetworkModel, 
             number = number,
             startDate = mapDate(startdate),
             endDate = mapDate(enddate),
-            course = course,
-            status = status,
+            course = mapCourse(course),
+            status = whenNotNull(status) { mapMeetStatus(it) },
             lastUpdate = mapUtcDateTime(lastupdate),
             statistic = whenNotNull(statistic) { mapStatistics(it) }
         )

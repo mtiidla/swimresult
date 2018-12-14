@@ -9,7 +9,7 @@ data class MeetNetworkModel(
     val name: String,
     val nation: String,
     val number: String?,
-    val course: Int,
+    val course: String,
     val startdate: String,
     val enddate: String,
     val status: Int?,

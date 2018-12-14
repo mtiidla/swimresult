@@ -1,5 +1,5 @@
 package ee.mtiidla.swimresult.domain.model
 
 enum class Gender {
-    MALE, FEMALE, MIX, OTHER
+    MALE, YOUTH_MALE, FEMALE, YOUTH_FEMALE, MIX, ALL, OTHER
 }

@@ -20,10 +20,4 @@ class SessionNetworkMapper @Inject constructor(
             events = eventMapper.map(events)
         )
     }
-
-    private fun mapCourse(course: String): Course = when (course) {
-        "1" -> Course.LCM
-        "2" -> Course.SCM
-        else -> Course.OTHER
-    }
 }
