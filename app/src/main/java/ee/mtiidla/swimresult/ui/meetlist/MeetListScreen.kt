@@ -8,6 +8,7 @@ import ee.mtiidla.swimresult.R
 import ee.mtiidla.swimresult.domain.model.Meet
 import ee.mtiidla.swimresult.ui.Screen
 import ee.mtiidla.swimresult.util.gone
+import ee.mtiidla.swimresult.util.hideKeyboard
 import ee.mtiidla.swimresult.util.inflateLayout
 import ee.mtiidla.swimresult.util.onTextChanged
 import ee.mtiidla.swimresult.util.setStableIds
@@ -30,20 +31,21 @@ class MeetListScreen(context: Context) : Screen, LayoutContainer {
         meetListView.layoutManager = LinearLayoutManager(context)
         meetListView.adapter = adapter
         meetFilterView.onTextChanged { listener.onMeetFilter(it) }
-        meetFilterClearButton.setOnClickListener { meetFilterView.text = null }
+        meetFilterClearButton.setOnClickListener {
+            meetFilterView.text = null
+            meetFilterView.hideKeyboard()
+        }
     }
 
     fun render(state: MeetListState) {
         when (state) {
             is MeetListState.Loading -> {
                 meetFilterView.isEnabled = false
-                meetFilterClearButton.isEnabled = false
                 progressBar.visible()
                 meetListView.gone()
             }
             is MeetListState.Data -> {
                 meetFilterView.isEnabled = true
-                meetFilterClearButton.isEnabled = false
                 meetListView.visible()
                 progressBar.gone()
 
@@ -57,7 +59,6 @@ class MeetListScreen(context: Context) : Screen, LayoutContainer {
             }
             is MeetListState.Filter -> {
                 meetFilterView.isEnabled = true
-                meetFilterClearButton.isEnabled = true
                 meetListView.visible()
                 progressBar.gone()
 
@@ -68,18 +69,18 @@ class MeetListScreen(context: Context) : Screen, LayoutContainer {
         }
     }
 
-    private fun scrollToTopOnNextAdapterChange(recylcerView: RecyclerView) {
-        val adapter = recylcerView.adapter
+    private fun scrollToTopOnNextAdapterChange(recyclerView: RecyclerView) {
+        val adapter = recyclerView.adapter
         adapter?.registerAdapterDataObserver(object : RecyclerView.AdapterDataObserver() {
 
             override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {
                 adapter.unregisterAdapterDataObserver(this)
-                recylcerView.scrollToPosition(0)
+                recyclerView.scrollToPosition(0)
             }
 
             override fun onItemRangeRemoved(positionStart: Int, itemCount: Int) {
                 adapter.unregisterAdapterDataObserver(this)
-                recylcerView.scrollToPosition(0)
+                recyclerView.scrollToPosition(0)
             }
         })
     }
