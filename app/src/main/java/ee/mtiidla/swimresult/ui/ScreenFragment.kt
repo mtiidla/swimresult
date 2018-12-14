@@ -12,7 +12,7 @@ import kotlin.reflect.KClass
 
 abstract class ScreenFragment<T : Screen> : Fragment() {
 
-    lateinit var screen: T
+    private var screen: T? = null
 
     abstract fun createScreen(context: Context): T
 
@@ -22,8 +22,20 @@ abstract class ScreenFragment<T : Screen> : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         screen = createScreen(container!!.context)
-        return screen.getRootView()
+        return screen().getRootView()
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        screen = null
+    }
+
+    /**
+     * The screen instance returned here can safely be used between [onCreateView] and [onDestroyView]
+     *
+     * @throws NullPointerException when used outside of these lifecycle events
+     */
+    fun screen(): T = screen!!
 
     companion object {
 

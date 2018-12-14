@@ -33,6 +33,6 @@ class AthleteFragment : ScreenFragment<AthleteScreen>() {
         super.onViewCreated(view, savedInstanceState)
 
         ViewModelProviders.of(this, viewModelFactory).get(AthleteViewModel::class.java)
-            .screenState.observe(viewLifecycleOwner, Observer<AthleteState>(screen::render))
+            .screenState.observe(viewLifecycleOwner, Observer<AthleteState>(screen()::render))
     }
 }

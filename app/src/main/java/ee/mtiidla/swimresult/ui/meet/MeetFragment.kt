@@ -44,7 +44,7 @@ class MeetFragment : ScreenFragment<MeetScreen>() {
         super.onViewCreated(view, savedInstanceState)
 
         ViewModelProviders.of(this, viewModelFactory).get(MeetViewModel::class.java)
-            .screenState.observe(viewLifecycleOwner, Observer<MeetState>(screen::render))
+            .screenState.observe(viewLifecycleOwner, Observer<MeetState>(screen()::render))
 
         meetNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {

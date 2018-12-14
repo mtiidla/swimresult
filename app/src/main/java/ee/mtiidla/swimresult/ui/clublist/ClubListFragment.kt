@@ -34,14 +34,14 @@ class ClubListFragment : ScreenFragment<ClubListScreen>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        screen.listener = object : ClubListScreen.Listener {
+        screen().listener = object : ClubListScreen.Listener {
             override fun onClubClicked(club: Club) {
                 openClubScreen(club)
             }
         }
 
         ViewModelProviders.of(this, viewModelFactory).get(ClubListViewModel::class.java)
-            .screenState.observe(viewLifecycleOwner, Observer<ClubListState>(screen::render))
+            .screenState.observe(viewLifecycleOwner, Observer<ClubListState>(screen()::render))
     }
 
     private fun openClubScreen(club: Club) {

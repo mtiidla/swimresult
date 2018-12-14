@@ -35,7 +35,7 @@ class MeetListFragment : ScreenFragment<MeetListScreen>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        screen.listener = object : Listener {
+        screen().listener = object : Listener {
 
             override fun onMeetSearch(query: String) {
                 viewModel.onMeetSearch(query)
@@ -46,7 +46,7 @@ class MeetListFragment : ScreenFragment<MeetListScreen>() {
             }
         }
 
-        viewModel.screenState.observe(viewLifecycleOwner, Observer<MeetListState>(screen::render))
+        viewModel.screenState.observe(viewLifecycleOwner, Observer<MeetListState>(screen()::render))
     }
 
     private fun openMeetScreen(meet: Meet) {

@@ -34,7 +34,7 @@ class EventFragment : ScreenFragment<EventScreen>() {
         super.onViewCreated(view, savedInstanceState)
 
         ViewModelProviders.of(this, viewModelFactory).get(EventViewModel::class.java)
-            .screenState.observe(viewLifecycleOwner, Observer<EventState>(screen::render))
+            .screenState.observe(viewLifecycleOwner, Observer<EventState>(screen()::render))
 
     }
 

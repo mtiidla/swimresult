@@ -34,14 +34,14 @@ class EventListFragment : ScreenFragment<EventListScreen>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        screen.listener = object : EventListScreen.Listener {
+        screen().listener = object : EventListScreen.Listener {
             override fun onEventClicked(event: Event) {
                 openEventScreen(event)
             }
         }
 
         ViewModelProviders.of(this, viewModelFactory).get(EventListViewModel::class.java)
-            .screenState.observe(viewLifecycleOwner, Observer<EventListState>(screen::render))
+            .screenState.observe(viewLifecycleOwner, Observer<EventListState>(screen()::render))
     }
 
     private fun openEventScreen(event: Event) {

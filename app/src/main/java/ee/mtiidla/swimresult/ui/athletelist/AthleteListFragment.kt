@@ -34,14 +34,14 @@ class AthleteListFragment : ScreenFragment<AthleteListScreen>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        screen.listener = object: AthleteListScreen.Listener {
+        screen().listener = object: AthleteListScreen.Listener {
             override fun onAthleteClicked(athlete: Athlete) {
                 openAthleteScreen(athlete)
             }
         }
 
         ViewModelProviders.of(this, viewModelFactory).get(AthleteListViewModel::class.java)
-            .screenState.observe(viewLifecycleOwner, Observer<AthleteListState>(screen::render))
+            .screenState.observe(viewLifecycleOwner, Observer<AthleteListState>(screen()::render))
     }
 
     private fun openAthleteScreen(athlete: Athlete) {

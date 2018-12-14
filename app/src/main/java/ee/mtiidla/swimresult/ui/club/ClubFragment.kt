@@ -33,6 +33,6 @@ class ClubFragment : ScreenFragment<ClubScreen>() {
         super.onViewCreated(view, savedInstanceState)
 
         ViewModelProviders.of(this, viewModelFactory).get(ClubViewModel::class.java)
-            .screenState.observe(viewLifecycleOwner, Observer<ClubState>(screen::render))
+            .screenState.observe(viewLifecycleOwner, Observer<ClubState>(screen()::render))
     }
 }
