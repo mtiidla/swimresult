@@ -3,23 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingLeft="@dimen/spacing_16"
     android:paddingTop="@dimen/spacing_24"
-    android:paddingRight="@dimen/spacing_16"
     android:paddingBottom="@dimen/spacing_8">
 
     <ImageView
         android:id="@+id/meetGroupFlagView"
         android:layout_width="32dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical" />
+        android:layout_marginLeft="@dimen/spacing_16"
+        android:layout_marginTop="3dp"
+        tools:src="@drawable/ic_olympic_flag" />
 
     <TextView
         android:id="@+id/meetGroupTitleView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="42dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="@dimen/spacing_16"
+        android:paddingBottom="@dimen/spacing_8"
         android:textAppearance="@style/TextAppearance.S20"
         tools:text="Estonia" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/divider" />
 
 </FrameLayout>

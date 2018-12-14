@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:gravity="center"
-            android:text="Meets"
+            android:text="@string/meet_list_title"
             android:textAppearance="@style/TextAppearance.S20"
             android:textColor="@color/primary_inverted" />
 

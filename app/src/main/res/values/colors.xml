@@ -3,4 +3,8 @@
     <color name="colorPrimary">@color/primary</color>
     <color name="colorPrimaryDark">@color/primary_dark</color>
     <color name="colorAccent">@color/accent</color>
+    <color name="status_finished">#4CAF50</color>
+    <color name="status_invitation">#BDBDBD</color>
+    <color name="status_seeded">#FFC107</color>
+    <color name="status_ongoing">#448AFF</color>
 </resources>

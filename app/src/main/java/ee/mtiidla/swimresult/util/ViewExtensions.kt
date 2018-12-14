@@ -1,11 +1,13 @@
 package ee.mtiidla.swimresult.util
 
+import android.app.Activity
 import android.content.Context
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.annotation.LayoutRes
 
@@ -46,4 +48,9 @@ fun EditText.onTextChanged(f: (String) -> Unit) {
             f.invoke(s.toString())
         }
     })
+}
+
+fun EditText.hideKeyboard() {
+    val imm = context.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+    imm.hideSoftInputFromWindow(windowToken, 0)
 }

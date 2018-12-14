@@ -5,5 +5,8 @@
     <string name="meet_navigation_athletes">Athletes</string>
     <string name="meet_navigation_clubs">Clubs</string>
 
-    <string name="search_meets">Search meets…</string>
+    <string name="search_meets">Search meets by name or city…</string>
+    <string name="meet_list_title">Meets</string>
+    <string name="lcm">50m pool</string>
+    <string name="scm">25m pool</string>
 </resources>
