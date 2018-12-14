@@ -9,7 +9,7 @@ sealed class MeetListState {
 
     data class Data(val meetGroups: List<MeetGroup>) : MeetListState()
 
-    data class Search(val meets: List<Meet>) : MeetListState()
+    data class Filter(val meets: List<Meet>) : MeetListState()
 
     data class Error(val error: Throwable) : MeetListState()
 }

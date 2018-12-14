@@ -29,21 +29,21 @@ class MeetListScreen(context: Context) : Screen, LayoutContainer {
         adapter.setStableIds()
         meetListView.layoutManager = LinearLayoutManager(context)
         meetListView.adapter = adapter
-        meetSearchView.onTextChanged { listener.onMeetSearch(it) }
-        meetSearchClearButton.setOnClickListener { meetSearchView.text = null }
+        meetFilterView.onTextChanged { listener.onMeetFilter(it) }
+        meetFilterClearButton.setOnClickListener { meetFilterView.text = null }
     }
 
     fun render(state: MeetListState) {
         when (state) {
             is MeetListState.Loading -> {
-                meetSearchView.isEnabled = false
-                meetSearchClearButton.isEnabled = false
+                meetFilterView.isEnabled = false
+                meetFilterClearButton.isEnabled = false
                 progressBar.visible()
                 meetListView.gone()
             }
             is MeetListState.Data -> {
-                meetSearchView.isEnabled = true
-                meetSearchClearButton.isEnabled = false
+                meetFilterView.isEnabled = true
+                meetFilterClearButton.isEnabled = false
                 meetListView.visible()
                 progressBar.gone()
 
@@ -55,9 +55,9 @@ class MeetListScreen(context: Context) : Screen, LayoutContainer {
 
                 adapter.items = adapterData
             }
-            is MeetListState.Search -> {
-                meetSearchView.isEnabled = true
-                meetSearchClearButton.isEnabled = true
+            is MeetListState.Filter -> {
+                meetFilterView.isEnabled = true
+                meetFilterClearButton.isEnabled = true
                 meetListView.visible()
                 progressBar.gone()
 
@@ -88,6 +88,6 @@ class MeetListScreen(context: Context) : Screen, LayoutContainer {
 
         fun onMeetClicked(meet: Meet)
 
-        fun onMeetSearch(query: String)
+        fun onMeetFilter(query: String)
     }
 }

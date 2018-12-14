@@ -45,7 +45,7 @@ class MeetGroupAdapterDelegate :
                 Picasso.get().load("https://www.countryflags.io/$countryCode/flat/64.png")
                     .into(meetGroupFlagView)
             } else {
-                // TODO: Marko 04.12.2018 show IOC flag
+                meetGroupFlagView.setImageResource(R.drawable.ic_olympic_flag)
             }
         }
     }

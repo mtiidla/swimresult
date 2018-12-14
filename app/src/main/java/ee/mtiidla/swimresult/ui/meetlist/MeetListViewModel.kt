@@ -39,7 +39,7 @@ class MeetListViewModel @Inject constructor(private val meetRepo: MeetRepository
         }
     }
 
-    fun onMeetSearch(query: String) {
+    fun onMeetFilter(query: String) {
         meetGroups.notNull {
             if (query.isNotBlank()) {
                 if (meets == null) {
@@ -49,7 +49,7 @@ class MeetListViewModel @Inject constructor(private val meetRepo: MeetRepository
                     val filteredMeets = mutableSetOf<Meet>()
                     meets.filterTo(filteredMeets) { meet -> meet.name.startsWith(query, true) }
                     meets.filterTo(filteredMeets) { meet -> meet.name.contains(query, true) }
-                    viewState.value = MeetListState.Search(filteredMeets.toList())
+                    viewState.value = MeetListState.Filter(filteredMeets.toList())
                 }
             } else {
                 viewState.value = MeetListState.Data(it)

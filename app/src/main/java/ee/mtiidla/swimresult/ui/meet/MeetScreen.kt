@@ -17,7 +17,7 @@ class MeetScreen(context: Context) : Screen, LayoutContainer {
     fun render(state: MeetState) {
         when (state) {
             is MeetState.Loading -> {
-
+                // TODO: Marko 14.12.2018 implement
             }
             is MeetState.Data -> {
                 meetNameView.text = state.meet.name

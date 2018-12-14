@@ -1,0 +1,28 @@
+<vector android:height="20dp" android:viewportHeight="600"
+    android:viewportWidth="900" android:width="30dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#fff" android:pathData="M0,0h900v600h-900z"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M232.348,253.493m-91.618,0a91.618,91.618 0,1 1,183.237 0a91.618,91.618 0,1 1,-183.237 0"
+        android:strokeColor="#0885c2" android:strokeWidth="17.67258644"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M450,253.493m-91.618,0a91.618,91.618 0,1 1,183.237 0a91.618,91.618 0,1 1,-183.237 0"
+        android:strokeColor="#000" android:strokeWidth="17.67258644"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M667.652,253.493m-91.618,0a91.618,91.618 0,1 1,183.237 0a91.618,91.618 0,1 1,-183.237 0"
+        android:strokeColor="#ed334e" android:strokeWidth="17.67258644"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M341.174,346.507m-91.618,0a91.618,91.618 0,1 1,183.237 0a91.618,91.618 0,1 1,-183.237 0"
+        android:strokeColor="#fbb132" android:strokeWidth="17.67258644"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M558.826,346.507m-91.618,0a91.618,91.618 0,1 1,183.237 0a91.618,91.618 0,1 1,-183.237 0"
+        android:strokeColor="#1c8b3c" android:strokeWidth="17.67258644"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M305.643,198.522A91.618,91.618 0,0 1,305.643 308.464"
+        android:strokeColor="#0885c2" android:strokeWidth="17.67258644"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M523.295,198.522A91.618,91.618 0,0 1,523.295 308.464M450,345.112A91.618,91.618 0,0 1,395.029 326.788"
+        android:strokeColor="#000" android:strokeWidth="17.67258644"/>
+    <path android:fillColor="#00000000"
+        android:pathData="M667.652,345.112A91.618,91.618 0,0 1,612.681 326.788"
+        android:strokeColor="#ed334e" android:strokeWidth="17.67258644"/>
+</vector>

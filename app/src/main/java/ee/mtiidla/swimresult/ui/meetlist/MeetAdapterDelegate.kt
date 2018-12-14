@@ -43,7 +43,7 @@ class MeetAdapterDelegate(private val listener: (Meet) -> Unit) :
         private var item: MeetItem? = null
 
         init {
-            containerView.setOnClickListener {
+            itemView.setOnClickListener {
                 item.notNull { meetItem ->
                     listener.invoke(meetItem.meet)
                 }

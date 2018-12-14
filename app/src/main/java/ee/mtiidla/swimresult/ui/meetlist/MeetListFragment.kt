@@ -37,8 +37,8 @@ class MeetListFragment : ScreenFragment<MeetListScreen>() {
 
         screen().listener = object : Listener {
 
-            override fun onMeetSearch(query: String) {
-                viewModel.onMeetSearch(query)
+            override fun onMeetFilter(query: String) {
+                viewModel.onMeetFilter(query)
             }
 
             override fun onMeetClicked(meet: Meet) {
