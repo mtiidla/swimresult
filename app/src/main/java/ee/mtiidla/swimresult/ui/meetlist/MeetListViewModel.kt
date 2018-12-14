@@ -48,7 +48,10 @@ class MeetListViewModel @Inject constructor(private val meetRepo: MeetRepository
                 meets.notNull { meets ->
                     val filteredMeets = mutableSetOf<Meet>()
                     meets.filterTo(filteredMeets) { meet -> meet.name.startsWith(query, true) }
-                    meets.filterTo(filteredMeets) { meet -> meet.name.contains(query, true) }
+                    meets.filterTo(filteredMeets) { meet ->
+                        meet.name.contains(query, true)
+                            || meet.city.contains(query, true)
+                    }
                     viewState.value = MeetListState.Filter(filteredMeets.toList())
                 }
             } else {
