@@ -5,10 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.hannesdorfmann.adapterdelegates4.AbsListItemAdapterDelegate
-import com.squareup.picasso.Picasso
 import ee.mtiidla.swimresult.R
-import ee.mtiidla.swimresult.domain.model.CountryCodes
 import ee.mtiidla.swimresult.ui.meetlist.MeetListData.MeetGroupItem
+import ee.mtiidla.swimresult.util.CountryFlagImageLoader
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.list_item_meet_group.*
 
@@ -40,13 +39,7 @@ class MeetGroupAdapterDelegate :
 
         fun render(item: MeetGroupItem) = with(item.meetGroup.country) {
             meetGroupTitleView.text = name
-            if (CountryCodes.isValidFinaCountry(code)) {
-                val countryCode = CountryCodes.toIso2(code)
-                Picasso.get().load("https://www.countryflags.io/$countryCode/flat/64.png")
-                    .into(meetGroupFlagView)
-            } else {
-                meetGroupFlagView.setImageResource(R.drawable.ic_olympic_flag)
-            }
+            CountryFlagImageLoader.loadFlag(code, meetGroupFlagView)
         }
     }
 }

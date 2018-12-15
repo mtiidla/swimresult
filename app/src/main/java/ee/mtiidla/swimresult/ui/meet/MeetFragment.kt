@@ -46,6 +46,12 @@ class MeetFragment : ScreenFragment<MeetScreen>() {
         ViewModelProviders.of(this, viewModelFactory).get(MeetViewModel::class.java)
             .screenState.observe(viewLifecycleOwner, Observer<MeetState>(screen()::render))
 
+        screen().listener = object : MeetScreen.Listener {
+            override fun onBackClicked() {
+                requireActivity().supportFragmentManager.popBackStack()
+            }
+        }
+
         meetNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.menu_events -> {

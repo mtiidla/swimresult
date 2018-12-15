@@ -14,6 +14,12 @@ class MeetScreen(context: Context) : Screen, LayoutContainer {
 
     override fun getRootView(): ViewGroup = containerView
 
+    lateinit var listener: Listener
+
+    init {
+        toolbar.setNavigationOnClickListener { listener.onBackClicked() }
+    }
+
     fun render(state: MeetState) {
         when (state) {
             is MeetState.Loading -> {
@@ -24,5 +30,10 @@ class MeetScreen(context: Context) : Screen, LayoutContainer {
                 meetCityView.text = state.meet.city
             }
         }
+    }
+
+    interface Listener {
+
+        fun onBackClicked()
     }
 }

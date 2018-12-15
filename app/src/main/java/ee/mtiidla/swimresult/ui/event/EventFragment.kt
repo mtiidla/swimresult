@@ -33,6 +33,12 @@ class EventFragment : ScreenFragment<EventScreen>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        screen().listener = object : EventScreen.Listener {
+            override fun onBackClicked() {
+                requireActivity().supportFragmentManager.popBackStack()
+            }
+        }
+
         ViewModelProviders.of(this, viewModelFactory).get(EventViewModel::class.java)
             .screenState.observe(viewLifecycleOwner, Observer<EventState>(screen()::render))
 

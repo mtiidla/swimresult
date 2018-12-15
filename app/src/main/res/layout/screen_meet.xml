@@ -14,8 +14,8 @@
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:background="@drawable/meet_header_background"
-            android:layout_height="240dp">
+            android:layout_height="240dp"
+            android:background="@drawable/meet_header_background">
 
             <net.opacapp.multilinecollapsingtoolbar.CollapsingToolbarLayout
                 android:id="@+id/meetCollapsingToolbar"
@@ -47,10 +47,10 @@
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?actionBarSize"
+                    app:contentInsetEnd="@dimen/spacing_16"
                     app:contentInsetStartWithNavigation="0dp"
                     app:layout_collapseMode="pin"
                     app:navigationIcon="@drawable/ic_back" />
-
 
             </net.opacapp.multilinecollapsingtoolbar.CollapsingToolbarLayout>
 

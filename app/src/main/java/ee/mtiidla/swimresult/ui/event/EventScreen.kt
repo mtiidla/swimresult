@@ -18,8 +18,11 @@ class EventScreen(context: Context) : Screen, LayoutContainer {
 
     private val infoScreen = EventInfoScreen(context)
 
+    lateinit var listener: Listener
+
     init {
         eventInfoContainer.addView(infoScreen.getRootView())
+        toolbar.setNavigationOnClickListener { listener.onBackClicked() }
     }
 
     fun render(state: EventState) {
@@ -34,5 +37,10 @@ class EventScreen(context: Context) : Screen, LayoutContainer {
             }
             is EventState.Error -> TODO()
         }
+    }
+
+    interface Listener {
+
+        fun onBackClicked()
     }
 }

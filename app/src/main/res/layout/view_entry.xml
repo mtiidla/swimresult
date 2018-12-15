@@ -7,10 +7,70 @@
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
     <TextView
-        android:id="@+id/entryTitleView"
-        android:layout_width="match_parent"
+        android:id="@+id/entryOrderView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="000"
+        android:textAppearance="@style/TextAppearance.S14"
+        app:layout_constraintBaseline_toBaselineOf="@id/entryTitleView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="HardcodedText"
+        tools:text="10." />
 
+    <TextView
+        android:id="@+id/entryLabelView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_8"
+        android:layout_marginRight="@dimen/spacing_8"
+        android:textAppearance="@style/TextAppearance.S14"
+        app:layout_constraintLeft_toRightOf="@id/entryOrderView"
+        app:layout_constraintRight_toLeftOf="@+id/entryTimeView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Firstname" />
+
+    <TextView
+        android:id="@+id/entryTitleView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.S14.Bold"
+        app:layout_constraintLeft_toLeftOf="@id/entryLabelView"
+        app:layout_constraintRight_toRightOf="@+id/entryLabelView"
+        app:layout_constraintTop_toBottomOf="@id/entryLabelView"
+        tools:text="Lastname" />
+
+    <ImageView
+        android:id="@+id/entryNationFlagView"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="@id/entryLabelView"
+        app:layout_constraintTop_toBottomOf="@id/entryTitleView"
+        tools:src="@drawable/ic_olympic_flag" />
+
+    <TextView
+        android:id="@+id/entrySubtitleView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_4"
+        android:textAppearance="@style/TextAppearance.S12"
+        app:layout_constraintBottom_toBottomOf="@id/entryNationFlagView"
+        app:layout_constraintLeft_toRightOf="@id/entryNationFlagView"
+        app:layout_constraintRight_toRightOf="@+id/entryLabelView"
+        app:layout_constraintTop_toTopOf="@+id/entryNationFlagView"
+        tools:text="Tartu Ujumisklubi" />
+
+    <TextView
+        android:id="@+id/entryTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="0:00:00"
+        android:textAppearance="@style/TextAppearance.S14"
+        app:layout_constraintBaseline_toBaselineOf="@id/entryTitleView"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText"
+        tools:text="15:20:34" />
 
 </merge>
