@@ -14,8 +14,16 @@
         <item name="android:textSize">14dp</item>
     </style>
 
+    <style name="TextAppearance.S14.Bold">
+        <item name="fontFamily">@font/noto_bold</item>
+    </style>
+
     <style name="TextAppearance.S16">
         <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="TextAppearance.S16.Bold">
+        <item name="fontFamily">@font/noto_bold</item>
     </style>
 
     <style name="TextAppearance.S20">
@@ -28,6 +36,16 @@
 
     <style name="TextAppearance.S24">
         <item name="android:textSize">24dp</item>
+    </style>
+
+    <style name="TextAppearance.MeetTitle">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/noto_bold</item>
+    </style>
+
+    <style name="TextAppearance.MeetTitle.Expanded">
+        <item name="android:textSize">30dp</item>
     </style>
 
 </resources>

@@ -12,5 +12,6 @@ data class EventNetworkModel(
     val isrelay: Boolean,
     val time: String,
     val date: String,
-    val round: String
+    val round: String,
+    val stylename: String?
 )

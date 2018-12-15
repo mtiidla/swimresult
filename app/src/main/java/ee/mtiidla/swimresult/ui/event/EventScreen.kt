@@ -19,7 +19,7 @@ class EventScreen(context: Context) : Screen, LayoutContainer {
     private val infoScreen = EventInfoScreen(context)
 
     init {
-        eventHeatsContainer.addView(infoScreen.getRootView())
+        eventInfoContainer.addView(infoScreen.getRootView())
     }
 
     fun render(state: EventState) {

@@ -3,6 +3,7 @@ package ee.mtiidla.swimresult.data.network.mapper
 import ee.mtiidla.swimresult.data.network.model.EntryNetworkModel
 import ee.mtiidla.swimresult.domain.model.Competitor
 import ee.mtiidla.swimresult.domain.model.Entry
+import ee.mtiidla.swimresult.util.whenNotNull
 import javax.inject.Inject
 
 class EntryNetworkMapper @Inject constructor(private val clubAthleteMapper: ClubAthleteNetworkMapper) :
@@ -47,7 +48,7 @@ class EntryNetworkMapper @Inject constructor(private val clubAthleteMapper: Club
                             clubCode = clubcode,
                             teamNumber = teamnumber,
                             ageText = agetext,
-                            athletes = clubAthleteMapper.map(athletes)
+                            athletes = whenNotNull(athletes) { clubAthleteMapper.map(it) } ?: emptyList()
                         )
                     )
                 }

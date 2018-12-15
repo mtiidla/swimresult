@@ -18,10 +18,10 @@ class ResultJsonParentAdapter {
         @Suppress("UNCHECKED_CAST")
         val jsonMap = reader.readJsonValue() as Map<String, Any>
 
-        return if (jsonMap.containsKey("athletes")) {
-            clubAdapter.fromJsonValue(jsonMap)!!
-        } else {
+        return if (jsonMap.containsKey("athleteid")) {
             athleteAdapter.fromJsonValue(jsonMap)!!
+        } else {
+            clubAdapter.fromJsonValue(jsonMap)!!
         }
     }
 

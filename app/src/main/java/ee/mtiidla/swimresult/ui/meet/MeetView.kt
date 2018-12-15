@@ -1,14 +1,15 @@
 package ee.mtiidla.swimresult.ui.meet
 
 import android.content.Context
-import android.content.res.Resources
 import android.util.AttributeSet
 import android.widget.LinearLayout
-import androidx.core.content.ContextCompat
+import androidx.annotation.ColorRes
 import ee.mtiidla.swimresult.R
 import ee.mtiidla.swimresult.domain.model.Course
 import ee.mtiidla.swimresult.domain.model.DateRange
 import ee.mtiidla.swimresult.domain.model.Meet
+import ee.mtiidla.swimresult.util.color
+import ee.mtiidla.swimresult.util.string
 import kotlinx.android.synthetic.main.view_meet.view.*
 import org.threeten.bp.format.DateTimeFormatter
 import org.threeten.bp.format.FormatStyle
@@ -29,24 +30,24 @@ class MeetView : LinearLayout {
     fun bindMeet(meet: Meet) = with(meet) {
         meetTitleView.text = name
         val date = DateRange(startDate, endDate).format(dateFormatter)
-        val pool = getDisplayableCourse(resources, course)
-        meetSubtitleView.text = listOf(city, pool, date)
+        meetSubtitleView.text = listOf(city, getDisplayableCourse(course), date)
             .filter { it.isNotBlank() }
             .joinToString(" • ")
-        meetStatusView.setColorFilter(ContextCompat.getColor(context, getStatusColorRes(status!!)))
+        meetStatusView.setColorFilter(color(getStatusColorRes(status!!)))
     }
 
+    @ColorRes
     private fun getStatusColorRes(status: Meet.Status): Int = when (status) {
-        Meet.Status.FINISHED -> R.color.status_finished
         Meet.Status.INVITATION -> R.color.status_invitation
         Meet.Status.SEEDED -> R.color.status_seeded
         Meet.Status.ONGOING -> R.color.status_ongoing
+        Meet.Status.FINISHED -> R.color.status_finished
         Meet.Status.UNKNOWN -> R.color.status_invitation
     }
 
-    private fun getDisplayableCourse(resources: Resources, course: Course): String = when (course) {
-        Course.LCM -> resources.getString(R.string.lcm)
-        Course.SCM -> resources.getString(R.string.scm)
+    private fun getDisplayableCourse(course: Course): String = when (course) {
+        Course.LCM -> string(R.string.lcm)
+        Course.SCM -> string(R.string.scm)
         Course.OTHER -> ""
     }
 }

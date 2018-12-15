@@ -9,7 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
 import androidx.annotation.LayoutRes
+import androidx.annotation.StringRes
+import androidx.core.content.ContextCompat
 
 fun View.visible() {
     if (visibility != View.VISIBLE) {
@@ -22,6 +26,19 @@ fun View.gone() {
         visibility = View.GONE
     }
 }
+
+fun View.show(show: Boolean = true) {
+    if (show) {
+        visible()
+    } else {
+        gone()
+    }
+}
+
+fun View.string(@StringRes stringRes: Int): String = resources.getString(stringRes)
+
+@ColorInt
+fun View.color(@ColorRes colorRes: Int): Int = ContextCompat.getColor(context, colorRes)
 
 fun inflateLayout(context: Context, @LayoutRes layoutRes: Int): ViewGroup {
     return LayoutInflater.from(context).inflate(layoutRes, null) as ViewGroup

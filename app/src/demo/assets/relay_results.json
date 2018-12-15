@@ -337,32 +337,6 @@
           "teamnumber": "2",
           "agetext": "",
           "heatid": "15825",
-          "athletes": [
-            {
-              "fullname": "Alina Tuntsik",
-              "id": "12082",
-              "swrid": "4996419",
-              "swimtime": "32.55"
-            },
-            {
-              "fullname": "Janely Havi",
-              "id": "12072",
-              "swrid": "5024684",
-              "swimtime": "36.56"
-            },
-            {
-              "fullname": "Aleksandr Amosenkov",
-              "id": "12040",
-              "swrid": "4948880",
-              "swimtime": "25.31"
-            },
-            {
-              "fullname": "Mark Tretjakov",
-              "id": "12048",
-              "swrid": "5025046",
-              "swimtime": "25.25"
-            }
-          ],
           "lane": 2,
           "swimtime": "1:59.67",
           "info": "",

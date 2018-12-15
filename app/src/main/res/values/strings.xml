@@ -9,4 +9,22 @@
     <string name="meet_list_title">Meets</string>
     <string name="lcm">50m pool</string>
     <string name="scm">25m pool</string>
+    <string name="event_gender_male">Men</string>
+    <string name="event_gender_youth_male">Boys</string>
+    <string name="event_gender_female">Women</string>
+    <string name="event_gender_youth_female">Girls</string>
+    <string name="event_gender_mix">Mixed</string>
+    <string name="event_gender_all">All</string>
+    <string name="event_gender_other">Other</string>
+    <string name="stroke_free">Freestyle</string>
+    <string name="stroke_back">Backstroke</string>
+    <string name="stroke_breast">Breaststroke</string>
+    <string name="stroke_fly">Butterfly</string>
+    <string name="stroke_im">Individual Medley</string>
+    <string name="stroke_medley">Medley</string>
+    <string name="stroke_other">Other swimstyle</string>
+    <string name="round_timed_final">Timed final</string>
+    <string name="round_prelim">Preliminary</string>
+    <string name="round_final">Final</string>
+    <string name="round_unknown">Unknown</string>
 </resources>

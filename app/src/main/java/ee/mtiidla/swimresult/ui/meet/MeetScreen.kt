@@ -20,7 +20,7 @@ class MeetScreen(context: Context) : Screen, LayoutContainer {
                 // TODO: Marko 14.12.2018 implement
             }
             is MeetState.Data -> {
-                meetNameView.text = state.meet.name
+                meetCollapsingToolbar.title = state.meet.name
                 meetCityView.text = state.meet.city
             }
         }

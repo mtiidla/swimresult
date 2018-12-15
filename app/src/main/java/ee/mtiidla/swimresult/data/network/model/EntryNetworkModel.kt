@@ -35,7 +35,7 @@ sealed class EntryNetworkModel {
         val place: Int?,
         val status: String?,
         val entrystatus: String?,
-        val athletes: List<ClubAthleteNetworkModel>
+        val athletes: List<ClubAthleteNetworkModel>?
 
     ) : EntryNetworkModel()
 }

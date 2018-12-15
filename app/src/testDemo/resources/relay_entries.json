@@ -142,28 +142,6 @@
       "entrytime": "2:01.00",
       "teamnumber": "2",
       "agetext": "",
-      "athletes": [
-        {
-          "fullname": "Alina Tuntsik",
-          "id": "12082",
-          "swrid": "4996419"
-        },
-        {
-          "fullname": "Janely Havi",
-          "id": "12072",
-          "swrid": "5024684"
-        },
-        {
-          "fullname": "Aleksandr Amosenkov",
-          "id": "12040",
-          "swrid": "4948880"
-        },
-        {
-          "fullname": "Mark Tretjakov",
-          "id": "12048",
-          "swrid": "5025046"
-        }
-      ],
       "clubid": "12032",
       "nametext": "J\u00e4rveotsa SK 2",
       "place": 5
