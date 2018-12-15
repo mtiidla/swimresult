@@ -13,5 +13,9 @@ data class Event(
     val time: LocalTime?,
     val date: LocalDate?,
     val round: String,
-    val status: Int? = null
-)
+    val status: Status? = null
+) {
+    enum class Status {
+        INVITATION, ENTRIES, SEEDED, ONGOING, FINISHED, UNKNOWN
+    }
+}

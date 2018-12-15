@@ -4,7 +4,6 @@ import ee.mtiidla.swimresult.data.network.model.HeatInfoNetworkModel
 import ee.mtiidla.swimresult.domain.model.Course
 import ee.mtiidla.swimresult.domain.model.Gender
 import ee.mtiidla.swimresult.domain.model.HeatInfo
-import ee.mtiidla.swimresult.domain.model.Meet
 import ee.mtiidla.swimresult.domain.model.Split
 import org.threeten.bp.LocalDate
 import org.threeten.bp.LocalDateTime
@@ -20,14 +19,6 @@ internal fun mapGender(gender: String): Gender = when (gender) {
     "11" -> Gender.YOUTH_MALE
     "12" -> Gender.YOUTH_FEMALE
     else -> Gender.OTHER
-}
-
-internal fun mapMeetStatus(status: Int): Meet.Status = when (status) {
-    0 -> Meet.Status.INVITATION
-    1 -> Meet.Status.SEEDED
-    3 -> Meet.Status.ONGOING
-    5 -> Meet.Status.FINISHED
-    else -> Meet.Status.UNKNOWN
 }
 
 internal fun mapCourse(course: String): Course = when (course) {

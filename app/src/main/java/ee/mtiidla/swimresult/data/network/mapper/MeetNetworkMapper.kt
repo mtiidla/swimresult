@@ -31,4 +31,12 @@ class MeetNetworkMapper @Inject constructor() : NetworkMapper<MeetNetworkModel, 
                 relays = relays
             )
         }
+
+    private fun mapMeetStatus(status: Int): Meet.Status = when (status) {
+        0 -> Meet.Status.INVITATION
+        1 -> Meet.Status.SEEDED
+        3 -> Meet.Status.ONGOING
+        5 -> Meet.Status.FINISHED
+        else -> Meet.Status.UNKNOWN
+    }
 }

@@ -23,6 +23,6 @@ data class Meet(
     )
 
     enum class Status {
-        FINISHED, INVITATION, SEEDED, ONGOING, UNKNOWN
+        INVITATION, SEEDED, ONGOING, FINISHED, UNKNOWN
     }
 }
