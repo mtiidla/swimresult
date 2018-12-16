@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
+import androidx.recyclerview.widget.RecyclerView
 import ee.mtiidla.swimresult.R
 import ee.mtiidla.swimresult.ui.Screen
 import ee.mtiidla.swimresult.ui.entrylist.EntryListState
@@ -31,8 +32,8 @@ class EventInfoScreen(context: Context) : Screen, LayoutContainer {
         eventInfoListView.adapter = adapter
         val linearLayoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        eventInfoListView.layoutManager =
-            linearLayoutManager
+        eventInfoListView.layoutManager = linearLayoutManager
+        eventInfoListView.setScrollingTouchSlop(RecyclerView.TOUCH_SLOP_PAGING)
         PagerSnapHelper().attachToRecyclerView(eventInfoListView)
         eventInfoTabView.setupWithRecyclerView(eventInfoListView)
     }

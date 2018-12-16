@@ -6,10 +6,160 @@
     tools:layout_width="match_parent"
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
+    <View
+        android:id="@+id/resultPlaceBackgroundView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/place_other"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/resultPlaceView"
+        app:layout_constraintRight_toRightOf="@+id/resultPlaceView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultPlaceView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:hint="00"
+        android:padding="@dimen/spacing_4"
+        android:textAppearance="@style/TextAppearance.S14.Bold"
+        android:textColor="@color/white"
+        app:layout_constraintBaseline_toBaselineOf="@id/resultTitleView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="HardcodedText"
+        tools:text="100" />
+
+    <TextView
+        android:id="@+id/resultLaneView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_8"
+        android:gravity="center"
+        android:hint="10"
+        android:textAppearance="@style/TextAppearance.S14"
+        app:layout_constraintBaseline_toBaselineOf="@id/resultTitleView"
+        app:layout_constraintLeft_toRightOf="@+id/resultPlaceView"
+        tools:ignore="HardcodedText"
+        tools:text="10" />
+
+    <TextView
+        android:id="@+id/resultLabelView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_8"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginRight="@dimen/spacing_8"
+        android:textAppearance="@style/TextAppearance.S14"
+        app:layout_constraintLeft_toRightOf="@id/resultLaneView"
+        app:layout_constraintRight_toLeftOf="@+id/resultTimeView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Firstname" />
+
     <TextView
         android:id="@+id/resultTitleView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.S14.Bold"
+        app:layout_constraintLeft_toLeftOf="@id/resultLabelView"
+        app:layout_constraintRight_toRightOf="@+id/resultLabelView"
+        app:layout_constraintTop_toBottomOf="@id/resultLabelView"
+        tools:text="Lastname" />
+
+    <ImageView
+        android:id="@+id/resultNationFlagView"
+        android:layout_width="@dimen/flag_width"
+        android:layout_height="@dimen/flag_height"
+        app:layout_constraintBottom_toTopOf="@+id/resultSplitView"
+        app:layout_constraintLeft_toLeftOf="@id/resultLabelView"
+        app:layout_constraintTop_toBottomOf="@id/resultTitleView"
+        app:layout_goneMarginBottom="@dimen/spacing_8"
+        tools:src="@drawable/ic_olympic_flag" />
+
+    <TextView
+        android:id="@+id/resultSubtitleView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_4"
+        android:textAppearance="@style/TextAppearance.S12"
+        app:layout_constraintBottom_toBottomOf="@id/resultNationFlagView"
+        app:layout_constraintLeft_toRightOf="@id/resultNationFlagView"
+        app:layout_constraintRight_toRightOf="@+id/resultLabelView"
+        app:layout_constraintTop_toTopOf="@+id/resultNationFlagView"
+        tools:text="Tartu Ujumisklubi" />
+
+    <TextView
+        android:id="@+id/resultEntryTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:hint="0:00:00"
+        android:textAppearance="@style/TextAppearance.S14"
+        android:textColor="@color/secondary_text"
+        app:layout_constraintBaseline_toBaselineOf="@id/resultLabelView"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText"
+        tools:text="16:10:13" />
+
+    <TextView
+        android:id="@+id/resultTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:hint="0:00:00"
+        android:textAppearance="@style/TextAppearance.S14.Bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/resultTitleView"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText"
+        tools:text="15:20:34" />
+
+    <TextView
+        android:id="@+id/resultDiffTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:hint="+00.00"
+        android:textAppearance="@style/TextAppearance.S12"
+        android:textColor="@color/secondary_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/resultSubtitleView"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText"
+        tools:text="+00.00" />
+
+    <LinearLayout
+        android:id="@+id/resultSplitView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginBottom="@dimen/spacing_8"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/resultNationFlagView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultNationFlagView"
+        tools:ignore="HardcodedText"
+        tools:text="+00.00">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.S12"
+            android:textColor="@color/secondary_text"
+            tools:ignore="HardcodedText"
+            tools:text="100m: 1:00.00 (30:00)" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.S12"
+            android:textColor="@color/secondary_text"
+            tools:ignore="HardcodedText"
+            tools:text="100m: 1:00.00 (30:00)" />
+
+    </LinearLayout>
 
 </merge>

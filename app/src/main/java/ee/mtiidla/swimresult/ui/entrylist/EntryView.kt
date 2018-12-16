@@ -10,7 +10,7 @@ import ee.mtiidla.swimresult.util.CountryFlagImageLoader
 import ee.mtiidla.swimresult.util.whenNotNull
 import kotlinx.android.synthetic.main.view_entry.view.*
 
-class EntryView : ConstraintLayout {
+open class EntryView : ConstraintLayout {
 
     constructor(context: Context) : super(context)
 
@@ -21,8 +21,8 @@ class EntryView : ConstraintLayout {
     }
 
     fun bindEntry(entry: Entry) {
-        // TODO: Marko 15.12.2018 maybe use single line for firstname and lastname, find a way to get lastname properly
-        entryOrderView.text = whenNotNull(entry.place) { "$it." } ?: ""
+        // TODO: Marko 16.12.2018 handle -1 place
+        entryOrderView.text = whenNotNull(entry.place) { if (it == -1) "DNS" else "$it." } ?: ""
         entryTimeView.text = entry.entryTime
         entry.competitor.run {
             when (this) {
@@ -32,9 +32,7 @@ class EntryView : ConstraintLayout {
                     entrySubtitleView.text = nation
                 }
                 is Competitor.Athlete -> {
-                    val names = athleteName.split(" ")
-                    val lastName = names.last()
-                    entryLabelView.text = athleteName.subSequence(0, athleteName.length - lastName.length - 1)
+                    entryLabelView.text = firstName
                     entryTitleView.text = lastName
                     entrySubtitleView.text = clubName
                 }

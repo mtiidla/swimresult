@@ -12,7 +12,11 @@ sealed class Competitor(val id: Long, open val nation: String) {
         val clubId: Long,
         val clubName: String,
         val clubCode: String
-    ) : Competitor(athleteId, nation)
+    ) : Competitor(athleteId, nation) {
+        // TODO: Marko 15.12.2018 maybe use single line for firstname and lastname, find a way to get separate names properly
+        val lastName = athleteName.split(" ").last()
+        val firstName = athleteName.subSequence(0, athleteName.length - lastName.length - 1)
+    }
 
     data class Club(
         val clubId: Long,

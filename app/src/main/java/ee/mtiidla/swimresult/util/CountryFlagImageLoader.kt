@@ -14,7 +14,7 @@ object CountryFlagImageLoader {
 
             // "https://flagpedia.net/data/flags/normal/$countryCode.png"
             Picasso.get().load("https://allianceone.coop/files/assets/default/images/iso-country-flags/png-country-4x3/res-640x480/$countryCode.png")
-                .resizeDimen(R.dimen.spacing_32, R.dimen.spacing_24)
+                .resizeDimen(R.dimen.flag_width, R.dimen.flag_height)
                 .centerInside()
                 .into(imageView)
         } else {

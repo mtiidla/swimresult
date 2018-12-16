@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/meetGroupFlagView"
-        android:layout_width="32dp"
-        android:layout_height="24dp"
+        android:layout_width="@dimen/flag_width"
+        android:layout_height="@dimen/flag_height"
         android:layout_marginLeft="@dimen/spacing_16"
         android:layout_marginTop="3dp"
         tools:src="@drawable/ic_olympic_flag" />

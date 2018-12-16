@@ -32,7 +32,7 @@ internal fun mapHeatInfo(heatInfo: HeatInfoNetworkModel) = with(heatInfo) {
 }
 
 internal fun mapSplits(splits: Map<String, String>?): List<Split>? {
-    return splits?.map { (distance, time) -> Split(distance, time) }
+    return splits?.map { (distance, time) -> Split(distance, time) }?.sortedBy { it.distanceText.toInt() }
 }
 
 internal fun mapTime(time: String): LocalTime? = if (time.isBlank()) null else LocalTime.parse(time)

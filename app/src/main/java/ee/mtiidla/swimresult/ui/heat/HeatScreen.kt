@@ -28,7 +28,7 @@ class HeatScreen(context: Context) : Screen, LayoutContainer {
     fun render(state: HeatState) {
         when (state) {
             is HeatState.Data -> {
-                adapter.items = state.heat.entries.map { HeatLaneListData.LaneItem(HeatLane(it.toString())) }
+                adapter.items = state.heat.entries.map { HeatLaneListData.LaneItem(HeatLane(it)) }
             }
         }
     }

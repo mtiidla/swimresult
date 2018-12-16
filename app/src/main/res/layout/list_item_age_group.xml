@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ee.mtiidla.swimresult.ui.resultlist.AgeGroupView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/spacing_32"
+    android:paddingTop="@dimen/spacing_24"
+    android:paddingRight="@dimen/spacing_16"
+    android:paddingBottom="@dimen/spacing_4" />

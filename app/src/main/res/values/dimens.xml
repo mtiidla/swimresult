@@ -7,4 +7,6 @@
     <dimen name="spacing_20">20dp</dimen>
     <dimen name="spacing_24">24dp</dimen>
     <dimen name="spacing_32">32dp</dimen>
+    <dimen name="flag_width">32dp</dimen>
+    <dimen name="flag_height">24dp</dimen>
 </resources>
