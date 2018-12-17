@@ -5,6 +5,7 @@ import ee.mtiidla.swimresult.data.network.mapper.AgeGroupNetworkMapper
 import ee.mtiidla.swimresult.data.network.mapper.MeetGroupNetworkMapper
 import ee.mtiidla.swimresult.data.network.mapper.MeetNetworkMapper
 import ee.mtiidla.swimresult.domain.model.AgeGroup
+import ee.mtiidla.swimresult.domain.model.Meet
 import ee.mtiidla.swimresult.domain.model.MeetGroup
 import ee.mtiidla.swimresult.domain.service.MeetService
 import kotlinx.coroutines.CoroutineScope
@@ -19,19 +20,19 @@ class MeetNetworkService @Inject constructor(
     private val meetGroupMapper: MeetGroupNetworkMapper,
     private val ageGroupMapper: AgeGroupNetworkMapper
 ) : MeetService {
-    override fun meets(): Deferred<List<MeetGroup>> = CoroutineScope(Dispatchers.IO).async {
+
+    override suspend fun meets(): List<MeetGroup> {
 
         val meets = restApi.getMeets().await()
 
-        return@async meetGroupMapper.map(meets.meetgroups)
-
+        return meetGroupMapper.map(meets.meetgroups)
     }
 
-    override fun meet(meetId: Long) = CoroutineScope(Dispatchers.IO).async {
+    override suspend fun meet(meetId: Long): Meet {
 
         val meet = restApi.getMeet(meetId).await()
 
-        return@async meetMapper.map(meet)
+        return meetMapper.map(meet)
     }
 
     override fun ageGroups(meetId: Long): Deferred<List<AgeGroup>> =

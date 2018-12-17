@@ -35,13 +35,12 @@ class EventNetworkService @Inject constructor(
             return@async eventMapper.map(events.events)
         }
 
-    override fun sessions(meetId: Long): Deferred<List<Session>> =
-        CoroutineScope(Dispatchers.IO).async {
+    override suspend fun sessions(meetId: Long): List<Session> {
 
-            val sessions = restApi.getEventsBySession(meetId).await()
+        val sessions = restApi.getEventsBySession(meetId).await()
 
-            return@async sessionMapper.map(sessions.sessions)
-        }
+        return sessionMapper.map(sessions.sessions)
+    }
 
     override fun entries(meetId: Long, eventId: Long): Deferred<List<Entry>> =
         CoroutineScope(Dispatchers.IO).async {

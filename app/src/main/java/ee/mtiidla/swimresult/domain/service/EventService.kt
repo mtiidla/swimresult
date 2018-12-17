@@ -11,7 +11,7 @@ interface EventService {
 
     fun events(meetId: Long) : Deferred<List<Event>>
 
-    fun sessions(meetId: Long): Deferred<List<Session>>
+    suspend fun sessions(meetId: Long): List<Session>
 
     fun entries(meetId: Long, eventId: Long): Deferred<List<Entry>>
 

@@ -96,7 +96,7 @@
         android:layout_height="wrap_content"
         android:gravity="right"
         android:hint="0:00:00"
-        android:textAppearance="@style/TextAppearance.S14"
+        android:textAppearance="@style/TextAppearance.S12"
         android:textColor="@color/secondary_text"
         app:layout_constraintBaseline_toBaselineOf="@id/resultLabelView"
         app:layout_constraintRight_toRightOf="parent"

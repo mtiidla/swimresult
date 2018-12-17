@@ -7,9 +7,9 @@ import kotlinx.coroutines.Deferred
 
 interface MeetService {
 
-    fun meets(): Deferred<List<MeetGroup>>
+    suspend fun meets(): List<MeetGroup>
 
-    fun meet(meetId: Long): Deferred<Meet>
+    suspend fun meet(meetId: Long): Meet
 
     fun ageGroups(meetId: Long): Deferred<List<AgeGroup>>
 }

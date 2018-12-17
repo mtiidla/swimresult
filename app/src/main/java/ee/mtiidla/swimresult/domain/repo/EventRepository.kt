@@ -7,7 +7,9 @@ class EventRepository @Inject constructor(private val service: EventService) {
 
     fun events(meetId: Long) = service.events(meetId)
 
-    fun sessions(meetId: Long) = service.sessions(meetId)
+    suspend fun suspendedEvents(meetId: Long) = service.events(meetId).await()
+
+    suspend fun sessions(meetId: Long) = service.sessions(meetId)
 
     fun entries(meetId: Long, eventId: Long) = service.entries(meetId, eventId)
 

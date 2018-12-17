@@ -5,9 +5,9 @@ import javax.inject.Inject
 
 class MeetRepository @Inject constructor(private val service: MeetService) {
 
-    fun meetGroups() = service.meets()
+    suspend fun meetGroups() = service.meets()
 
-    fun meet(meetId: Long) = service.meet(meetId)
+    suspend fun meet(meetId: Long) = service.meet(meetId)
 
     fun ageGroups(meetId: Long) = service.ageGroups(meetId)
 }
