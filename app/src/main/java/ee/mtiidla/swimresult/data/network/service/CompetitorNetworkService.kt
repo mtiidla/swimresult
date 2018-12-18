@@ -10,10 +10,6 @@ import ee.mtiidla.swimresult.domain.model.AthleteDetails
 import ee.mtiidla.swimresult.domain.model.Club
 import ee.mtiidla.swimresult.domain.model.ClubDetails
 import ee.mtiidla.swimresult.domain.service.CompetitorService
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import javax.inject.Inject
 
 class CompetitorNetworkService @Inject constructor(
@@ -23,35 +19,32 @@ class CompetitorNetworkService @Inject constructor(
     private val athleteDetailsMapper: AthleteDetailsNetworkMapper,
     private val clubDetailsMapper: ClubDetailsNetworkMapper
 ) : CompetitorService {
-    override fun athletes(meetId: Long): Deferred<List<Athlete>> =
-        CoroutineScope(Dispatchers.IO).async {
 
-            val athletes = restApi.getAthletes(meetId).await()
+    override suspend fun athletes(meetId: Long): List<Athlete> {
 
-            return@async athleteMapper.map(athletes)
-        }
+        val athletes = restApi.getAthletes(meetId).await()
 
-    override fun clubs(meetId: Long): Deferred<List<Club>> =
-        CoroutineScope(Dispatchers.IO).async {
+        return athleteMapper.map(athletes)
+    }
 
-            val clubs = restApi.getClubs(meetId).await()
+    override suspend fun clubs(meetId: Long): List<Club> {
 
-            return@async clubMapper.map(clubs)
-        }
+        val clubs = restApi.getClubs(meetId).await()
 
-    override fun athlete(meetId: Long, athleteId: Long): Deferred<AthleteDetails> =
-        CoroutineScope(Dispatchers.IO).async {
+        return clubMapper.map(clubs)
+    }
 
-            val athlete = restApi.getAthlete(meetId, athleteId).await()
+    override suspend fun athlete(meetId: Long, athleteId: Long): AthleteDetails {
 
-            return@async athleteDetailsMapper.map(athlete)
-        }
+        val athlete = restApi.getAthlete(meetId, athleteId).await()
 
-    override fun club(meetId: Long, clubId: Long): Deferred<ClubDetails> =
-        CoroutineScope(Dispatchers.IO).async {
+        return athleteDetailsMapper.map(athlete)
+    }
 
-            val club = restApi.getClub(meetId, clubId).await()
+    override suspend fun club(meetId: Long, clubId: Long): ClubDetails {
 
-            return@async clubDetailsMapper.map(club)
-        }
+        val club = restApi.getClub(meetId, clubId).await()
+
+        return clubDetailsMapper.map(club)
+    }
 }

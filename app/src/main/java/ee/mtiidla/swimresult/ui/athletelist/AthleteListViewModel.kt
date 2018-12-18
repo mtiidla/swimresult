@@ -2,12 +2,10 @@ package ee.mtiidla.swimresult.ui.athletelist
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import ee.mtiidla.swimresult.domain.repo.CompetitorRepository
+import ee.mtiidla.swimresult.ui.UiScopedViewModel
 import ee.mtiidla.swimresult.ui.meet.MeetScreenArgs
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
@@ -15,7 +13,7 @@ import kotlin.coroutines.CoroutineContext
 class AthleteListViewModel @Inject constructor(
     private val competitorRepository: CompetitorRepository,
     screenArgs: MeetScreenArgs
-) : ViewModel(), CoroutineScope {
+) : UiScopedViewModel() {
 
     override val coroutineContext: CoroutineContext = Dispatchers.Main
 
@@ -23,21 +21,14 @@ class AthleteListViewModel @Inject constructor(
 
     val screenState: LiveData<AthleteListState> = viewState
 
-    private var job: Job? = null
-
     init {
 
-        job = launch {
+        launch {
 
             viewState.value = AthleteListState.Loading
-            val athletes = competitorRepository.athletes(screenArgs.meetId).await()
+            val athletes = withIO { competitorRepository.athletes(screenArgs.meetId) }
             viewState.value = AthleteListState.Data(athletes.sortedBy { it.fullname })
 
         }
     }
-
-    override fun onCleared() {
-        job?.cancel()
-    }
-
 }

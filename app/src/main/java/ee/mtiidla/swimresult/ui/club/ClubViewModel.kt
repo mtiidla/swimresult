@@ -2,11 +2,9 @@ package ee.mtiidla.swimresult.ui.club
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import ee.mtiidla.swimresult.domain.repo.CompetitorRepository
-import kotlinx.coroutines.CoroutineScope
+import ee.mtiidla.swimresult.ui.UiScopedViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
@@ -14,7 +12,7 @@ import kotlin.coroutines.CoroutineContext
 class ClubViewModel @Inject constructor(
     private val competitorRepository: CompetitorRepository,
     private val clubScreenArgs: ClubScreenArgs
-) : ViewModel(), CoroutineScope {
+) : UiScopedViewModel() {
 
     override val coroutineContext: CoroutineContext = Dispatchers.Main
 
@@ -22,21 +20,17 @@ class ClubViewModel @Inject constructor(
 
     val screenState: LiveData<ClubState> = viewState
 
-    private var job: Job? = null
-
     init {
 
-        job = launch {
+        launch {
             viewState.value = ClubState.Loading
-            val club = competitorRepository.club(
-                clubScreenArgs.meetScreenArgs.meetId,
-                clubScreenArgs.clubId
-            ).await()
+            val club = withIO {
+                competitorRepository.club(
+                    clubScreenArgs.meetScreenArgs.meetId,
+                    clubScreenArgs.clubId
+                )
+            }
             viewState.value = ClubState.Data(club)
         }
-    }
-
-    override fun onCleared() {
-        job?.cancel()
     }
 }
