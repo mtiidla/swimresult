@@ -27,4 +27,5 @@
     <string name="round_prelim">Preliminary</string>
     <string name="round_final">Final</string>
     <string name="round_unknown">Unknown</string>
+    <string name="round_fastest_heat">Fastest heat</string>
 </resources>

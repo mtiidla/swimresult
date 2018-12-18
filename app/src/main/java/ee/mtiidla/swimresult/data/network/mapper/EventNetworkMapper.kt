@@ -36,6 +36,7 @@ class EventNetworkMapper @Inject constructor() : NetworkMapper<EventNetworkModel
         1 -> Event.Round.TIMED_FINAL
         2 -> Event.Round.PRELIM
         9 -> Event.Round.FINAL
+        11 -> Event.Round.FASTEST_HEAT
         else -> Event.Round.UNKNOWN
     }
 }

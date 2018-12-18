@@ -20,6 +20,6 @@ data class Event(
         INVITATION, ENTRIES, SEEDED, ONGOING, FINISHED, UNKNOWN
     }
     enum class Round {
-        TIMED_FINAL, PRELIM, FINAL, UNKNOWN
+        TIMED_FINAL, PRELIM, FINAL, FASTEST_HEAT, UNKNOWN
     }
 }
