@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import ee.mtiidla.swimresult.R
+import ee.mtiidla.swimresult.domain.model.Event
 import ee.mtiidla.swimresult.ui.Screen
 import ee.mtiidla.swimresult.ui.entrylist.EntryListState
 import ee.mtiidla.swimresult.ui.heat.HeatState
@@ -61,7 +62,8 @@ class EventInfoScreen(context: Context) : Screen, LayoutContainer {
                 }
                 state.eventInfo.heats.notNull {
                     it.forEach { heat ->
-                        tabs += "Heat ${heat.code}"
+                        val label = if (state.eventInfo.event.round == Event.Round.FINAL) "Final" else "Heat"
+                        tabs +=   "$label ${heat.code}"
                         adapterData += EventInfoData.HeatItem(HeatState.Data(heat))
                     }
                 }

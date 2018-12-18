@@ -9,5 +9,5 @@ class MeetRepository @Inject constructor(private val service: MeetService) {
 
     suspend fun meet(meetId: Long) = service.meet(meetId)
 
-    fun ageGroups(meetId: Long) = service.ageGroups(meetId)
+    suspend fun ageGroups(meetId: Long) = service.ageGroups(meetId)
 }

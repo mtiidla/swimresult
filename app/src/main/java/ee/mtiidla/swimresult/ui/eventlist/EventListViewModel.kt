@@ -27,7 +27,7 @@ class EventListViewModel @Inject constructor(
 
             viewState.value = EventListState.Loading
 
-            val events = asyncIO { eventRepository.suspendedEvents(screenArgs.meetId) }
+            val events = asyncIO { eventRepository.events(screenArgs.meetId) }
             val sessions = asyncIO { eventRepository.sessions(screenArgs.meetId) }
 
             val eventBySession = sessions.await().associateWith { it.events }.mapValues { entry ->

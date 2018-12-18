@@ -36,6 +36,7 @@ class EventDisplayer(val resources: Resources) {
         Event.Round.TIMED_FINAL -> R.string.round_timed_final
         Event.Round.PRELIM -> R.string.round_prelim
         Event.Round.FINAL -> R.string.round_final
+        Event.Round.FASTEST_HEAT -> R.string.round_fastest_heat
         Event.Round.UNKNOWN -> R.string.round_unknown
     }
 

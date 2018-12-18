@@ -12,10 +12,6 @@ import ee.mtiidla.swimresult.domain.model.Event
 import ee.mtiidla.swimresult.domain.model.Heat
 import ee.mtiidla.swimresult.domain.model.Session
 import ee.mtiidla.swimresult.domain.service.EventService
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import javax.inject.Inject
 
 class EventNetworkService @Inject constructor(
@@ -27,13 +23,12 @@ class EventNetworkService @Inject constructor(
     private val resultMapper: AgeGroupResultNetworkMapper
 ) : EventService {
 
-    override fun events(meetId: Long): Deferred<List<Event>> =
-        CoroutineScope(Dispatchers.IO).async {
+    override suspend fun events(meetId: Long): List<Event> {
 
-            val events = restApi.getEvents(meetId).await()
+        val events = restApi.getEvents(meetId).await()
 
-            return@async eventMapper.map(events.events)
-        }
+        return eventMapper.map(events.events)
+    }
 
     override suspend fun sessions(meetId: Long): List<Session> {
 
@@ -42,27 +37,24 @@ class EventNetworkService @Inject constructor(
         return sessionMapper.map(sessions.sessions)
     }
 
-    override fun entries(meetId: Long, eventId: Long): Deferred<List<Entry>> =
-        CoroutineScope(Dispatchers.IO).async {
+    override suspend fun entries(meetId: Long, eventId: Long): List<Entry> {
 
-            val entries = restApi.getEntries(meetId, eventId).await()
+        val entries = restApi.getEntries(meetId, eventId).await()
 
-            return@async entryMapper.map(entries.entries)
-        }
+        return entryMapper.map(entries.entries)
+    }
 
-    override fun heats(meetId: Long, eventId: Long): Deferred<List<Heat>> =
-        CoroutineScope(Dispatchers.IO).async {
+    override suspend fun heats(meetId: Long, eventId: Long): List<Heat> {
 
-            val heats = restApi.getHeats(meetId, eventId).await()
+        val heats = restApi.getHeats(meetId, eventId).await()
 
-            return@async heatMapper.map(heats.heats)
-        }
+        return heatMapper.map(heats.heats)
+    }
 
-    override fun results(meetId: Long, eventId: Long): Deferred<List<AgeGroupResults>> =
-        CoroutineScope(Dispatchers.IO).async {
+    override suspend fun results(meetId: Long, eventId: Long): List<AgeGroupResults> {
 
-            val results = restApi.getResults(meetId, eventId).await()
+        val results = restApi.getResults(meetId, eventId).await()
 
-            return@async resultMapper.map(results.agegroups)
-        }
+        return resultMapper.map(results.agegroups)
+    }
 }
