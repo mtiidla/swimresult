@@ -1,11 +1,11 @@
 package ee.mtiidla.swimresult.ui.athlete.adapter
 
 import com.hannesdorfmann.adapterdelegates4.AsyncListDifferDelegationAdapter
-import ee.mtiidla.swimresult.ui.athlete.AthleteData
+import ee.mtiidla.swimresult.ui.athlete.AthleteAdapterData
 import ee.mtiidla.swimresult.util.IdEqualsDiffCallback
 
-class AthleteAdapter : AsyncListDifferDelegationAdapter<AthleteData>(
-    IdEqualsDiffCallback<AthleteData>(AthleteData::id)
+class AthleteAdapter : AsyncListDifferDelegationAdapter<AthleteAdapterData>(
+    IdEqualsDiffCallback<AthleteAdapterData>(AthleteAdapterData::id)
 ) {
 
     init {

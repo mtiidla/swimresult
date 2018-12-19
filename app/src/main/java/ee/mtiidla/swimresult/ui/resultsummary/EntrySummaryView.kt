@@ -1,4 +1,4 @@
-package ee.mtiidla.swimresult.ui.athlete
+package ee.mtiidla.swimresult.ui.resultsummary
 
 import android.content.Context
 import android.util.AttributeSet

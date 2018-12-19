@@ -23,6 +23,7 @@ object AgeGroupDisplayer {
         fun getFormatter(type: Char) = when (type) {
             'a' -> AgeOldFormatter()
             'y' -> YearOfBirthFormatter()
+            'r' -> TotalAgeFormatter()
             else -> throw IllegalArgumentException("Unknown age group formatting type $type")
         }
     }
@@ -56,4 +57,21 @@ object AgeGroupDisplayer {
 
         override fun rangeMinMax(min: Int, max: Int): String = "$min - $max years"
     }
+
+    class TotalAgeFormatter : AgeGroupFormatter {
+        override fun equalMinMax(age: Int): String {
+            TODO("not implemented")
+        }
+
+        override fun openMin(max: Int): String {
+            TODO("not implemented")
+        }
+
+        override fun openMax(min: Int): String {
+            TODO("not implemented")
+        }
+
+        override fun rangeMinMax(min: Int, max: Int): String = "AG $min - $max"
+    }
+
 }

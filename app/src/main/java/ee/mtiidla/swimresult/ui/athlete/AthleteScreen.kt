@@ -37,15 +37,20 @@ class AthleteScreen(context: Context) : Screen, LayoutContainer {
                 progressBar.gone()
                 athleteDetailsListView.visible()
 
-                val adapterData = mutableListOf<AthleteData>()
-                adapterData += AthleteData.AthleteItem(state.athlete)
-                adapterData += AthleteData.ResultHeaderItem
-                state.athlete.results.forEach {
-                    adapterData += AthleteData.ResultItem(it)
+                val adapterData = mutableListOf<AthleteAdapterData>()
+                adapterData += AthleteAdapterData.AthleteItem(state.athlete)
+
+                if (state.athlete.results.isNotEmpty()) {
+                    adapterData += AthleteAdapterData.ResultHeaderItem
+                    state.athlete.results.forEach {
+                        adapterData += AthleteAdapterData.ResultItem(it)
+                    }
                 }
-                adapterData += AthleteData.EntryHeaderItem
-                state.athlete.entries.forEach {
-                    adapterData += AthleteData.EntryItem(it)
+                if (state.athlete.entries.isNotEmpty()) {
+                    adapterData += AthleteAdapterData.EntryHeaderItem
+                    state.athlete.entries.forEach {
+                        adapterData += AthleteAdapterData.EntryItem(it)
+                    }
                 }
                 adapter.items = adapterData
             }

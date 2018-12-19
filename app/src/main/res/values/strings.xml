@@ -29,5 +29,5 @@
     <string name="round_unknown">Unknown</string>
     <string name="round_fastest_heat">Fastest heat</string>
     <string name="athlete_results_header">Results</string>
-    <string name="athlete_entries_header">Entries</string>
+    <string name="athlete_entries_header">Upcoming entries</string>
 </resources>

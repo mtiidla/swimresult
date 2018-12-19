@@ -1,10 +1,11 @@
-package ee.mtiidla.swimresult.ui.athlete
+package ee.mtiidla.swimresult.ui.resultsummary
 
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import ee.mtiidla.swimresult.R
+import ee.mtiidla.swimresult.domain.model.ClubAthlete
 import ee.mtiidla.swimresult.domain.model.ResultSummary
 import ee.mtiidla.swimresult.domain.model.Split
 import ee.mtiidla.swimresult.ui.event.EventDisplayer
@@ -38,19 +39,40 @@ class ResultSummaryView : ConstraintLayout {
             resultSummaryPlaceView.text = place.toString()
             resultSummaryTimeView.text = swimTime
             resultSummaryEntryTimeView.text = entryTime
-            resultSummarySubtitleView.text = AgeGroupDisplayer.getTitle(ageGroup!!)
+            resultSummarySubtitleView.text =
+                if (place != -1) AgeGroupDisplayer.getTitle(ageGroup!!) else ""
 
             resultSummarySplitView.show(splits != null)
-            splits.notNull { bindSplits(it) }
+            splits.notNull {
+                if (athletes == null) bindSplits(it) else bindClubSplits(athletes, it)
+            }
         }
-
-
     }
 
     private fun bindSplits(splits: List<Split>) {
-        val splitColumns = ResultDisplayer.getSplitColumns(splits, resultSummarySplitView.childCount)
+        val splitColumns =
+            ResultDisplayer.getSplitColumns(splits, resultSummarySplitView.childCount)
         splitColumns.forEachIndexed { index, splitText ->
-            (resultSummarySplitView.getChildAt(index) as TextView).text = splitText
+            getSplitView(index).text = splitText
         }
     }
+
+    private fun bindClubSplits(athletes: List<ClubAthlete>, splits: List<Split>) {
+        val splitColumns =
+            ResultDisplayer.getSplitColumns(splits, resultSummarySplitView.childCount)
+                .toMutableList()
+        var names = ""
+        var times = ""
+        athletes.forEach {
+            names += "${it.fullName}\n"
+            times += "${it.swimTime}\n"
+        }
+        splitColumns[0] = names + "\n" + splitColumns[0]
+        splitColumns[splitColumns.size - 1] = times + "\n" + splitColumns[splitColumns.size - 1]
+        splitColumns.forEachIndexed { index, splitText ->
+            getSplitView(index).text = splitText
+        }
+    }
+
+    private fun getSplitView(index: Int) = resultSummarySplitView.getChildAt(index) as TextView
 }

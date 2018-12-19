@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ee.mtiidla.swimresult.ui.athlete.EntrySummaryView xmlns:android="http://schemas.android.com/apk/res/android"
+<ee.mtiidla.swimresult.ui.resultsummary.EntrySummaryView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingLeft="@dimen/spacing_16"

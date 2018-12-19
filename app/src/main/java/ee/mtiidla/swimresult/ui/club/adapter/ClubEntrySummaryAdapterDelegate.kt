@@ -1,15 +1,15 @@
-package ee.mtiidla.swimresult.ui.athlete.adapter
+package ee.mtiidla.swimresult.ui.club.adapter
 
 import android.view.ViewGroup
 import ee.mtiidla.swimresult.R
-import ee.mtiidla.swimresult.ui.athlete.AthleteAdapterData
-import ee.mtiidla.swimresult.ui.athlete.AthleteAdapterData.EntryItem
+import ee.mtiidla.swimresult.ui.club.ClubAdapterData
+import ee.mtiidla.swimresult.ui.club.ClubAdapterData.EntryItem
 import ee.mtiidla.swimresult.ui.resultsummary.EntrySummaryView
 import ee.mtiidla.swimresult.util.ViewAdapterDelegate
 import ee.mtiidla.swimresult.util.inflateView
 
-class AthleteEntrySummaryAdapterDelegate :
-    ViewAdapterDelegate<EntryItem, AthleteAdapterData, EntrySummaryView>() {
+class ClubEntrySummaryAdapterDelegate :
+    ViewAdapterDelegate<EntryItem, ClubAdapterData, EntrySummaryView>() {
 
     override fun createView(parent: ViewGroup): EntrySummaryView = inflateView(parent, R.layout.list_item_entry_summary)
 
@@ -22,8 +22,8 @@ class AthleteEntrySummaryAdapterDelegate :
     }
 
     override fun isForViewType(
-        item: AthleteAdapterData,
-        items: MutableList<AthleteAdapterData>,
+        item: ClubAdapterData,
+        items: MutableList<ClubAdapterData>,
         position: Int
     ): Boolean = item is EntryItem
 }
