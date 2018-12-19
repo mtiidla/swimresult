@@ -13,5 +13,7 @@ data class ResultSummary (
     val info: String,
     val place: Int,
     val athletes: List<ClubAthlete>?,
-    val teamNumber: String?
+    val teamNumber: String?,
+    val event: Event? = null,
+    val ageGroup: AgeGroup? = null
 )

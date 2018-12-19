@@ -25,17 +25,19 @@ class ResultView : ConstraintLayout {
 
     fun bindResult(result: Result) {
         // TODO: Marko 16.12.2018 handle DSQ etc
-        resultPlaceBackgroundView.setBackgroundResource(getPlaceBackgroundRes(result.place))
-        resultPlaceView.text = result.place.toString()
-        resultLaneView.text = result.lane.toString()
-        resultTimeView.text = result.swimTime
-        resultEntryTimeView.text = result.entryTime
+        result.run {
+            resultPlaceBackgroundView.setBackgroundResource(ResultDisplayer.getPlaceBackgroundRes(place))
+            resultPlaceView.text = place.toString()
+            resultLaneView.text = lane.toString()
+            resultTimeView.text = swimTime
+            resultEntryTimeView.text = entryTime
 
-        resultSplitView.show(result.splits != null)
-        result.splits.notNull { bindSplits(it) }
+            resultSplitView.show(splits != null)
+            splits.notNull { bindSplits(it) }
 
-        resultDiffTimeView.show(result.place != 1)
-        resultDiffTimeView.text = result.diff
+            resultDiffTimeView.show(place != 1)
+            resultDiffTimeView.text = diff
+        }
 
         result.competitor.run {
             when (this) {
@@ -55,24 +57,9 @@ class ResultView : ConstraintLayout {
     }
 
     private fun bindSplits(splits: List<Split>) {
-        val columns = resultSplitView.childCount
-        val splitColumns = Array(columns) { "" }
-        val rowsInColumn = Math.ceil(splits.size / columns.toDouble()).toInt()
-
-        // TODO: Marko 16.12.2018 club splits should show athletes as well?
-        // TODO: Marko 16.12.2018 better align split times, padding by space is not enough
-        splits.forEachIndexed { index, split ->
-            splitColumns[index / rowsInColumn] += "\n${split.distanceText}: ${split.timeText}"
-        }
+        val splitColumns = ResultDisplayer.getSplitColumns(splits, resultSplitView.childCount)
         splitColumns.forEachIndexed { index, splitText ->
-            (resultSplitView.getChildAt(index) as TextView).text = splitText.trimStart()
+            (resultSplitView.getChildAt(index) as TextView).text = splitText
         }
-    }
-
-    private fun getPlaceBackgroundRes(place: Int) = when (place) {
-        1 -> R.drawable.place_gold
-        2 -> R.drawable.place_silver
-        3 -> R.drawable.place_bronze
-        else -> R.drawable.place_other
     }
 }

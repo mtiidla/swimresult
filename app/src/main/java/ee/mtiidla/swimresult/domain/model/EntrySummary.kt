@@ -7,5 +7,6 @@ data class EntrySummary(
     val entryTime: String,
     val lane: Int,
     val teamNumber: String?,
-    val athletes: List<ClubAthlete>?
+    val athletes: List<ClubAthlete>?,
+    val event: Event? = null
 )

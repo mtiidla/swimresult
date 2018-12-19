@@ -2,4 +2,6 @@
 <resources>
     <item name="list_item_entry_list" type="id" />
     <item name="list_item_result_list" type="id" />
+    <item name="list_item_result_header" type="id" />
+    <item name="list_item_entry_header" type="id" />
 </resources>

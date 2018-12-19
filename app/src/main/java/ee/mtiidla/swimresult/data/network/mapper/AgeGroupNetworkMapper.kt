@@ -11,8 +11,8 @@ class AgeGroupNetworkMapper @Inject constructor() :
         AgeGroup(
             id = id.toLong(),
             key = key,
-            min = min,
-            max = max,
+            min = min.toInt(),
+            max = max.toInt(),
             name = name
         )
     }

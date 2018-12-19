@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_height="wrap_content"
+    tools:layout_width="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <View
+        android:id="@+id/resultSummaryPlaceBackgroundView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/place_other"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/resultSummaryPlaceView"
+        app:layout_constraintRight_toRightOf="@+id/resultSummaryPlaceView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultSummaryPlaceView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:hint="00"
+        android:padding="@dimen/spacing_4"
+        android:textAppearance="@style/TextAppearance.S14.Bold"
+        android:textColor="@color/white"
+        app:layout_constraintBaseline_toBaselineOf="@id/resultSummaryTitleView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="HardcodedText"
+        tools:text="100" />
+
+    <TextView
+        android:id="@+id/resultSummaryLabelView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_8"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginRight="@dimen/spacing_8"
+        android:textAppearance="@style/TextAppearance.S14"
+        app:layout_constraintLeft_toRightOf="@id/resultSummaryPlaceView"
+        app:layout_constraintRight_toLeftOf="@+id/resultSummaryTimeView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Timed final" />
+
+    <TextView
+        android:id="@+id/resultSummaryTitleView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.S14.Bold"
+        app:layout_constraintLeft_toLeftOf="@id/resultSummaryLabelView"
+        app:layout_constraintRight_toRightOf="@+id/resultSummaryLabelView"
+        app:layout_constraintTop_toBottomOf="@id/resultSummaryLabelView"
+        tools:text="101. Girls, 50m Freestyle" />
+
+    <TextView
+        android:id="@+id/resultSummarySubtitleView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.S12"
+        app:layout_constraintLeft_toLeftOf="@id/resultSummaryLabelView"
+        app:layout_constraintRight_toRightOf="@+id/resultSummaryLabelView"
+        app:layout_constraintTop_toBottomOf="@id/resultSummaryTitleView"
+        tools:text="YOB 2007-2009" />
+
+    <TextView
+        android:id="@+id/resultSummaryEntryTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:hint="0:00:00"
+        android:textAppearance="@style/TextAppearance.S12"
+        android:textColor="@color/secondary_text"
+        app:layout_constraintBaseline_toBaselineOf="@id/resultSummaryLabelView"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText"
+        tools:text="16:10:13" />
+
+    <TextView
+        android:id="@+id/resultSummaryTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:hint="0:00:00"
+        android:textAppearance="@style/TextAppearance.S14.Bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/resultSummaryTitleView"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText"
+        tools:text="15:20:34" />
+
+    <TextView
+        android:id="@+id/resultSummaryDiffTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:hint="+00.00"
+        android:textAppearance="@style/TextAppearance.S12"
+        android:textColor="@color/secondary_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/resultSummarySubtitleView"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText"
+        tools:text="+00.00" />
+
+    <LinearLayout
+        android:id="@+id/resultSummarySplitView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8"
+        android:layout_marginBottom="@dimen/spacing_8"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/resultSummarySubtitleView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultSummarySubtitleView"
+        tools:ignore="HardcodedText"
+        tools:text="+00.00">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.S12"
+            android:textColor="@color/secondary_text"
+            tools:ignore="HardcodedText"
+            tools:text="100m: 1:00.00 (30:00)" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.S12"
+            android:textColor="@color/secondary_text"
+            tools:ignore="HardcodedText"
+            tools:text="100m: 1:00.00 (30:00)" />
+
+    </LinearLayout>
+
+</merge>
