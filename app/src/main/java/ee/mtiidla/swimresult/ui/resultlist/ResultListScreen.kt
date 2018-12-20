@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import ee.mtiidla.swimresult.R
+import ee.mtiidla.swimresult.domain.model.Result
 import ee.mtiidla.swimresult.ui.Screen
 import ee.mtiidla.swimresult.util.inflateLayout
 import ee.mtiidla.swimresult.util.setStableIds
@@ -16,7 +17,9 @@ class ResultListScreen(context: Context) : Screen, LayoutContainer {
 
     override fun getRootView(): ViewGroup = containerView
 
-    private val adapter = ResultListAdapter()
+    lateinit var listener: Listener
+
+    private val adapter = ResultListAdapter { listener.onResultClicked(it) }
 
     init {
         adapter.setStableIds()
@@ -38,4 +41,8 @@ class ResultListScreen(context: Context) : Screen, LayoutContainer {
         }
     }
 
+    interface Listener {
+
+        fun onResultClicked(result: Result)
+    }
 }

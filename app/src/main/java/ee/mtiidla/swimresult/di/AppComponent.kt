@@ -10,6 +10,7 @@ import ee.mtiidla.swimresult.ui.club.ClubComponent
 import ee.mtiidla.swimresult.ui.event.EventComponent
 import ee.mtiidla.swimresult.ui.meet.MeetComponent
 import ee.mtiidla.swimresult.ui.meetlist.MeetListFragment
+import ee.mtiidla.swimresult.ui.result.ResultComponent
 
 @ApplicationScope
 @Component(modules = [AppModule::class])
@@ -28,6 +29,8 @@ interface AppComponent {
     fun athlete() : AthleteComponent.Builder
     
     fun club() : ClubComponent.Builder
+
+    fun result() : ResultComponent.Builder
 
     @Component.Builder
     interface Builder {

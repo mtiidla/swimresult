@@ -11,9 +11,11 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.annotation.ColorInt
 import androidx.annotation.ColorRes
+import androidx.annotation.DimenRes
 import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
 import androidx.core.content.ContextCompat
+import androidx.core.view.setPadding
 
 fun View.visible() {
     if (visibility != View.VISIBLE) {
@@ -33,6 +35,10 @@ fun View.show(show: Boolean = true) {
     } else {
         gone()
     }
+}
+
+fun View.setPaddingRes(@DimenRes paddingRes: Int) {
+    setPadding(resources.getDimensionPixelSize(paddingRes))
 }
 
 fun View.string(@StringRes stringRes: Int): String = resources.getString(stringRes)

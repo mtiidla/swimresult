@@ -1,9 +1,10 @@
 package ee.mtiidla.swimresult.ui.resultlist
 
 import com.hannesdorfmann.adapterdelegates4.AsyncListDifferDelegationAdapter
+import ee.mtiidla.swimresult.domain.model.Result
 import ee.mtiidla.swimresult.util.IdEqualsDiffCallback
 
-class ResultListAdapter :
+class ResultListAdapter(listener: (Result) -> Unit) :
     AsyncListDifferDelegationAdapter<ResultListData>(
         IdEqualsDiffCallback<ResultListData>(
             ResultListData::id
@@ -11,7 +12,7 @@ class ResultListAdapter :
     ) {
 
     init {
-        delegatesManager.addDelegate(ResultAdapterDelegate())
+        delegatesManager.addDelegate(ResultAdapterDelegate(listener))
         delegatesManager.addDelegate(AgeGroupAdapterDelegate())
     }
 

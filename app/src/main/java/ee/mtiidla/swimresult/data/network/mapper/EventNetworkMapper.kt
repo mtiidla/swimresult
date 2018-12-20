@@ -35,8 +35,8 @@ class EventNetworkMapper @Inject constructor() : NetworkMapper<EventNetworkModel
     private fun mapRound(round: Int): Event.Round = when (round) {
         1 -> Event.Round.TIMED_FINAL
         2 -> Event.Round.PRELIM
+        8, 11 -> Event.Round.FASTEST_HEAT // // TODO: Marko 20.12.2018 two codes for  fastest heat?
         9 -> Event.Round.FINAL
-        11 -> Event.Round.FASTEST_HEAT
         else -> Event.Round.UNKNOWN
     }
 }

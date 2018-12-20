@@ -15,7 +15,7 @@ class ResultNetworkMapper @Inject constructor(private val clubAthleteMapper: Clu
                 Result(
                     entryTime = entrytime,
                     heatId = heatid.toLong(),
-                    heatinfo = whenNotNull(heatinfo) { mapHeatInfo(it) },
+                    heatInfo = whenNotNull(heatinfo) { mapHeatInfo(it) },
                     lane = lane,
                     splits = mapSplits(splits),
                     swimTime = swimtime,
@@ -42,7 +42,7 @@ class ResultNetworkMapper @Inject constructor(private val clubAthleteMapper: Clu
                 Result(
                     entryTime = entrytime,
                     heatId = heatid.toLong(),
-                    heatinfo = whenNotNull(heatinfo) { mapHeatInfo(it) },
+                    heatInfo = whenNotNull(heatinfo) { mapHeatInfo(it) },
                     lane = lane,
                     splits = mapSplits(splits),
                     swimTime = swimtime,

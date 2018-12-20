@@ -6,11 +6,12 @@ import ee.mtiidla.swimresult.ui.eventinfo.EventInfoData.ResultListItem
 import ee.mtiidla.swimresult.ui.resultlist.ResultListScreen
 import ee.mtiidla.swimresult.util.ViewHolderAdapterDelegate
 
-class ResultListScreenAdapterDelegate :
+class ResultListScreenAdapterDelegate(val listener: ResultListScreen.Listener) :
     ViewHolderAdapterDelegate<ResultListItem, EventInfoData, ResultListScreenAdapterDelegate.ResultListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup): ResultListViewHolder {
         val screen = ResultListScreen(parent.context)
+        screen.listener = listener
         screen.getRootView().layoutParams = RecyclerView.LayoutParams(
             RecyclerView.LayoutParams.MATCH_PARENT,
             RecyclerView.LayoutParams.MATCH_PARENT

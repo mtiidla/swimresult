@@ -1,21 +1,25 @@
 package ee.mtiidla.swimresult.ui.resultlist
 
 import ee.mtiidla.swimresult.domain.model.AgeGroup
+import ee.mtiidla.swimresult.util.whenNotNull
 
 object AgeGroupDisplayer {
 
     fun getTitle(ageGroup: AgeGroup): String = with(ageGroup) {
-        name ?: with(AgeGroupFormatterFactory.getFormatter(key[0])) {
-            when (Character.getNumericValue(key[1])) {
-                1 -> equalMinMax(min)
-                2 -> openMin(max)
-                3 -> openMax(min)
-                4 -> rangeMinMax(min, max)
-                else -> {
-                    "Unknown age group"
+        name ?: whenNotNull(key) {
+            with(AgeGroupFormatterFactory.getFormatter(it[0])) {
+                when (Character.getNumericValue(it[1])) {
+                    0 -> "Open"
+                    1 -> equalMinMax(min)
+                    2 -> openMin(max)
+                    3 -> openMax(min)
+                    4 -> rangeMinMax(min, max)
+                    else -> {
+                        "Unknown age group"
+                    }
                 }
             }
-        }
+        } ?: "Unknown age group"
     }
 
     object AgeGroupFormatterFactory {
@@ -73,5 +77,4 @@ object AgeGroupDisplayer {
 
         override fun rangeMinMax(min: Int, max: Int): String = "AG $min - $max"
     }
-
 }

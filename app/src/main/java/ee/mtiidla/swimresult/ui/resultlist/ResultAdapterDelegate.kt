@@ -2,11 +2,13 @@ package ee.mtiidla.swimresult.ui.resultlist
 
 import android.view.ViewGroup
 import ee.mtiidla.swimresult.R
+import ee.mtiidla.swimresult.domain.model.Result
 import ee.mtiidla.swimresult.ui.resultlist.ResultListData.ResultItem
 import ee.mtiidla.swimresult.util.ViewAdapterDelegate
 import ee.mtiidla.swimresult.util.inflateView
 
-class ResultAdapterDelegate : ViewAdapterDelegate<ResultItem, ResultListData, ResultView>() {
+class ResultAdapterDelegate(listener: (Result) -> Unit) :
+    ViewAdapterDelegate<ResultItem, ResultListData, ResultView>({ listener.invoke(it.result) }) {
 
     override fun createView(parent: ViewGroup): ResultView =
         inflateView(parent, R.layout.list_item_result)

@@ -1,6 +1,6 @@
 package ee.mtiidla.swimresult.domain.model
 
-sealed class Competitor(val id: Long, open val nation: String) {
+sealed class Competitor(val id: Long, open val nation: String, open val displayName: String) {
 
     data class Athlete(
         val athleteId: Long,
@@ -12,7 +12,7 @@ sealed class Competitor(val id: Long, open val nation: String) {
         val clubId: Long,
         val clubName: String,
         val clubCode: String
-    ) : Competitor(athleteId, nation) {
+    ) : Competitor(athleteId, nation, athleteName) {
         // TODO: Marko 15.12.2018 maybe use single line for firstname and lastname, find a way to get separate names properly
         val lastName = athleteName.split(" ").last()
         val firstName = athleteName.subSequence(0, athleteName.length - lastName.length - 1)
@@ -26,5 +26,5 @@ sealed class Competitor(val id: Long, open val nation: String) {
         val teamNumber: String,
         val ageText: String,
         val athletes: List<ClubAthlete>
-    ) : Competitor(clubId, nation)
+    ) : Competitor(clubId, nation, clubName)
 }

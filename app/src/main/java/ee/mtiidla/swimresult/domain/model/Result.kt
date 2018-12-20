@@ -3,7 +3,7 @@ package ee.mtiidla.swimresult.domain.model
 data class Result (
     val entryTime: String,
     val heatId: Long,
-    val heatinfo: HeatInfo?,
+    val heatInfo: HeatInfo?,
     val lane: Int,
     val splits: List<Split>?,
     val swimTime: String,

@@ -16,7 +16,7 @@ class EventScreen(private val context: Context) : Screen, LayoutContainer {
 
     override fun getRootView(): ViewGroup = containerView
 
-    lateinit var listener: Listener
+    private lateinit var _listener: Listener
 
     private val infoScreen = EventInfoScreen(context)
 
@@ -24,7 +24,12 @@ class EventScreen(private val context: Context) : Screen, LayoutContainer {
 
     init {
         eventInfoContainer.addView(infoScreen.getRootView())
-        toolbar.setNavigationOnClickListener { listener.onBackClicked() }
+        toolbar.setNavigationOnClickListener { _listener.onBackClicked() }
+    }
+
+    fun setListener(listener: Listener) {
+        this._listener = listener
+        infoScreen.listener = listener
     }
 
     fun render(state: EventState) {
@@ -45,7 +50,7 @@ class EventScreen(private val context: Context) : Screen, LayoutContainer {
         }
     }
 
-    interface Listener {
+    interface Listener : EventInfoScreen.Listener {
 
         fun onBackClicked()
     }

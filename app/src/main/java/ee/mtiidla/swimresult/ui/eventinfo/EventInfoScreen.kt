@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import ee.mtiidla.swimresult.R
 import ee.mtiidla.swimresult.domain.model.Event
+import ee.mtiidla.swimresult.domain.model.Result
 import ee.mtiidla.swimresult.ui.Screen
 import ee.mtiidla.swimresult.ui.entrylist.EntryListState
 import ee.mtiidla.swimresult.ui.heat.HeatState
@@ -26,7 +27,13 @@ class EventInfoScreen(context: Context) : Screen, LayoutContainer {
 
     override fun getRootView(): ViewGroup = containerView
 
-    private val adapter = EventInfoAdapter()
+    lateinit var listener: Listener
+
+    private val adapter = EventInfoAdapter(object : Listener {
+        override fun onResultClicked(result: Result) {
+            listener.onResultClicked(result)
+        }
+    })
 
     init {
         adapter.setStableIds()
@@ -81,5 +88,10 @@ class EventInfoScreen(context: Context) : Screen, LayoutContainer {
             tab.text = it
             eventInfoTabView.addTab(tab)
         }
+    }
+
+    interface Listener : EventInfoAdapter.EventInfoListener {
+
+
     }
 }
